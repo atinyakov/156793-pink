@@ -6,37 +6,43 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="wrapper">
 
-    <header class="page-header">
-      <h1 class="page-header__logo">Pink</h1>
-      <button class="page-header__menu-button--close"></button>
-      <nav class="main-nav ">
-        <ul class="main-nav__list">
-          <li class="main-nav_item"><a>Главная</a></li>
-          <li class="main-nav__item"><a href="">Фотографии</a></li>
-          <li class="main-nav__item"><a href="">Конкурс</a></li>
-          <li class="main-nav__item"><a href="">HTML Academy</a></li>
-        </ul>
-      </nav>
-      <img src="img" alt="" class="page-header__logo-image">
-      <h2 class="page-header__title">Конкурс на самое безбашенное путешевствие с Пинк</h2>
-    </header>
+      <header class="page-header">
+        <nav class="main-nav ">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--logo">
+              <img class="main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="PINK logo">
+              <button class="main-nav__menu-button--close"></button>
+            </li>
+            <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <main class="page-main">
-      <section class="page-main__form">
+      <section class="form">
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__fieldset">
             <legend class="form__legend visually-hidden">Ваше имя</legend>
-            <label class="form__label" for="last-name">Фамилия:</label>
-            <input class="form__input" id="last-name" type="text" name="" value="" placeholder="Укажите фамилию *">
-            <label class="form__label" for="first-name">Имя:</label>
-            <input class="form__input" id="first-name" type="text" name="first-name" value="" placeholder="Введите ваше имя *">
-            <label class="form__label" for="first-name">Отчество</label>
-            <input class="form__input" id="middle-name" type="text" name="first-name" value="" placeholder="Ну и отчество тоже *">
+            <div>
+              <label class="form__label--contact" for="last-name">Фамилия:</label>
+              <input class="form__input--text" id="last-name" type="text" name="" value="" placeholder="Укажите фамилию *">
+            </div>
+            <div>
+              <label class="form__label--contact" for="first-name">Имя:</label>
+              <input class="form__input--text" id="first-name" type="text" name="first-name" value="" placeholder="Введите ваше имя *">
+            </div>
+            <div>
+              <label class="form__label--contact" for="first-name">Отчество</label>
+              <input class="form__input--text" id="middle-name" type="text" name="first-name" value="" placeholder="Ну и отчество тоже *">
+            </div>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend visually-hidden">Ваши безбашенные достижения в путешествии</legend>
-            <label class="form__label" for="achievments">Ваши безбашенные достижения в путешествии</label>
+          <fieldset class="form__fieldset form__fieldset--achievments">
+            <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
             <div class="form__item">
               <input class="form__input--checked" type="checkbox" id="selfie" name="achievments" value="shark selfie" checked>
               <label class="form__label" for="selfie">Сделал селфи с акулой</label>
@@ -64,12 +70,16 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend visually-hidden">Ваши контакты</legend>
-            <label class="form__label" for="tel">Номер телефона:</label>
-            <input class="form__input" id="tel" type="tel" name="tel" value="" placeholder="Номер, пожалуйста">
-            <label class="form__label" for="email">Адрес почты</label>
-            <input class="form__input" id="email" type="email" name="email" value="" placeholder="Введите почту *">
+            <div>
+              <label class="form__label--contact" for="tel">Номер телефона:</label>
+              <input class="form__input--text" id="tel" type="tel" name="tel" value="" placeholder="Номер, пожалуйста">
+            </div>
+            <div>
+              <label class="form__label--contact" for="email">Адрес почты</label>
+              <input class="form__input--text" id="email" type="email" name="email" value="" placeholder="Введите почту *">
+            </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--app">
             <legend class="form__legend visually-hidden">С каким приложением путешествовали?</legend>
             <label class="form__label" for="app">С каким приложением путешествовали?</label>
             <div class="form__item">
@@ -87,24 +97,24 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <label class="form__label" for="emotions">Опишите свои эмоции:</label>
-            <input class="form__input" type="textarea" name="emotions" value="" placeholder="Можно прям в красках, не стесняясь в выражениях">
+            <input class="form__input-textarea" type="textarea" name="emotions" value="" placeholder="Можно прям в красках, не стесняясь в выражениях">
           </fieldset>
         </form>
-        <button type="submit" name="button">Отправить форму</button>
+        <button class="button" type="submit" name="button">Отправить форму</button>
         <span><sup>*</sup>- Обязательные поля</span>
       </section>
     </main>
 
     <footer class="page-footer">
-      <img src="img" alt="" class="page-footer__logo-image">
-      <h2 class="page-footer__logo">Pink</h2>
-      <ul class="page-footer__social footer-social">
-        <li class="footer-social__item"><a href=""><span class="">Twetter</span></a></li>
-        <li class="footer-social__item"><a href=""><span class="">Facebook</span></a></li>
-        <li class="footer-social__item"><a href=""><span class="">Youtube</span></a></li>
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="PINK logo">
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item"><a href=""><span class="">Twetter</span></a></li>
+        <li class="page-footer__social-item"><a href=""><span class="">Facebook</span></a></li>
+        <li class="page-footer__social-item"><a href=""><span class="">Youtube</span></a></li>
       </ul>
-      <span class="page-footer__developed">Раработано</span>
-      <img src="img" alt="" class="page-footer_developed-logo">
+      <a class="page-footer__developed">Раработано
+      <img src="img/htmlacademy.svg" alt="" class="page-footer_developed-logo" width="35" height="35"></a>
     </footer>
+    </div>
     </body>
   </html>

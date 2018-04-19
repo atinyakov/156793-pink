@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+  <div class="wrapper">
 
     <header class="page-header">
       <nav class="main-nav ">
@@ -21,10 +22,10 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
 
+    <main class="page-main">
       <section class="download-app ">
-          <a href="" class="download-app__download-button">Скачать приложение</a>
+          <a href="" class="download-app__download-button button">Скачать приложение</a>
           <ul class="download-app__list">
             <li><a class="download-app__item--apple" href=""><span class="visually-hidden">Apple</span></a></li>
             <li><a class="download-app__item--android" href=""><span class="visually-hidden">Android</span></a></li>
@@ -54,7 +55,7 @@
       </section>
 
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы о нас</h2>
+        <h2 class="visually-hidden">Отзывы о нас</h2>
         <ul class="reviews__list">
           <li>
             <blockquote class="reviews__item">
@@ -85,20 +86,22 @@
       <section class="pricing">
         <h2 class="visually-hidden">Наши цены</h2>
         <ul class="pricing__plan-list">
-          <li class="plan-list__item">
-            <table>
-              <caption>
-                <h3 class="plan-list__title">Стандарт</h3>
-                <p class="plan-list__price">3,99 USD</p>
+          <li class="pricing__item">
+            <table class="pricing__table">
+              <caption class="pricing__billing-plan">
+                <h3 class="pricing__title">Стандарт</h3>
+                <p class="pricing__price">3,99 USD</p>
               </caption>
-              <tr>
-                <th class="plan-list__feature">Розовый фильтр</th>
-                <th class="plan-list__feature">Смайлики</th>
-                <th class="plan-list__feature">Комментарии</th>
+              <tr class="pricing__table--row">
+                <th class="pricing__feature">Розовый фильтр</th>
+                <td><span class="visually-hidden">Есть</span></td>
               </tr>
-              <tr>
+              <tr class="pricing__table--row">
+                <th class="pricing__feature">Смайлики</th>
                 <td><span class="visually-hidden">Есть</span></td>
-                <td><span class="visually-hidden">Есть</span></td>
+              </tr>
+              <tr class="pricing__table--row">
+                <th class="pricing__feature">Комментарии</th>
                 <td><span class="visually-hidden">Нет</span></td>
               </tr>
             </table>
@@ -113,30 +116,31 @@
           </li>
         </ul>
         <p class="pricing__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle--active" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+          <button class="slider__toggle--active" type="button"><span class="visually-hidden">2</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden"></span>3</button>
         </p>
       </section>
     </main>
 
     <footer class="contact-us">
       <h2 class="contat-us__slogan">Остались вопросы?<br>Свяжитесь с нами!</h2>
-      <ul class="contact-us__contacts contacts-list">
-        <li class="contacts-list__item">
-          <b class="contacts-list__title">Звоните:</b>
-          <p class="contacts-list__content">+7 (812) 555-66-66</p>
+      <ul class="contact-us-list">
+        <li class="contact-us__item">
+          <b class="contact-us__title">Звоните:</b>
+          <p class="contact-us__content">+7 (812) 555-66-66</p>
         </li>
-        <li class="contacts-list__item">
-          <b class="contacts-list__title">Пишите:</b>
-          <p class="contacts-list__content">mail@htmlacademy.ru</p>
+        <li class="contact-us__item">
+          <b class="contact-us__title">Пишите:</b>
+          <p class="contact-us__content">mail@htmlacademy.ru</p>
         </li>
-        <li class="contacts-list__item">
-          <b class="contacts-list__title">Приезжайте в гости:</b>
-          <p class="contacts-list__content">ул. Большая<br>Конюшенная, 19/8</p>
+        <li class="contact-us__item">
+          <b class="contact-us__title">Приезжайте в гости:</b>
+          <p class="contact-us__content">ул. Большая<br>Конюшенная, 19/8</p>
         </li>
       </ul>
       <img src="img" alt="" class="contact-us__map">
     </footer>
+    </div>
   </body>
 </html>

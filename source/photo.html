@@ -6,114 +6,120 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-    <header class="page-header">
-      <h1 class="page-header__logo">Pink</h1>
-      <button class="page-header__menu-button--close"></button>
+  <div class="wrapper">
+    <header class="page-header page-header--photo">
       <nav class="main-nav ">
         <ul class="main-nav__list">
-          <li class="main-nav_item"><a>Главная</a></li>
-          <li class="main-nav__item"><a href="">Фотографии</a></li>
-          <li class="main-nav__item"><a href="">Конкурс</a></li>
-          <li class="main-nav__item"><a href="">HTML Academy</a></li>
+          <li class="main-nav__item main-nav__item--logo">
+            <img class="main-nav__logo" src="img/logo-pink-white-mobile.svg" alt="PINK logo">
+            <button class="main-nav__menu-button--close"></button>
+          </li>
+          <li class="main-nav__item--hidden"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item--hidden"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item--hidden"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item--hidden"><a class="main-nav__link" href="">HTML Academy</a></li>
         </ul>
       </nav>
-      <img src="img" alt="" class="page-header__logo-image">
-      <h2 class="page-header__title">Фотографии пользователей</h2>
     </header>
 
     <main class="page-main">
       <section class="user-photo">
         <h2 class="user-photo__title">Взгляните на фотографии, которые выкладывают пользователи!Видите, как не хватает ваших?</h2>
-        <ul class="user-photo__recent-uploads uploads-list">
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image--wide">
-            <b class="uploads-list__username">Анна</b>
-            <time class="uploads-list__date" datetime="2017-09-29">5 минут назад</time>
-            <p class="uploads-list__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 215</span>
+        <ul class="user-photo__recent-uploads">
+          <li class="user-photo__item">
+            <img src="img/panorama-mobile@1x.jpg" alt="" class="user-photo__image--wide">
+            <b class="user-photo__username">Анна</b>
+            <time class="user-photo_date" datetime="2017-09-29">5 минут назад</time>
+            <p class="user-photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 215</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Левон</b>
-            <time class="uploads-list__date" datetime="2017-09-29">5 часов назад</time>
-            <p class="uploads-list__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 356</span>
+          <li class="user-photo__item">
+            <img src="img/photo-car-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Левон</b>
+            <time class="user-photo__date" datetime="2017-09-29">5 часов назад</time>
+            <p class="user-photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 356</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Антон</b>
-            <time class="uploads-list__date" datetime="2017-09-29">12 часов назад</time>
-            <p class="uploads-list__comment">Соседи будут рады!</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 666</span>
+          <li class="user-photo__item">
+            <img src="img/photo-drumset-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Антон</b>
+            <time class="user-photo__date" datetime="2017-09-29">12 часов назад</time>
+            <p class="user-photo__comment">Соседи будут рады!</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 666</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Борис</b>
-            <time class="uploads-list__date" datetime="2017-09-29">20 часов назад</time>
-            <p class="uploads-list__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 215</span>
+          <li class="user-photo__item">
+            <img src="img/photo-window-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Борис</b>
+            <time class="user-photo__date" datetime="2017-09-29">20 часов назад</time>
+            <p class="user-photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 215</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Сергей</b>
-            <time class="uploads-list__date" datetime="2017-09-29">25 часов назад</time>
-            <p class="uploads-list__comment">Самая кубанская в мире!</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 4</span>
+          <li class="user-photo__item">
+            <img src="img/photo-fair-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Сергей</b>
+            <time class="user-photo__date" datetime="2017-09-29">25 часов назад</time>
+            <p class="user-photo__comment">Самая кубанская в мире!</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 4</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Максим</b>
-            <time class="uploads-list__date" datetime="2017-09-29">40 часов назад</time>
-            <p class="uploads-list__comment">Где снег-то?</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 150</span>
+          <li class="user-photo__item">
+            <img src="img/photo-pov-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Максим</b>
+            <time class="user-photo__date" datetime="2017-09-29">40 часов назад</time>
+            <p class="user-photo__comment">Где снег-то?</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 150</span>
           </li>
-          <li class="uploads-list__item">
-            <img src="img" alt="" class="uploads-list__image">
-            <b class="uploads-list__username">Надежда</b>
-            <time class="uploads-list__date" datetime="2017-09-29">45 часов назад</time>
-            <p class="uploads-list__comment">Всем GM и взаимные лайки!</p>
-            <img src="img" alt="" class="uploads-list__like">
-            <span class="uploads-list__likes-total">Нравится: 256</span>
+          <li class="user-photo__item">
+            <img src="img/photo-wing-mobile@1x.jpg" alt="" class="user-photo__image">
+            <b class="user-photo__username">Надежда</b>
+            <time class="user-photo__date" datetime="2017-09-29">45 часов назад</time>
+            <p class="user-photo__comment">Всем GM и взаимные лайки!</p>
+            <img src="img" alt="" class="user-photo__like">
+            <span class="user-photo__likes-total">Нравится: 256</span>
           </li>
         </ul>
         <p class="user-photo__slogan">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
       </section>
 
-      <section class="editor-preview">
+      <section class="editor">
         <h2 class="visually-hidden">Наш редактор</h2>
-        <form class="editor-preview__editor" action="https://echo.htmlacademy.ru" method="post">
-          <img src="img" alt="" class="editor-preview__img">
-          <ul class="editor-preview__editor-buttons editor-buttons">
-            <li class="editor-buttons__item"><button><span class="visually-hidden">crop</span></button></li>
-            <li class="editor-buttons__item"><button><span class="visually-hidden">fill</span></button></li>
-            <li class="editor-buttons__item"><button><span class="visually-hidden">contrast</span></button></li>
+        <form class="editor-preview" action="https://echo.htmlacademy.ru" method="post">
+          <div class="editor-preview__img">
+            <img src="img/photo-road-mobile@1x.jpg" alt="">
+          </div>
+          <ul class="editor-preview__editor">
+            <li class="editor-preview__editor-buttons--crop"><button><span class="visually-hidden">crop</span></button></li>
+            <li class="editor-preview__editor-buttons--fill"><button><span class="visually-hidden">fill</span></button></li>
+            <li class="editor-preview__editor-buttons--contrast"><button><span class="visually-hidden">contrast</span></button></li>
           </ul>
           <label class="editor-preview__range" for="contrast">
             <input type="range" id="contrast" value="">
           </label>
-          <button class="editor-preview__button" type="button" name="button">Запостить</button>
-          <button class="editor-preview__button" type="button" name="button">Отмена</button>
+          <div>
+            <button class="editor-preview__button button" type="button" name="button">Запостить</button>
+          </div>
+          <div>
+            <button class="editor-preview__button--disabled button" type="button" name="button">Отмена</button>
+          </div>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
-      <img src="img" alt="" class="page-footer__logo-image">
-      <h2 class="page-footer__logo">Pink</h2>
-      <ul class="page-footer__social footer-social">
-        <li class="footer-social__item"><a href=""><span class="">Twetter</span></a></li>
-        <li class="footer-social__item"><a href=""><span class="">Facebook</span></a></li>
-        <li class="footer-social__item"><a href=""><span class="">Youtube</span></a></li>
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="PINK logo">
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item"><a href=""><span class="">Twetter</span></a></li>
+        <li class="page-footer__social-item"><a href=""><span class="">Facebook</span></a></li>
+        <li class="page-footer__social-item"><a href=""><span class="">Youtube</span></a></li>
       </ul>
-      <span class="page-footer__developed">Раработано</span>
-      <img src="img" alt="" class="page-footer_developed-logo">
+      <a class="page-footer__developed">Раработано
+      <img src="img/htmlacademy.svg" alt="" class="page-footer_developed-logo" width="35" height="35"></a>
     </footer>
+  </div>
   </body>
 </html>
