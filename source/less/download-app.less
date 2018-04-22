@@ -1,10 +1,14 @@
 .download-app {
-  background-color: #1d2631;
   color: white;
-  min-height: 270px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d2631;
+  height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
 }
 
 .download-app__download-button {
@@ -44,4 +48,37 @@
   background-position: center;
   width: 45px;
   height: 60px;
+}
+
+.download-app__slogan {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+
+.download-app__slogan--visible {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .download-app {
+    height: 420px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    top: 100px;
+    background-color: transparent;
+  }
+
+  .download-app__slogan--visible {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-app {
+    margin-left: 120px;
+  }
 }

@@ -1,6 +1,8 @@
 .features {
   text-align: center;
   background: linear-gradient(0.475turn, #ffffff 30%, #f2f2f2 30%);
+  height: 1005px;
+  position: relative;
 }
 
 .features__description {
@@ -12,4 +14,24 @@
 .features__features-list {
   list-style: none;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    height: 1110px;
+  }
+
+  .features__description {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    height: 1360px;
+  }
+
+  .features__description {
+    margin-bottom: 120px;
+  }
 }

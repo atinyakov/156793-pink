@@ -3,6 +3,9 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+  margin-top: 150px;
+  height: 390px;
+  justify-content: space-around;
 }
 
 .features-list__slogan {
@@ -13,4 +16,116 @@
 .features-list__desription {
   font-size: 14px;
   line-height: 24px;
+}
+
+.features-list__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.features-list__text {
+  order: 2;
+}
+
+.features-list__img {
+  order: 1;
+  display: none;
+}
+
+.features-list__img--tablet {
+  position: absolute;
+  left: 76px;
+  bottom: -42px;
+  display: block;
+}
+
+.features-list__img--desktop {
+  display: none;
+}
+
+.features-list__item--horizontal {
+  display: none;
+  justify-content: space-between;
+}
+
+.features-list__img--horizontal {
+  background-image: url("../img/24.png");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .features__features-list {
+    width: 310px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .features-list__img--tablet {
+    bottom: 355px;
+  }
+
+  .features-list__item--horizontal {
+    display: flex;
+    background: white;
+    height: 280px;
+    padding-bottom: 125px;
+  }
+
+  .features-list__text--horizontal {
+    width: 320px;
+    text-align: left;
+    order: 2;
+  }
+
+  .features-list__img--horizontal {
+    transform: scale(0.6);
+    background-position: center left;
+    width: 300px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-list__img--desktop {
+    display: block;
+  }
+
+  .features-list {
+    margin: 0 130px;
+    display: flex;
+    width: 940px;
+    height: 570px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .features-list__image {
+    transform: scale(1);
+  }
+
+  .features-list__item {
+    flex-direction: column;
+    width: 280px;
+  }
+
+  .features-list__img--tablet {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+
+  .features-list__item--horizontal {
+    display: flex;
+    width: 940px;
+    height: 350px;
+    margin: 0 130px;
+    margin-top: 70px;
+    background: transparent;
+  }
+
+  .features-list__text--horizontal {
+    width: 570px;
+    text-align: left;
+    order: 2;
+  }
 }
