@@ -1,31 +1,220 @@
 .user-photo {
+  margin: 0 auto;
   text-align: center;
   color: #283645;
   font-size: 14px;
 }
 
 .user-photo__recent-uploads {
+  margin: 0 auto;
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .user-photo__item {
   width: 280px;
+  height: 320px;
   margin: 0 auto 20px;
   background-color: #f2f2f2;
   text-align: left;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  position: relative;
 }
 
 .user-photo__title {
+  margin: 0;
   font-size: 14px;
   line-height: 30px;
 }
 
 .user-photo__comment {
   line-height: 24px;
+  order: 3;
 }
 
 .user-photo__likes-total {
   color: #d22856;
   font-size: 12px;
+  order: 4;
+}
+
+.user-photo__item--wide {
+  position: relative;
+  height: 330px;
+  width: 280px;
+  background-image: url("../img/panorama-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-photo__description {
+  position: absolute;
+  bottom: 0;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.user-photo__username {
+  order: 1;
+}
+
+.user-photo_date {
+  order: 2;
+}
+
+.user-photo__item--1 {
+  background-image: url("../img/photo-1-mobile.jpg");
+}
+
+.user-photo__item--2 {
+  background-image: url("../img/photo-2-mobile.jpg");
+}
+
+.user-photo__item--3 {
+  background-image: url("../img/photo-3-mobile.jpg");
+}
+
+.user-photo__item--4 {
+  background-image: url("../img/photo-4-mobile.jpg");
+}
+
+.user-photo__item--5 {
+  background-image: url("../img/photo-5-mobile.jpg");
+}
+
+.user-photo__item--6 {
+  background-image: url("../img/photo-6-mobile.jpg");
+}
+
+.user-photo__slogan {
+  height: 170px;
+}
+
+@media (min-width: @tablet-width) {
+  .user-photo__recent-uploads {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .user-photo__item {
+    width: 300px;
+    height: 455px;
+  }
+
+  .user-photo__item--wide {
+    width: 660px;
+    background-image: url("../img/panorama-tablet.jpg");
+    height: 680px;
+  }
+
+  .user-photo__description--wide {
+    display: flex;
+    width: 570px;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  .user-photo__comment--wide {
+    order: 4;
+  }
+
+  .user-photo__likes-total--wide {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .user-photo__title--wide {
+    height: 230px;
+  }
+
+  .user-photo__item--1 {
+    background-image: url("../img/photo-1-tablet.jpg");
+  }
+
+  .user-photo__item--2 {
+    background-image: url("../img/photo-2-tablet.jpg");
+  }
+
+  .user-photo__item--3 {
+    background-image: url("../img/photo-3-tablet.jpg");
+  }
+
+  .user-photo__item--4 {
+    background-image: url("../img/photo-4-tablet.jpg");
+  }
+
+  .user-photo__item--5 {
+    background-image: url("../img/photo-5-tablet.jpg");
+  }
+
+  .user-photo__item--6 {
+    background-image: url("../img/photo-6-tablet.jpg");
+  }
+
+  .user-photo__slogan {
+    height: 195px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-photo__recent-uploads {
+    width: 940px;
+  }
+
+  .user-photo__item {
+    height: 555px;
+  }
+
+  .user-photo__item--wide {
+    width: 940px;
+    background-image: url("../img/panorama-desktop.jpg");
+    height: 600px;
+  }
+
+  .user-photo__description--wide {
+    // display: flex;
+    width: 100%;
+    // flex-wrap: wrap;
+    // align-self: center;
+    height: 100px;
+  }
+
+  .user-photo__title--wide {
+    height: 245px;
+  }
+
+  .user-photo__item--1 {
+    background-image: url("../img/photo-1-desktop.jpg");
+  }
+
+  .user-photo__item--2 {
+    background-image: url("../img/photo-2-desktop.jpg");
+  }
+
+  .user-photo__item--3 {
+    background-image: url("../img/photo-3-desktop.jpg");
+  }
+
+  .user-photo__item--4 {
+    background-image: url("../img/photo-4-desktop.jpg");
+  }
+
+  .user-photo__item--5 {
+    background-image: url("../img/photo-5-desktop.jpg");
+  }
+
+  .user-photo__item--6 {
+    background-image: url("../img/photo-6-desktop.jpg");
+  }
+
+  .user-photo__slogan {
+    height: 240px;
+  }
 }
