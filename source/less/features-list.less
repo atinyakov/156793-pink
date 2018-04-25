@@ -29,17 +29,13 @@
 
 .features-list__img {
   order: 1;
-  display: none;
-}
-
-.features-list__img--tablet {
   position: absolute;
   left: 76px;
   bottom: -42px;
   display: block;
 }
 
-.features-list__img--desktop {
+.features-list__img--hidden {
   display: none;
 }
 
@@ -60,7 +56,7 @@
     margin-right: 20px;
   }
 
-  .features-list__img--tablet {
+  .features-list__img {
     bottom: 355px;
   }
 
@@ -86,7 +82,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .features-list__img--desktop {
+  .features-list__img--hidden {
     display: block;
   }
 
@@ -108,7 +104,7 @@
     width: 280px;
   }
 
-  .features-list__img--tablet {
+  .features-list__img {
     position: relative;
     left: 0;
     bottom: 0;
