@@ -1,7 +1,7 @@
 .reviews {
   text-align: center;
   background: linear-gradient(0.48turn, #ffffff 90%, @light-background 90%);
-  height: 380px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,7 +29,7 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    height: 320px;
+    min-height: 320px;
   }
 
   .reviews__author-name {
@@ -43,8 +43,7 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    height: 500px;
-    // width: 960px;
+    min-height: 500px;
   }
 
   .reviews__author-name {

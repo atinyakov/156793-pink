@@ -4,7 +4,7 @@
 }
 
 .footer--index {
-  height: 615px;
+  min-height: 615px;
   background-image: url("../img/map-mobile.png");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -31,24 +31,24 @@
 
 @media (min-width: @tablet-width) {
   .footer--index {
-    height: 905px;
+    min-height: 905px;
     background-image: url("../img/map-tablet.png");
   }
 
   .footer__more--index {
     display: flex;
-    height: 130px;
+    min-height: 130px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer--index {
-    height: 1067px;
+    min-height: 1067px;
     background-image: url("../img/map.png");
   }
 
   .footer__more--index {
     display: flex;
-    height: 197px;
+    min-height: 197px;
   }
 }

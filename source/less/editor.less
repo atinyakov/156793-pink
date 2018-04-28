@@ -1,7 +1,7 @@
 .editor {
   background-color: @light-background;
   text-align: center;
-  height: 760px;
+  min-height: 760px;
 }
 
 .editor-preview__controls {
@@ -16,7 +16,7 @@
 .editor-preview__column {
   margin: 60px auto 55px;
   width: 280px;
-  height: 375px;
+  min-height: 375px;
 }
 
 .editor-preview__img {
@@ -26,7 +26,7 @@
 
 @media (min-width: @tablet-width) {
   .editor {
-    height: 510px;
+    min-height: 510px;
   }
 
   .editor-preview {
@@ -36,18 +36,18 @@
   .editor-preview__img {
     background-image: url("../img/photo-7-tablet.jpg");
     width: 300px;
-    height: 400px;
+    min-height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .editor {
-    height: 550px;
+    min-height: 550px;
   }
 
   .editor-preview__img {
     background-image: url("../img/photo-7-desktop.jpg");
     width: 300px;
-    height: 400px;
+    min-height: 400px;
   }
 }
