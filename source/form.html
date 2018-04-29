@@ -2,17 +2,16 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Pink</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <header class="header header--photo">
+      <div class="main-nav__menu">
         <nav class="main-nav">
-          <div class="main-nav__menu">
-            <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="PINK logo">
-            <button class="main-nav__menu-button main-nav__menu-button--close"><span class="visually-hidden">Меню</span></button>
-          </div>
+          <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="PINK logo">
+          <button class="main-nav__menu-button main-nav__menu-button--close"><span class="visually-hidden">Меню</span></button>
           <ul class="main-nav__sub-menu">
             <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
@@ -20,11 +19,13 @@
             <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
           </ul>
         </nav>
-      </header>
-      <main class="page-main">
-        <section class="form">
+      </div>
+    </header>
+    <main class="page-main">
+        <section class="page-main__form">
+        <h3 class="page-main__header">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<br><span class="form__intstructions">Пожалуйста заполните форму ниже:</span></h3>
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset--name">
               <legend class="form__legend visually-hidden">Ваше имя</legend>
               <div>
                 <label class="form__label form__label--contact" for="last-name">Фамилия:</label>
@@ -40,7 +41,8 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--achievments">
-              <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="form__legend form__legend--hidden ">Ваши безбашенные достижения в путешествии</legend>
+              <label class="fieldset__label" for="achievments">Ваши безбашенные достижения в путешествии</label>
               <div class="form__item">
                 <input class="form__input form__input--checked" type="checkbox" id="selfie" name="achievments" value="shark selfie" checked>
                 <label class="form__label" for="selfie">Сделал селфи с акулой</label>
@@ -66,8 +68,8 @@
                 <label class="form__label" for="hotel">Разгромил отель</label>
               </div>
             </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__legend visually-hidden">Ваши контакты</legend>
+            <fieldset class="form__fieldset form__fieldset--contact-data">
+              <legend class="form__legend form__legend--hidden">Ваши контакты</legend>
               <div>
                 <label class="form__label form__label--contact" for="tel">Номер телефона:</label>
                 <input class="form__input form__input--text" id="tel" type="tel" name="tel" value="" placeholder="Номер, пожалуйста">
@@ -78,7 +80,7 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--app">
-              <legend class="form__legend visually-hidden">С каким приложением путешествовали?</legend>
+              <legend class="form__legend form__legend--hidden">С каким приложением путешествовали?</legend>
               <label class="form__label" for="app">С каким приложением путешествовали?</label>
               <div class="form__item">
                 <input class="form__input form__input--checked" type="radio" id="ios" name="app" value="ios" checked>
@@ -93,25 +95,25 @@
                 <label class="form__label" for="win">Windows Phone</label>
               </div>
             </fieldset>
-            <fieldset class="form__fieldset">
-              <label class="form__label" for="emotions">Опишите свои эмоции:</label>
+            <fieldset class="form__fieldset form__fieldset--emotions">
+              <legend class="form__legend form__legend--hidden">С каким приложением путешествовали?</legend>
+              <label class="fieldset__label" for="emotions">Опишите свои эмоции:</label>
               <input class="form__input-textarea" type="textarea" name="emotions" value="" placeholder="Можно прям в красках, не стесняясь в выражениях">
             </fieldset>
           </form>
           <button class="button" type="submit" name="button">Отправить форму</button>
           <span><sup>*</sup>- Обязательные поля</span>
         </section>
-      </main>
-      <footer class="footer">
-      <img class="footer__logo" src="img/logo-pink-footer-mobile.svg" alt="PINK logo">
-      <ul class="footer__social">
+    </main>
+    <footer class="footer">
+    <img class="footer__logo" src="img/logo-pink-footer-mobile.svg" alt="PINK logo">
+    <ul class="footer__social">
         <li class="footer__social-item"><a href=""><span class="">Twetter</span></a></li>
         <li class="footer__social-item"><a href=""><span class="">Facebook</span></a></li>
         <li class="footer__social-item"><a href=""><span class="">Youtube</span></a></li>
       </ul>
-      <a class="footer__developed">Раработано
-      <img src="img/htmlacademy.svg" alt="" class="footer_developed-logo" width="35" height="35"></a>
+    <a class="footer__developed">Раработано
+    <img src="img/htmlacademy.svg" alt="" class="footer_developed-logo" width="35" height="35"></a>
     </footer>
-    </div>
   </body>
 </html>

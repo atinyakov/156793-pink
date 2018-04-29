@@ -1,49 +1,163 @@
 .form {
   font-size: 18px;
   line-height: 30px;
-}
+  display: flex;
+  flex-direction: column;
 
-.form__item {
-  height: 40px;
+  &__item {
+    min-height: 40px;
+    margin-bottom: 42px;
+  }
+
+  &__intstructions {
+    display: none;
+  }
 }
 
 .form__fieldset {
   border: 0;
+  margin: 0;
+  padding: 0 20px 40px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--name {
+    order: 1;
+    min-height: 540px;
+  }
+
+  &--contact-data {
+    order: 3;
+  }
+
+  &--app {
+    order: 4;
+    background-color: @light-background;
+    min-height: 340px;
+  }
+
+  &--achievments {
+    order: 2;
+    background-color: @light-background;
+    min-height: 600px;
+  }
+
+  &--emotions {
+    order: 5;
+  }
 }
 
 .form__input--text {
   width: 280px;
-  color: #283645;
+  color: @dark-background;
   font-size: 18px;
+  height: 60px;
 }
 
 .form__input-textarea {
   width: 280px;
-  height: 200px;
+  min-height: 200px;
+}
+
+.fieldset__label {
+  color: @pink;
 }
 
 .form__label--contact,
 .form__legend {
-  color: #d22856;
+  color: @pink;
   text-transform: uppercase;
   font-size: 14px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.form__fieldset--achievments,
-.form__fieldset--app {
-  background-color: #f2f2f2;
+.form__label--contact {
+  padding-left: 20px;
+  margin-bottom: 5px;
 }
 
-.form__fieldset--app {
-  min-height: 340px;
+@media (min-width: @tablet-width) {
+  .form__label--contact {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .form__input--text {
+    width: 100%;
+    margin: 10px 0 55px;
+  }
+
+  .form__fieldset {
+    div {
+      flex-direction: row;
+    }
+
+    &--app {
+      order: 2;
+    }
+
+    &--achievments {
+      order: 4;
+    }
+  }
+
+  .form__intstructions {
+    display: inline;
+  }
 }
 
-.form__fieldset--achievments {
-  min-height: 600px;
-  width: 280px;
-  margin: 0;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+@media (min-width: @desktop-width) {
+  .form {
+    width: 960px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .form__fieldset {
+    border: 2px solid @light-background;
+    width: 100%;
+
+    div {
+      flex-wrap: wrap;
+    }
+
+    &--app {
+      border: 2;
+      width: 450px;
+      padding: 0;
+      margin: 0;
+      background: none;
+    }
+
+    &--name {
+      border: 0;
+      width: 450px;
+    }
+
+    &--achievments {
+      order: 4;
+    }
+
+    &--emotions {
+      .fieldset__label {
+        display: none;
+      }
+    }
+  }
+
+  .form__legend--hidden {
+    display: inline;
+  }
+
+  .form__input-textarea {
+    width: 100%;
+  }
 }

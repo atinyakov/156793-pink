@@ -1,10 +1,44 @@
 .header {
   margin: 0;
   padding: 0;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60% auto, 100% auto;
+  background-position: 0 285px, top center;
+  min-height: 730px;
+  position: relative;
 }
 
 .header--photo {
   line-height: 24px;
+  min-height: 460px;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    background-image: url("../img/iphone-6.png"), url("../img/back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% auto;
+    background-position: bottom right, top center;
+  }
+
+  .header--photo {
+    min-height: 440px;
+    background-image: url("../img/back-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    min-height: 853px;
+    background-image: url("../img/back-desktop.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 120% auto;
+    background-position: top center;
+  }
+
+  .header--photo {
+    min-height: 390px;
+    background-size: 100% auto;
+  }
 }

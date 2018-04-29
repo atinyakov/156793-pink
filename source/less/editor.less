@@ -1,5 +1,5 @@
 .editor {
-  background-color: #f2f2f2;
+  background-color: @light-background;
   text-align: center;
   min-height: 760px;
 }
@@ -10,5 +10,44 @@
 }
 
 .editor-preview__button {
-  border-color: #d22856;
+  border-color: @pink;
+}
+
+.editor-preview__column {
+  margin: 60px auto 55px;
+  width: 280px;
+  min-height: 375px;
+}
+
+.editor-preview__img {
+  background-image: url("../img/photo-7-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .editor {
+    min-height: 510px;
+  }
+
+  .editor-preview {
+    display: flex;
+  }
+
+  .editor-preview__img {
+    background-image: url("../img/photo-7-tablet.jpg");
+    width: 300px;
+    min-height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor {
+    min-height: 550px;
+  }
+
+  .editor-preview__img {
+    background-image: url("../img/photo-7-desktop.jpg");
+    width: 300px;
+    min-height: 400px;
+  }
 }

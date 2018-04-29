@@ -1,17 +1,27 @@
 .contact-us {
   text-align: center;
   min-height: 615px;
-  color: #283645;
+  color: @dark-background;
 }
 
 .contat-us__slogan {
   font-size: 24px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-us__list {
   padding: 0;
   margin: 0 auto;
   list-style: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us__item {
+  width: 300px;
 }
 
 .contact-us__title {
@@ -19,6 +29,17 @@
 }
 
 .contact-us__content {
-  color: #d22856;
+  color: @pink;
   font-size: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .contact-us__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-us__item {
+    flex-grow: 1;
+  }
 }

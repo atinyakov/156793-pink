@@ -1,6 +1,6 @@
 .pricing {
-  background-color: #f2f2f2;
-  min-height: 380px;
+  background-color: @light-background;
+  min-height: 450px;
   text-align: center;
   margin: 0 auto;
   padding: 0;
@@ -13,9 +13,9 @@
 }
 
 .pricing__billing-plan {
-  background-color: #283645;
+  background-color: @dark-background;
   color: white;
-  height: 100px;
+  min-height: 100px;
 }
 
 .pricing__table {
@@ -25,4 +25,82 @@
 
 .pricing__table-row {
   height: 60px;
+}
+
+.pricing__table-cell {
+  width: 70px;
+}
+
+.pricing__table-cell--yes {
+  background-image: url("../img/yes.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pricing__table-cell--no {
+  background-image: url("../img/no.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pricing__plan-list--detailed {
+  display: none;
+}
+
+.pricing__table-row--header {
+  min-height: 100px;
+}
+
+.pricing__title,
+.pricing__price {
+  display: block;
+}
+
+.pricing__billing-plan--rowspanned {
+  display: table-caption;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .pricing {
+    min-height: 325px;
+  }
+
+  .pricing__table {
+    border: 1px solid black;
+  }
+
+  .pricing__table-cell {
+    width: 155px;
+  }
+
+  .pricing__plan-list--brief {
+    display: none;
+  }
+
+  .pricing__plan-list--detailed {
+    display: table;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pricing {
+    min-height: 440px;
+  }
+
+  .pricing__plan-list--brief {
+    display: none;
+  }
+
+  .pricing__table {
+    border: 1px solid black;
+  }
+
+  .pricing__table-cell {
+    width: 235px;
+  }
+
+  .pricing__plan-list--detailed {
+    display: table;
+  }
 }
