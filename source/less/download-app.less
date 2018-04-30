@@ -4,39 +4,56 @@
   bottom: 0;
   width: 100%;
   background-color: #1d2631;
-  height: 270px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  height: 269px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
   text-align: center;
+
+  &__description {
+    width: 240px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: 41px;
+    letter-spacing: -0.5px;
+    word-spacing: 2px;
+    line-height: 24px;
+    font-family: "Open Sans Light", "Arial", serif;
+  }
 }
 
 .download-app__download-button {
   border-color: white;
+  margin: 28px 20px;
+  line-height: 48px;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .download-app__list {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
   justify-content: space-around;
+  padding: 0;
+  margin: 32px auto 12px 44px;
+  width: 231px;
 }
 
 .download-app__item--apple {
   background-image: url("../img/logo-apple.svg");
   background-repeat: no-repeat;
   display: inline-block;
-  background-position: center;
-  width: 47px;
-  height: 60px;
+  background-position: center, 0;
+  width: 50px;
+  height: 56px;
 }
 
 .download-app__item--android {
   background-image: url("../img/logo-android.svg");
   background-repeat: no-repeat;
   display: inline-block;
-  background-position: center;
+  background-position: 3px, 5px;
   width: 45px;
   height: 60px;
 }
@@ -45,8 +62,8 @@
   background-image: url("../img/logo-microsoft.svg");
   background-repeat: no-repeat;
   display: inline-block;
-  background-position: center;
-  width: 45px;
+  background-position: 7px, 0;
+  width: 51px;
   height: 60px;
 }
 
@@ -62,18 +79,19 @@
 
 @media (min-width: @tablet-width) {
   .download-app {
-    height: 420px;
+    min-height: 420px;
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 20px;
     top: 100px;
     background-color: transparent;
   }
 
   .download-app__slogan--hidden {
     display: inline;
+    width: 200px;
+    margin: 0 auto;
   }
 }
 

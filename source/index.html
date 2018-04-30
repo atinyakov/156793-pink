@@ -8,10 +8,14 @@
   </head>
   <body>
     <header class="header">
-      <nav class="main-nav ">
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__menu">
-          <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="PINK logo">
-          <button class="main-nav__button main-nav__button--close"><span class="visually-hidden">Меню</span></button>
+            <picture>
+              <source class="main-nav__logo" media="(min-width: 940px)" srcset="img/logotype-white-desktop.png">
+              <source class="main-nav__logo" media="(min-width: 660px)" srcset="img/logotype-white-tablet.png" width="174" height="auto">
+              <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" width="74" height="auto" alt="">
+            </picture>
+          <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
           <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
             <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
@@ -28,14 +32,17 @@
             <li><a class="download-app__item download-app__item--android" href=""><span class="visually-hidden">Android</span></a></li>
             <li><a class="download-app__item download-app__item--windows" href=""><span class="visually-hidden">Windows</span></a></li>
           </ul>
-          <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+          <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
     </header>
 
     <main class="page-main">
       <section class="features">
         <h2 class="visually-hidden">Особенности приложения</h2>
-        <p class="features__description">Устали от серости мегаполиса?<br>  Нам есть, что вам<br>предложить!</p>
+        <div class="features__description-containter">
+          <p class="features__description">Устали от серости мегаполиса</p>
+          <p class="features__description">Нам есть, что вам предложить!</p>
+        </div>
         <ul class="features__features-list features-list">
           <li class="features-list__item">
             <div class="features-list__text">

@@ -1,14 +1,23 @@
 .features {
   text-align: center;
-  background: linear-gradient(0.475turn, #ffffff 30%, @light-background 30%);
+  background: linear-gradient(1.484turn, #ffffff 23%, @light-background 23%);
   min-height: 1005px;
   position: relative;
-}
+  z-index: -4;
 
-.features__description {
-  color: @dark-background;
-  font-size: 24px;
-  text-align: center;
+  &__description {
+    color: @dark-background;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 20px;
+    padding: 26px 0 0 0;
+    line-height: 30px;
+    letter-spacing: -0.4px;
+
+    &-containter {
+      margin-top: 16px;
+    }
+  }
 }
 
 .features__features-list {

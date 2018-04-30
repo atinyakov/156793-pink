@@ -1,15 +1,23 @@
 .reviews {
   text-align: center;
-  background: linear-gradient(0.48turn, #ffffff 90%, @light-background 90%);
-  min-height: 380px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  background: linear-gradient(0.49turn, #ffffff 80%, @light-background 80%);
+  min-height: 443px;
+  margin-top: -24px;
+
+  &__text {
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-top: 19px;
+    width: 280px;
+  }
 }
 
 .reviews__list {
   margin: 0;
+  margin-top: 7px;
   padding: 0;
+  padding-top: 47px;
   list-style: none;
 }
 
@@ -19,8 +27,9 @@
 }
 
 .reviews__author-name {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: bold;
 }
 
 .reviews__author-proffesion {
@@ -30,6 +39,9 @@
 @media (min-width: @tablet-width) {
   .reviews {
     min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .reviews__author-name {
