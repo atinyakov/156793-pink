@@ -1,6 +1,6 @@
 .features {
   text-align: center;
-  background: linear-gradient(1.484turn, #ffffff 23%, @light-background 23%);
+  background: linear-gradient(1.488turn, #ffffff 21%, @light-background 21%);
   min-height: 1005px;
   position: relative;
   z-index: -4;
@@ -28,10 +28,31 @@
 @media (min-width: @tablet-width) {
   .features {
     min-height: 1110px;
+
+    // &__features-list {
+    //   width: 310px;
+    //   margin-left: auto;
+    //   margin-right: 20px;
+    //   margin-top: 120px;
+    // }
+
+    &__description {
+      font-size: 40px;
+      letter-spacing: 0;
+
+      &-containter {
+        margin-top: 30px;
+        font-family: "Open Sans Light", "Arial", sans-serif;
+        font-weight: 300;
+      }
+    }
   }
 
-  .features__description {
-    font-size: 40px;
+  p.features__description:nth-child(2) {
+    width: 400px;
+    padding-top: 8px;
+    margin: 0 auto;
+    line-height: 49px;
   }
 }
 

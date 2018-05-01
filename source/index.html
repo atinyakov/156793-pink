@@ -40,7 +40,7 @@
       <section class="features">
         <h2 class="visually-hidden">Особенности приложения</h2>
         <div class="features__description-containter">
-          <p class="features__description">Устали от серости мегаполиса</p>
+          <p class="features__description">Устали от серости мегаполиса?</p>
           <p class="features__description">Нам есть, что вам предложить!</p>
         </div>
         <ul class="features__features-list features-list">
@@ -105,16 +105,25 @@
             </blockquote>
           </li>
         </ul>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle slider__toggle--active" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
+        <ul class="reviews__toggles slider__toggles">
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="slider-1" name="slide-page-1" checked="">
+            <label tabindex="0" for="slider-1"><span class="visually-hidden">1</span></label>
+          </li>
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="slider-2" name="slide-page-2">
+            <label tabindex="0" for="slider-2"><span class="visually-hidden">2</span></label>
+          </li>
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="slider-3" name="slide-page-3">
+            <label tabindex="0" for="slider-3"><span class="visually-hidden">3</span></label>
+          </li>
+        </ul>
       </section>
 
       <section class="pricing">
         <h2 class="visually-hidden">Наши цены</h2>
-        <ul class="pricing__plan-list pricing__plan-list--brief">
+        <!-- <ul class="pricing__plan-list pricing__plan-list--brief">
           <li class="pricing__item">
             <table class="pricing__table">
                   <div class="pricing__billing-plan pricing__billing-plan--rowspanned">
@@ -143,7 +152,7 @@
             <table>
             </table>
           </li>
-        </ul>
+        </ul> -->
         <table class="pricing__table pricing__plan-list--detailed">
           <tr class="pricing__table-row pricing__table-row--header">
             <td class="pricing__table-cell">&nbsp</td>
@@ -168,28 +177,37 @@
           </tr>
           <tr class="pricing__table-row">
             <th class="pricing__feature">Розовый фильтр</th>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
           </tr>
           <tr class="pricing__table-row">
             <th class="pricing__feature">Смайлики</th>
-            <td class="pricing__table-cell pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
+            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
           </tr>
           <tr class="pricing__table-row">
             <th class="pricing__feature">Комментарии</th>
-            <td class="pricing__table-cell pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
+            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
+            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
+            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
           </tr>
         </table>
-        <p class="pricing__toggles slider__toggles">
-          <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
-          <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">2</span></button>
-          <button class="slider__toggle" type="button"><span class="visually-hidden"></span>3</button>
-        </p>
+        <ul class="pricing__toggles slider__toggles">
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="price-1" name="price-1">
+            <label tabindex="0" for="price-1"><span class="visually-hidden">1</span></label>
+          </li>
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="price-2" name="price-2" checked="">
+            <label tabindex="0" for="price-2"><span class="visually-hidden">2</span></label>
+          </li>
+          <li class="slider__switcher">
+            <input class="slider__input-radio visually-hidden" type="radio" id="price-3" name="price-3">
+            <label tabindex="0" for="price-3"><span class="visually-hidden">3</span></label>
+          </li>
+        </ul>
       </section>
     </main>
 

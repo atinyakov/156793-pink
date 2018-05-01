@@ -81,17 +81,39 @@
   .download-app {
     min-height: 420px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     top: 100px;
     background-color: transparent;
+
+    &__download-button {
+      width: 300px;
+    }
+
+    &__list {
+      margin: 47px auto 12px 51px;
+      width: 237px;
+    }
+
+    &__description {
+      width: 304px;
+      margin: 30px auto;
+      font-size: 17px;
+      margin-left: 18px;
+      letter-spacing: 0.5px;
+      word-spacing: 0;
+    }
+  }
+
+  .download-app__slogan {
+    font-family: "Open Sans Light", "Arial", sans-serif;
+    padding-top: 103px;
+    font-weight: 300;
+    margin-left: 70px;
+    line-height: 48px;
+    width: 200px;
   }
 
   .download-app__slogan--hidden {
-    display: inline;
-    width: 200px;
-    margin: 0 auto;
+    display: block;
   }
 }
 
