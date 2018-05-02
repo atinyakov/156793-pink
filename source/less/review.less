@@ -1,6 +1,6 @@
 .reviews {
   text-align: center;
-  background: linear-gradient(0.49turn, #ffffff 80%, @light-background 80%);
+  background: linear-gradient(0.487turn, #ffffff 88%, #f2f2f2 88%);
   min-height: 442px;
   margin-top: -32px;
 
@@ -43,18 +43,44 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    min-height: 320px;
+    min-height: 397px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-  }
 
-  .reviews__author-name {
-    font-size: 20px;
-  }
 
-  .reviews__author-proffesion {
-    display: inline;
+    &__item {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+
+    &__list {
+      padding-top: 64px;
+    }
+
+    &__text {
+      width: 620px;
+      padding: 0 20px;
+      font-size: 18px;
+    }
+
+    &__author {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 53px;
+
+      &-name {
+        font-size: 20px;
+      }
+
+      &-proffesion {
+        display: inline;
+        font-style: normal;
+        font-size: 14px;
+      }
+    }
   }
 }
 

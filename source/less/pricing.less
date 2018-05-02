@@ -99,14 +99,30 @@
   .pricing {
     min-height: 325px;
 
+    &__wrapper {
+      padding-top: 33px;
+    }
+
+    &__toggles {
+      display: none;
+    }
+
     &__feature {
       display: table-cell;
+    }
+
+    &__billing-plan {
+      min-height: 79px;
     }
   }
 
   .pricing__table {
     width: 620px;
     margin: auto;
+
+    &-row {
+      height: 46px;
+    }
 
     &-cell {
       width: 155px;
