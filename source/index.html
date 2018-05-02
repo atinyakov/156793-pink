@@ -122,78 +122,52 @@
       </section>
 
       <section class="pricing">
-        <h2 class="visually-hidden">Наши цены</h2>
-        <!-- <ul class="pricing__plan-list pricing__plan-list--brief">
-          <li class="pricing__item">
-            <table class="pricing__table">
-                  <div class="pricing__billing-plan pricing__billing-plan--rowspanned">
-                    <span class="pricing__title">База</span>
-                    <span class="pricing__price">1,99 USD</span>
-                  </div>
-              <tr class="pricing__table-row">
-                <th class="pricing__feature">Розовый фильтр</th>
-                <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-              </tr>
-              <tr class="pricing__table-row">
-                <th class="pricing__feature">Смайлики</th>
-                <td class="pricing__table-cell pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-              </tr>
-              <tr class="pricing__table-row">
-                <th class="pricing__feature">Комментарии</th>
-                <td class="pricing__table-cell pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-              </tr>
-            </table>
-          </li>
-          <li class="plan-list__item visually-hidden">
-            <table>
-            </table>
-          </li>
-          <li class="plan-list__item visually-hidden">
-            <table>
-            </table>
-          </li>
-        </ul> -->
-        <table class="pricing__table pricing__plan-list--detailed">
-          <tr class="pricing__table-row pricing__table-row--header">
-            <td class="pricing__table-cell">&nbsp</td>
-            <td class="pricing__table-cell">
-              <div class="pricing__billing-plan">
-                <span class="pricing__title">База</span>
-                <span class="pricing__price">1,99 USD</span>
-              </div>
-            </td>
-            <td class="pricing__table-cell pricing__table-cell--hit">
-              <div class="pricing__billing-plan">
-                <span class="pricing__title">Стандарт</span>
-                <span class="pricing__price">3,99 USD</span>
-              </div>
-            </td>
-            <td class="pricing__table-cell">
-              <div class="pricing__billing-plan">
-                <span class="pricing__title">Анлим</span>
-                <span class="pricing__price">9,99 USD</span>
-              </div>
-            </td>
-          </tr>
-          <tr class="pricing__table-row">
-            <th class="pricing__feature">Розовый фильтр</th>
-            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-          </tr>
-          <tr class="pricing__table-row">
-            <th class="pricing__feature">Смайлики</th>
-            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-          </tr>
-          <tr class="pricing__table-row">
-            <th class="pricing__feature">Комментарии</th>
-            <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--no"><span class="visually-hidden">Нет</span></td>
-            <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="visually-hidden">Есть</span></td>
-          </tr>
-        </table>
+        <div class="pricing__wrapper">
+          <h2 class="visually-hidden">Наши цены</h2>
+          <table class="pricing__table pricing__plan-list--detailed">
+            <tr class="pricing__table-row pricing__table-row--header">
+              <td class="pricing__feature">
+                <span class="visually-hidden">Наши цены</span>
+              </td>
+              <td class="pricing__table-cell">
+                <div class="pricing__billing-plan">
+                  <span class="pricing__title">База</span>
+                  <span class="pricing__price">1,99 USD</span>
+                </div>
+              </td>
+              <td class="pricing__table-cell pricing__table-cell--hit">
+                <div class="pricing__billing-plan">
+                  <span class="pricing__title">Стандарт</span>
+                  <span class="pricing__price">3,99 USD</span>
+                </div>
+              </td>
+              <td class="pricing__table-cell">
+                <div class="pricing__billing-plan">
+                  <span class="pricing__title">Анлим</span>
+                  <span class="pricing__price">9,99 USD</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="pricing__table-row">
+              <th class="pricing__table-cell pricing__feature"><span class="pricing__table-cell-name">Розовый фильтр</span></th>
+              <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Розовый фильтр</span></td>
+              <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Розовый фильтр</span></td>
+              <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Розовый фильтр</span></td>
+            </tr>
+            <tr class="pricing__table-row">
+              <th class="pricing__table-cell pricing__feature"><span class="pricing__table-cell-name">Смайлики</span></th>
+              <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Смайлики</span></td>
+              <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Смайлики</span></td>
+              <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Смайлики</span></td>
+            </tr>
+            <tr class="pricing__table-row">
+              <th class="pricing__table-cell pricing__feature"><span class="pricing__table-cell-name">Комментарии</span></th>
+              <td class="pricing__table-cell pricing__table-column-2 pricing__table-cell--no"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Комментарии</span></td>
+              <td class="pricing__table-cell pricing__table-column-3 pricing__table-cell--no"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Комментарии</span></td>
+              <td class="pricing__table-cell pricing__table-column-4 pricing__table-cell--yes"><span class="pricing__table-cell-name pricing__table-cell-name--hidden">Комментарии</span></td>
+            </tr>
+          </table>
+        </div>
         <ul class="pricing__toggles slider__toggles">
           <li class="slider__switcher">
             <input class="slider__input-radio visually-hidden" type="radio" id="price-1" name="price-1">
