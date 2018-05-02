@@ -186,7 +186,7 @@
     </main>
 
     <footer class="contact-us footer footer--index">
-      <h2 class="contat-us__slogan">Остались вопросы?<br>Свяжитесь с нами!</h2>
+      <h2 class="contact-us__slogan">Остались вопросы?<br>Свяжитесь с нами!</h2>
       <ul class="contact-us__list">
         <li class="contact-us__item">
           <b class="contact-us__title">Звоните:</b>
@@ -201,7 +201,12 @@
           <p class="contact-us__content">ул. Большая<br>Конюшенная, 19/8</p>
         </li>
       </ul>
-      <img src="img" alt="" class="contact-us__map">
+      <!-- <img src="img" alt="" class="contact-us__map"> -->
+      <picture class="contact-us__map">
+        <source media="(min-width: 940px)" srcset="img/map.png">
+        <source media="(min-width: 660px)" srcset="img/map-tablet.png" width="" height="auto">
+        <img src="img/map-mobile.png" width="" height="" alt="Карта">
+      </picture>
       <div class="footer__more footer__more--index">
         <img class="footer__logo" src="img/logo-pink-footer-mobile.svg" alt="PINK logo">
         <ul class="footer__social">

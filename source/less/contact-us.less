@@ -4,38 +4,58 @@
   color: @dark-background;
 
   &__slogan {
-    font-size: 24px;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    padding-top: 44px;
-  }
+      background-color: white;
+      font-size: 24px;
+      font-family: "Open Sans", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      padding-top: 42px;
+      padding-bottom: 36px;
+      line-height: 29px;
+      letter-spacing: -0.5px;
+    }
 
-  &__list {
+    &__map {
+      position: absolute;
+      bottom: 0;
+      left: ~"calc(50% - 160px)";
+      z-index: -1;
+    }
+}
+
+.contact-us__list {
     padding: 0;
+    padding-bottom: 20px;
     margin: 0 auto;
     list-style: none;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
+    width: 320px;
+}
 
-  &__item {
-    width: 300px;
-  }
+.contact-us__item {
+  width: 280px;
+  padding: 0 20px;
+  margin-bottom: 24px;
+}
 
-  &__title {
-    font-size: 18px;
-  }
+.contact-us__title {
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  padding-left: 3px;
+}
 
-  &__content {
-    color: @pink;
-    font-size: 24px;
-  }
+.contact-us__content {
+  color: @pink;
+  font-size: 24px;
+  letter-spacing: -0.2px;
+  line-height: 28px;
+  margin: 0;
+  padding-top: 4px;
 }
 
 @media (min-width: @tablet-width) {
   .contact-us__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
