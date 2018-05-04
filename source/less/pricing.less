@@ -151,26 +151,31 @@
   .pricing__plan-list--brief {
     display: none;
   }
-
-  .pricing__plan-list--detailed {
-    display: table;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .pricing {
-    min-height: 440px;
+    min-height: 410px;
+    padding-top: 28px;
+
+    &__billing-plan {
+      min-height: 95px;
+    }
+
+    &__table {
+      width: 940px;
+
+      &-row {
+        height: 61px;
+      }
+
+      &-cell {
+        width: 235px;
+      }
+    }
   }
 
   .pricing__plan-list--brief {
     display: none;
-  }
-
-  .pricing__table-cell {
-    width: 235px;
-  }
-
-  .pricing__plan-list--detailed {
-    display: table;
   }
 }

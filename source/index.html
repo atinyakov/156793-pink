@@ -72,7 +72,7 @@
         <div class="features-list__item features-list__item--horizontal">
           <img class="features-list__img features-list__img--horizontal" width="298" height="345" src="img/24.png" alt="">
           <div class="features-list__text features-list__text--horizontal">
-            <p class="features-list__slogan features-list__slogan--horizontal">Эффект<br>на 24 часа!</p>
+            <p class="features-list__slogan features-list__slogan--horizontal">Эффект <br>на 24 часа!</p>
             <p class="features-list__description features-list__description--horizontal">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a href="#" class="features-list__link">Узнать больше об исследовании</a>
           </div>
@@ -81,26 +81,32 @@
 
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас</h2>
-        <ul class="reviews__list">
-          <li>
-            <blockquote class="reviews__item">
-              <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-          </li>
-          <li class="visually-hidden">
-            <blockquote class="reviews__item">
-              <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-          </li>
-          <li class="visually-hidden">
-            <blockquote class="reviews__item">
-              <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-          </li>
-        </ul>
+        <div class="reviews__wrapper">
+          <button class="reviews__nav-button">&lt;</button>
+          <div class="reviews__containter">
+            <ul class="reviews__list">
+              <li>
+                <blockquote class="reviews__item">
+                  <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+              </li>
+              <li class="visually-hidden">
+                <blockquote class="reviews__item">
+                  <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+              </li>
+              <li class="visually-hidden">
+                <blockquote class="reviews__item">
+                  <cite class="reviews__author"><span class="reviews__author-name">Николай Петров </span><span class="reviews__author-proffesion">25 лет, водитель трамвая</span></cite>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+          <button class="reviews__nav-button">&gt;</button>
+        </div>
         <ul class="reviews__toggles slider__toggles">
           <li class="slider__switcher">
             <input class="slider__input-radio visually-hidden" type="radio" id="slider-1" name="slide-page-1" checked="">
@@ -116,11 +122,10 @@
           </li>
         </ul>
       </section>
-
       <section class="pricing">
         <div class="pricing__wrapper">
           <h2 class="visually-hidden">Наши цены</h2>
-          <table class="pricing__table pricing__plan-list--detailed">
+          <table class="pricing__table">
             <tr class="pricing__table-row pricing__table-row--header">
               <td class="pricing__feature">
                 <span class="visually-hidden">Наши цены</span>
@@ -185,15 +190,15 @@
       <h2 class="contact-us__slogan">Остались вопросы?<br>Свяжитесь с нами!</h2>
       <div class="contact-us__footer-wrapper">
         <ul class="contact-us__list">
-        <li class="contact-us__item">
+        <li class="contact-us__item contact-us__item--left">
           <b class="contact-us__title">Звоните:</b>
           <p class="contact-us__content">+7 (812) 555-66-66</p>
         </li>
-        <li class="contact-us__item">
+        <li class="contact-us__item contact-us__item--right">
           <b class="contact-us__title">Пишите:</b>
           <p class="contact-us__content">mail@htmlacademy.ru</p>
         </li>
-        <li class="contact-us__item">
+        <li class="contact-us__item contact-us__item--middle">
           <b class="contact-us__title">Приезжайте в гости:</b>
           <p class="contact-us__content">ул. Большая<br>Конюшенная, 19/8</p>
         </li>
