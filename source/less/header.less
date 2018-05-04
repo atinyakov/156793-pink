@@ -18,7 +18,7 @@
   .header {
     background-image: url("../img/iphone-6.png"), url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-size: 100% auto, 100% auto;
+    background-size: 100% auto, cover;
     background-position: 0 184px, 0 -1px;
   }
 
@@ -31,10 +31,10 @@
 @media (min-width: @desktop-width) {
   .header {
     min-height: 853px;
-    background-image: url("../img/back-desktop.jpg");
+    background-image: url("../img/iphone-6.png"), url("../img/back-desktop.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-size: 120% auto;
-    background-position: top center;
+    background-size: 65% auto, cover;
+    background-position: 277px bottom, bottom center;
   }
 
   .header--photo {

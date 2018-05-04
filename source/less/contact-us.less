@@ -59,17 +59,45 @@
       left: ~"calc(50% - 330px)";
     }
 
+    &__footer-wrapper {
+      background: white;
+      margin: 0 auto;
+      width: 100%;
+
+      &--bottom {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
     &__list {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      width: 100%;
+      padding-top: 10px;
     }
 
     &__item {
       flex-grow: 1;
+      margin-bottom: 49px;
+    }
+
+    &__slogan {
+      font-size: 41px;
+      font-family: "Open Sans Light", "Arial", sans-serif;
+      font-weight: 300;
+      line-height: 47px;
+      padding-top: 45px;
+    }
+
+    &__content {
+      letter-spacing: -0.6px;
+      padding-top: 7px;
     }
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .contact-us {
