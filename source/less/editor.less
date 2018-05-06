@@ -1,25 +1,56 @@
 .editor {
   background-color: @light-background;
   text-align: center;
-  min-height: 760px;
+  margin: 40px 0;
+  padding-bottom: 33px;
 }
 
-.editor-preview__controls {
+.editor__button-container {
+  margin-top: 60px;
+}
+
+.editor__controls {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  padding: 0 36px 0 32px;
+  margin: 15px 0 25px;
 }
 
-.editor-preview__button {
+.editor__button {
   border-color: @pink;
+  color: @pink;
+  margin-bottom: 10px;
 }
 
-.editor-preview__column {
-  margin: 60px auto 55px;
+.editor__column {
   width: 280px;
-  min-height: 375px;
+  margin: 0 auto;
+  padding-top: 21px;
 }
 
-.editor-preview__img {
+.editor__control-button {
+  background-color: transparent;
+  border: none;
+  background-position: center, 0;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+
+  &--crop {
+    background-image: url("../img/icon-editor-crop.svg");
+  }
+
+  &--fill {
+    background-image: url("../img/icon-editor-fill.svg");
+  }
+
+  &--contrast {
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
+}
+
+.editor__img {
   background-image: url("../img/photo-7-mobile.jpg");
   background-repeat: no-repeat;
 }
@@ -29,25 +60,13 @@
     min-height: 510px;
   }
 
-  .editor-preview {
+  .editor__containern {
     display: flex;
-  }
-
-  .editor-preview__img {
-    background-image: url("../img/photo-7-tablet.jpg");
-    width: 300px;
-    min-height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .editor {
     min-height: 550px;
-  }
-
-  .editor-preview__img {
-    background-image: url("../img/photo-7-desktop.jpg");
-    width: 300px;
-    min-height: 400px;
   }
 }

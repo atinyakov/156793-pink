@@ -7,11 +7,29 @@
   background-position: -2px 173px, top left;
   min-height: 730px;
   position: relative;
+
+  &__slogan {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    top: 79px;
+    line-height: 29px;
+    font-size: 24px;
+    text-indent: 7px;
+  }
 }
 
-.header--photo {
+
+.header--not-index {
   line-height: 24px;
-  min-height: 460px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%, 0%;
+  min-height: 236px;
 }
 
 @media (min-width: @tablet-width) {
@@ -20,11 +38,24 @@
     background-repeat: no-repeat, no-repeat;
     background-size: 100% auto, cover;
     background-position: 0 184px, 0 -1px;
+
+    &__slogan {
+      top: 147px;
+      line-height: 59px;
+      font-size: 51px;
+      letter-spacing: -0.5px;
+      text-indent: 0;
+
+      br {
+        display: none;
+      }
+    }
   }
 
-  .header--photo {
+  .header--not-index {
     min-height: 440px;
     background-image: url("../img/back-tablet@1x.jpg");
+    background-position: 0% 0%;
   }
 }
 
@@ -37,7 +68,7 @@
     background-position: 277px bottom, bottom center;
   }
 
-  .header--photo {
+  .header--not-index {
     min-height: 390px;
     background-size: 100% auto;
   }

@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header header--photo">
-      <div class="main-nav__menu">
-        <nav class="main-nav">
-          <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="PINK logo">
-          <button class="main-nav__menu-button main-nav__menu-button--close"><span class="visually-hidden">Меню</span></button>
-          <ul class="main-nav__sub-menu">
+    <header class="header">
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__menu">
+            <picture>
+              <source class="main-nav__logo" media="(min-width: 940px)" srcset="img/logotype-white-desktop.png">
+              <source class="main-nav__logo" media="(min-width: 660px)" srcset="img/logotype-white-tablet.png" width="174" height="auto">
+              <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" width="74" height="auto" alt="">
+            </picture>
+          <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
+          <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
             <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main class="page-main">
         <section class="page-main__form">
