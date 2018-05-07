@@ -6,15 +6,28 @@
 }
 
 .editor__button-container {
-  margin-top: 60px;
+  margin-top: 112px;
 }
 
 .editor__controls {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  position: relative;
   padding: 0 36px 0 32px;
   margin: 15px 0 25px;
+}
+
+.editor__input {
+  display: none;
+
+  &--visible {
+    display: block;
+    position: absolute;
+    left: ~"calc(50% - 120px)";
+    top: 77px;
+    width: 240px;
+  }
 }
 
 .editor__button {
@@ -36,6 +49,8 @@
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
 
   &--crop {
     background-image: url("../img/icon-editor-crop.svg");
@@ -50,23 +65,91 @@
   }
 }
 
-.editor__img {
-  background-image: url("../img/photo-7-mobile.jpg");
-  background-repeat: no-repeat;
-}
-
 @media (min-width: @tablet-width) {
   .editor {
-    min-height: 510px;
-  }
+    padding-bottom: 0;
 
-  .editor__containern {
-    display: flex;
+    &__button {
+      margin-bottom: 23px;
+      width: 260px;
+
+      &-container {
+        margin-top: 69px;
+      }
+    }
+
+    &__column {
+      width: 300px;
+      padding-top: 21px;
+    }
+
+    &__container {
+      display: flex;
+      padding: 36px 10px 32px;
+    }
+
+    &__controls {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+
+      input {
+        display: inline-block;
+        width: 201px;
+      }
+    }
+
+    &__control-button {
+      height: 66px;
+    }
+
+    &__input {
+      display: inline-block;
+
+      &--visible {
+        display: inline-block;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 130px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .editor {
-    min-height: 550px;
+    margin-bottom: 103px;
+
+    &__button {
+      width: 190px;
+
+      &__container {
+        display: flex;
+        margin-top: 143px;
+        justify-content: space-between;
+        width: 420px;
+      }
+    }
+
+    &__column {
+      width: 470px;
+      margin: 0;
+    }
+
+    &__control-button {
+      padding: 0 36px 0 0;
+      background-position: 0 0;
+    }
+
+    &__controls {
+      input {
+        width: 290px;
+      }
+
+      li {
+        width: 400px;
+      }
+    }
   }
 }

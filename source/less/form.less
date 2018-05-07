@@ -4,6 +4,71 @@
   display: flex;
   flex-direction: column;
 
+  &__fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0 0 30px;
+
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding-left: 4px;
+      margin-bottom: 13px;
+    }
+
+    &--name {
+      order: 1;
+      margin-left: ~"calc(50% - 143px)";
+    }
+
+    &--contact-data {
+      order: 3;
+      margin-left: ~"calc(50% - 143px)";
+      padding-top: 28px;
+    }
+
+    &--app {
+      order: 4;
+      background-color: @light-background;
+      min-height: 340px;
+
+      .form__label {
+        margin-left: ~"calc(50% - 113px)";
+      }
+    }
+
+    &--achievments {
+      order: 2;
+      background-color: @light-background;
+      padding: 0;
+
+      div {
+        padding-left: 28px;
+        margin: 0 auto 42px;
+      }
+
+      .form__label {
+        margin-left: ~"calc(50% - 113px)";
+      }
+    }
+
+    &--emotions {
+      order: 5;
+    }
+  }
+
+  &__header {
+    display: block;
+    color: @pink;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 37px;
+    line-height: 19px;
+    margin-bottom: 38px;
+  }
+
   &__item {
     min-height: 40px;
     margin-bottom: 42px;
@@ -12,103 +77,107 @@
   &__intstructions {
     display: none;
   }
-}
 
-.form__fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0 20px 40px;
+  &__input {
+    &--text {
+      color: @dark-background;
+      font-size: 18px;
+      height: 56px;
+      width: 255px;
+      padding-left: 19px;
+    }
 
-  div {
-    display: flex;
-    flex-direction: column;
+    &--textarea {
+      width: 280px;
+      min-height: 200px;
+    }
   }
 
-  &--name {
-    order: 1;
-    min-height: 540px;
+  &__label {
+    color: @pink;
+    line-height: 34px;
+    padding-left: 28px;
+
+    &--contact {
+      text-transform: uppercase;
+      font-size: 14px;
+      padding-left: 22px;
+      margin-bottom: 5px;
+    }
   }
 
-  &--contact-data {
-    order: 3;
-  }
+  &__legend {
+    color: @pink;
+    text-transform: uppercase;
+    font-size: 14px;
 
-  &--app {
-    order: 4;
-    background-color: @light-background;
-    min-height: 340px;
-  }
-
-  &--achievments {
-    order: 2;
-    background-color: @light-background;
-    min-height: 600px;
-  }
-
-  &--emotions {
-    order: 5;
-  }
-}
-
-.form__input--text {
-  width: 280px;
-  color: @dark-background;
-  font-size: 18px;
-  height: 60px;
-}
-
-.form__input-textarea {
-  width: 280px;
-  min-height: 200px;
-}
-
-.fieldset__label {
-  color: @pink;
-}
-
-.form__label--contact,
-.form__legend {
-  color: @pink;
-  text-transform: uppercase;
-  font-size: 14px;
-
-  &--hidden {
-    display: none;
+    &--hidden {
+      display: none;
+    }
   }
 }
 
-.form__label--contact {
-  padding-left: 20px;
-  margin-bottom: 5px;
+.form__checkbox:checked + .form__label::before {
+  background-image: url("../img/tick.png");
+}
+
+.form__checkbox + .form__label::before {
+  content: "";
+  position: absolute;
+  left: ~"calc(50% - 141px)";
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  background-image: url("../img/no-tick.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.form__radio:checked + .form__label::before {
+  background-image: url("../img/tick-radio.png");
+}
+
+.form__radio + .form__label::before {
+  content: "";
+  position: absolute;
+  left: ~"calc(50% - 141px)";
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  background-image: url("../img/tick-radio-empty.png");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 @media (min-width: @tablet-width) {
-  .form__label--contact {
-    padding-left: 0;
-    padding-right: 20px;
-  }
-
-  .form__input--text {
-    width: 100%;
-    margin: 10px 0 55px;
-  }
-
-  .form__fieldset {
-    div {
-      flex-direction: row;
+  .form {
+    &__label--contact {
+      padding-left: 0;
+      padding-right: 20px;
     }
 
-    &--app {
-      order: 2;
+    &__input--text {
+      width: 100%;
+      margin: 10px 0 55px;
     }
 
-    &--achievments {
-      order: 4;
-    }
-  }
+    &__fieldset {
+      div {
+        flex-direction: row;
+      }
 
-  .form__intstructions {
-    display: inline;
+      &--app {
+        order: 2;
+      }
+
+      &--achievments {
+        order: 4;
+      }
+    }
+
+    &__intstructions {
+      display: inline;
+    }
   }
 }
 
@@ -119,45 +188,45 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-  }
 
-  .form__fieldset {
-    border: 2px solid @light-background;
-    width: 100%;
+    &__fieldset {
+      border: 2px solid @light-background;
+      width: 100%;
 
-    div {
-      flex-wrap: wrap;
-    }
+      div {
+        flex-wrap: wrap;
+      }
 
-    &--app {
-      border: 2;
-      width: 450px;
-      padding: 0;
-      margin: 0;
-      background: none;
-    }
+      &--app {
+        border: 2;
+        width: 450px;
+        padding: 0;
+        margin: 0;
+        background: none;
+      }
 
-    &--name {
-      border: 0;
-      width: 450px;
-    }
+      &--name {
+        border: 0;
+        width: 450px;
+      }
 
-    &--achievments {
-      order: 4;
-    }
+      &--achievments {
+        order: 4;
+      }
 
-    &--emotions {
-      .fieldset__label {
-        display: none;
+      &--emotions {
+        .fieldset__label {
+          display: none;
+        }
       }
     }
-  }
 
-  .form__legend--hidden {
-    display: inline;
-  }
+    &__input--textarea {
+      width: 100%;
+    }
 
-  .form__input-textarea {
-    width: 100%;
+    &__legend--hidden {
+      display: inline;
+    }
   }
 }
