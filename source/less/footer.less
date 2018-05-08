@@ -5,19 +5,17 @@
 
 .footer--index {
   min-height: 615px;
-  background-image: url("../img/map-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
 }
 
 .footer__social {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
+  padding: 0;
+  width: 180px;
 }
 
 .footer__more {
-  background-color: white;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -25,30 +23,66 @@
 
 .footer__more--index {
   display: none;
-  position: absolute;
-  bottom: 0;
+}
+
+.footer__social-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+
+.footer__social-item--youtube {
+  background-image: url("../img/icon-youtube.svg");
+}
+
+.footer__social-item--facebook {
+  background-image: url("../img/icon-facebook.svg");
+}
+
+.footer__social-item--twitter {
+  background-image: url("../img/icon-twitter.svg");
+}
+
+.footer--not-index {
+  flex-direction: column;
+  display: flex;
+  min-height: 208px;
+  justify-content: space-between;
+  padding-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {
   .footer--index {
     min-height: 905px;
-    background-image: url("../img/map-tablet.png");
   }
 
-  .footer__more--index {
+  .footer__more {
     display: flex;
     min-height: 130px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .footer--not-index {
+    flex-direction: row;
+    padding: 0;
+    align-items: flex-start;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer--index {
     min-height: 1067px;
-    background-image: url("../img/map.png");
+    overflow: hidden;
   }
 
-  .footer__more--index {
-    display: flex;
+  .footer__more {
+    width: 900px;
     min-height: 197px;
   }
 }

@@ -2,44 +2,141 @@
   text-align: center;
   min-height: 615px;
   color: @dark-background;
-}
 
-.contat-us__slogan {
-  font-size: 24px;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-}
+  &__slogan {
+    background-color: white;
+    font-size: 24px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 42px;
+    padding-bottom: 36px;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+  }
 
-.contact-us__list {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+  &__map {
+    position: absolute;
+    bottom: 0;
+    left: ~"calc(50% - 160px)";
+    z-index: -1;
+  }
+
+  &__list {
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    list-style: none;
+    background-color: white;
+    width: 320px;
+  }
 }
 
 .contact-us__item {
-  width: 300px;
+  width: 280px;
+  padding: 0 20px;
+  margin-bottom: 24px;
 }
 
 .contact-us__title {
   font-size: 18px;
+  letter-spacing: 0.8px;
+  padding-left: 3px;
 }
 
 .contact-us__content {
   color: @pink;
   font-size: 24px;
+  letter-spacing: -0.2px;
+  line-height: 28px;
+  margin: 0;
+  padding-top: 4px;
 }
 
 @media (min-width: @tablet-width) {
-  .contact-us__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  .contact-us {
+    &__map {
+      left: ~"calc(50% - 330px)";
+    }
 
-  .contact-us__item {
-    flex-grow: 1;
+    &__footer-wrapper {
+      background: white;
+      margin: 0 auto;
+      width: 100%;
+
+      &--bottom {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 10px;
+    }
+
+    &__item {
+      flex-grow: 1;
+      margin-bottom: 49px;
+    }
+
+    &__slogan {
+      font-size: 41px;
+      font-family: "Open Sans Light", "Arial", sans-serif;
+      font-weight: 300;
+      line-height: 47px;
+      padding-top: 45px;
+    }
+
+    &__content {
+      letter-spacing: -0.6px;
+      padding-top: 7px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .contact-us {
+    &__content {
+      padding-top: 26px;
+    }
+
+    &__map {
+      left: ~"calc(50% - 600px)";
+    }
+
+    &__slogan {
+      font-size: 51px;
+      line-height: 60px;
+      padding-top: 64px;
+    }
+
+    &__item {
+      flex-grow: 0;
+      margin-bottom: 0;
+
+      &--left {
+        order: 1;
+      }
+
+      &--middle {
+        order: 2;
+      }
+
+      &--right {
+        order: 3;
+      }
+    }
+
+    &__list {
+      flex-wrap: nowrap;
+      padding-top: 23px;
+      width: 960px;
+      justify-content: space-between;
+    }
   }
 }

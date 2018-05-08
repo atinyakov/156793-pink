@@ -1,0 +1,33 @@
+.slider__toggles {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 74px;
+  // margin: 0 auto;
+  // padding: 0;
+}
+
+.slider__switcher label {
+  display: block;
+  cursor: pointer;
+}
+
+.slider__input-radio:checked + label::before {
+  background-image: url("../img/slider__button.png");
+  width: 20px;
+  height: 20px;
+  background-size: 12px 12px;
+}
+
+.slider__input-radio + label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/slider__button--empty.png");
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+  background-position: center;
+  border-radius: 50%;
+}

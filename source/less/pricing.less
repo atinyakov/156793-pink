@@ -1,9 +1,24 @@
 .pricing {
   background-color: @light-background;
-  min-height: 450px;
+  // min-height: 450px;
   text-align: center;
   margin: 0 auto;
   padding: 0;
+
+  &__wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__toggles {
+    margin-top: 35px;
+    margin-left: ~"calc(50% - 74px)";
+    padding-bottom: 45px;
+  }
+
+  &__feature {
+    display: none;
+  }
 }
 
 .pricing__plan-list {
@@ -15,12 +30,16 @@
 .pricing__billing-plan {
   background-color: @dark-background;
   color: white;
-  min-height: 100px;
+  min-height: 97px;
+  text-align: center;
 }
 
 .pricing__table {
   border-collapse: collapse;
-  width: 100%;
+  width: 840px;
+  margin-left: ~"calc(50% - 418px)";
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .pricing__table-row {
@@ -28,32 +47,47 @@
 }
 
 .pricing__table-cell {
-  width: 70px;
-}
-
-.pricing__table-cell--yes {
-  background-image: url("../img/yes.png");
+  width: 280px;
+  background-color: white;
+  background-position: 230px center;
   background-repeat: no-repeat;
-  background-position: center;
-}
+  padding: 0;
+  border: 2px solid #f2f2f2;
 
-.pricing__table-cell--no {
-  background-image: url("../img/no.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  &-name {
+    padding: 0 0 0 21px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-.pricing__plan-list--detailed {
-  display: none;
+  &--yes {
+    background-image: url("../img/yes.png");
+  }
+
+  &--no {
+    background-image: url("../img/no.png");
+  }
 }
 
 .pricing__table-row--header {
-  min-height: 100px;
+  min-height: 120px;
 }
 
 .pricing__title,
 .pricing__price {
   display: block;
+}
+
+.pricing__title {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  padding-top: 21px;
+  letter-spacing: 1.2px;
+}
+
+.pricing__price {
+  padding-top: 8px;
+  font-size: 24px;
+  font-family: "Open Sans Light", "Arial", sans-serif;
 }
 
 .pricing__billing-plan--rowspanned {
@@ -64,43 +98,84 @@
 @media (min-width: @tablet-width) {
   .pricing {
     min-height: 325px;
+
+    &__wrapper {
+      padding-top: 33px;
+    }
+
+    &__toggles {
+      display: none;
+    }
+
+    &__feature {
+      display: table-cell;
+    }
+
+    &__billing-plan {
+      min-height: 79px;
+    }
+
+    &__title {
+      padding-top: 18px;
+      letter-spacing: normal;
+    }
+
+    &__price {
+      font-size: 18px;
+    }
   }
 
   .pricing__table {
-    border: 1px solid black;
-  }
+    width: 620px;
+    margin: auto;
 
-  .pricing__table-cell {
-    width: 155px;
+    &-row {
+      height: 46px;
+    }
+
+    &-cell {
+      width: 155px;
+      background-position: center;
+
+      &-name {
+        text-transform: none;
+        font-weight: 400;
+
+        &--hidden {
+          display: none;
+        }
+      }
+    }
   }
 
   .pricing__plan-list--brief {
     display: none;
-  }
-
-  .pricing__plan-list--detailed {
-    display: table;
   }
 }
 
 @media (min-width: @desktop-width) {
   .pricing {
-    min-height: 440px;
+    min-height: 410px;
+    padding-top: 28px;
+
+    &__billing-plan {
+      min-height: 95px;
+    }
+
+    &__table {
+      width: 940px;
+
+      &-row {
+        height: 61px;
+      }
+
+      &-cell {
+        width: 235px;
+      }
+    }
   }
 
   .pricing__plan-list--brief {
     display: none;
-  }
-
-  .pricing__table {
-    border: 1px solid black;
-  }
-
-  .pricing__table-cell {
-    width: 235px;
-  }
-
-  .pricing__plan-list--detailed {
-    display: table;
   }
 }

@@ -1,53 +1,155 @@
 .editor {
   background-color: @light-background;
   text-align: center;
-  min-height: 760px;
+  margin: 40px 0;
+  padding-bottom: 33px;
 }
 
-.editor-preview__controls {
+.editor__button-container {
+  margin-top: 112px;
+}
+
+.editor__controls {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 36px 0 32px;
+  margin: 15px 0 25px;
 }
 
-.editor-preview__button {
+.editor__input {
+  display: none;
+
+  &--visible {
+    display: block;
+    position: absolute;
+    left: ~"calc(50% - 120px)";
+    top: 77px;
+    width: 240px;
+  }
+}
+
+.editor__button {
   border-color: @pink;
+  color: @pink;
+  margin-bottom: 10px;
 }
 
-.editor-preview__column {
-  margin: 60px auto 55px;
+.editor__column {
   width: 280px;
-  min-height: 375px;
+  margin: 0 auto;
+  padding-top: 21px;
 }
 
-.editor-preview__img {
-  background-image: url("../img/photo-7-mobile.jpg");
+.editor__control-button {
+  background-color: transparent;
+  border: none;
+  background-position: center, 0;
+  width: 50px;
+  height: 50px;
   background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+
+  &--crop {
+    background-image: url("../img/icon-editor-crop.svg");
+  }
+
+  &--fill {
+    background-image: url("../img/icon-editor-fill.svg");
+  }
+
+  &--contrast {
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .editor {
-    min-height: 510px;
-  }
+    padding-bottom: 0;
 
-  .editor-preview {
-    display: flex;
-  }
+    &__button {
+      margin-bottom: 23px;
+      width: 260px;
 
-  .editor-preview__img {
-    background-image: url("../img/photo-7-tablet.jpg");
-    width: 300px;
-    min-height: 400px;
+      &-container {
+        margin-top: 69px;
+      }
+    }
+
+    &__column {
+      width: 300px;
+      padding-top: 21px;
+    }
+
+    &__container {
+      display: flex;
+      padding: 36px 10px 32px;
+    }
+
+    &__controls {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+
+      input {
+        display: inline-block;
+        width: 201px;
+      }
+    }
+
+    &__control-button {
+      height: 66px;
+    }
+
+    &__input {
+      display: inline-block;
+
+      &--visible {
+        display: inline-block;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 130px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .editor {
-    min-height: 550px;
-  }
+    margin-bottom: 103px;
 
-  .editor-preview__img {
-    background-image: url("../img/photo-7-desktop.jpg");
-    width: 300px;
-    min-height: 400px;
+    &__button {
+      width: 190px;
+
+      &__container {
+        display: flex;
+        margin-top: 143px;
+        justify-content: space-between;
+        width: 420px;
+      }
+    }
+
+    &__column {
+      width: 470px;
+      margin: 0;
+    }
+
+    &__control-button {
+      padding: 0 36px 0 0;
+      background-position: 0 0;
+    }
+
+    &__controls {
+      input {
+        width: 290px;
+      }
+
+      li {
+        width: 400px;
+      }
+    }
   }
 }
