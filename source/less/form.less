@@ -3,12 +3,24 @@
   line-height: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  &__button {
+    display: block;
+    margin: 6px auto;
+    background-color: green;
+    width: 286px;
+    line-height: 24px;
+    font-size: 19px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    min-height: 71px;
+  }
 
   &__fieldset {
     border: 0;
     margin: 0;
     padding: 0 0 30px;
-
 
     div {
       display: flex;
@@ -19,26 +31,45 @@
 
     &--name {
       order: 1;
-      margin-left: ~"calc(50% - 143px)";
+      // margin-left: ~"calc(50% - 143px)";
     }
 
     &--contact-data {
       order: 3;
-      margin-left: ~"calc(50% - 143px)";
+      // margin-left: ~"calc(50% - 143px)";
       padding-top: 28px;
     }
 
     &--app {
+      width: 100%;
       order: 4;
       background-color: @light-background;
-      min-height: 340px;
+      padding: 0 0 7px;
 
-      .form__label {
-        margin-left: ~"calc(50% - 113px)";
+      .form__item {
+        margin-bottom: 34px;
+      }
+
+      div {
+        margin-bottom: 34px;
+      }
+
+      .form__header {
+        margin-bottom: 36px;
+      }
+    }
+
+    &--emotions {
+      padding: 0 21px 30px;
+      order: 5;
+
+      .form__header {
+        margin-bottom: 17px;
       }
     }
 
     &--achievments {
+      width: 100%;
       order: 2;
       background-color: @light-background;
       padding: 0;
@@ -47,14 +78,6 @@
         padding-left: 28px;
         margin: 0 auto 42px;
       }
-
-      .form__label {
-        margin-left: ~"calc(50% - 113px)";
-      }
-    }
-
-    &--emotions {
-      order: 5;
     }
   }
 
@@ -70,8 +93,19 @@
   }
 
   &__item {
+    position: relative;
     min-height: 40px;
     margin-bottom: 42px;
+    width: 280px;
+
+    &-containter {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__intstructions {
@@ -88,15 +122,16 @@
     }
 
     &--textarea {
-      width: 280px;
-      min-height: 200px;
+      padding: 14px 19px;
+      line-height: 31px;
+      width: 238px;
+      min-height: 170px;
     }
   }
 
   &__label {
-    color: @pink;
+    padding-left: 71px;
     line-height: 34px;
-    padding-left: 28px;
 
     &--contact {
       text-transform: uppercase;
@@ -115,6 +150,15 @@
       display: none;
     }
   }
+
+  &__notice {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 37px 0 64px;
+    font-size: 14px;
+  }
 }
 
 .form__checkbox:checked + .form__label::before {
@@ -124,7 +168,7 @@
 .form__checkbox + .form__label::before {
   content: "";
   position: absolute;
-  left: ~"calc(50% - 141px)";
+  left: 0;
   display: inline-block;
   width: 50px;
   height: 40px;
@@ -140,7 +184,8 @@
 .form__radio + .form__label::before {
   content: "";
   position: absolute;
-  left: ~"calc(50% - 141px)";
+  left: 0;
+  top: -3px;
   display: inline-block;
   width: 50px;
   height: 40px;
@@ -151,32 +196,152 @@
 
 @media (min-width: @tablet-width) {
   .form {
+    margin-bottom: 57px;
+
+    &__button {
+      width: 574px;
+    }
+
     &__label--contact {
       padding-left: 0;
       padding-right: 20px;
     }
 
+    &__legend {
+      &--hidden {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &__item {
+      &-containter {
+        margin-left: 59px;
+        margin-top: 42px;
+        align-items: flex-start;
+      }
+    }
+
     &__input--text {
       width: 100%;
-      margin: 10px 0 55px;
+      margin: 10px 0 43px;
     }
 
     &__fieldset {
       div {
+        padding-left: 0;
+        margin: 0 20px;
         flex-direction: row;
       }
 
       &--app {
         order: 2;
+        border: 2px solid #f2f2f2;
+        width: 620px;
+        margin: 0 auto 53px;
+        background-color: transparent;
+        min-height: 300px;
+
+        .form__header {
+          display: none;
+        }
+
+        .form__label {
+          padding-left: 60px;
+        }
       }
 
       &--achievments {
         order: 4;
+        background-color: transparent;
+        border: 2px solid #f2f2f2;
+        width: 620px;
+        margin-bottom: 50px;
+
+        .form {
+          &__header {
+            display: none;
+          }
+
+          &__item {
+            &-containter {
+              margin-left: 60px;
+              margin-top: 37px;
+            }
+          }
+
+          &__label {
+            padding-left: 60px;
+          }
+        }
+      }
+
+      &--contact-data {
+        border: 2px solid #f2f2f2;
+        width: 620px;
+        padding-bottom: 0;
+        margin-bottom: 51px;
+
+        div {
+          margin: 0;
+          padding: 0;
+          display: block;
+        }
+
+        .form__input-wrapper {
+          display: flex;
+          flex-direction: column-reverse;
+          margin: 0 61px 19px;
+        }
+
+        .form__input {
+          margin: 4px 0 8px;
+          width: ~"calc( 100% - 21px)";
+        }
+
+        .form__label {
+          padding-left: 18px;
+          color: @pink;
+        }
+      }
+
+      &--name {
+        padding: 0 0 9px;
+        width: 100%;
+      }
+
+      &--emotions {
+        border: 2px solid #f2f2f2;
+        width: 620px;
+        padding: 0;
+
+        .form__header {
+          display: none;
+        }
+
+        .form__input {
+          margin: 32px 60px 45px;
+          width: 460px;
+          min-height: 160px;
+        }
       }
     }
 
     &__intstructions {
       display: inline;
+    }
+
+    &__submit {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 620px;
+      margin: 0 auto;
+      margin-bottom: 77px;
+    }
+
+    &__notice {
+      margin: 0;
     }
   }
 }
@@ -188,6 +353,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
+    margin-bottom: 50px;
 
     &__fieldset {
       border: 2px solid @light-background;
@@ -201,22 +367,47 @@
         border: 2;
         width: 450px;
         padding: 0;
-        margin: 0;
+        margin: -56px 0 0 50px;
         background: none;
+
+        .form__input--textarea {
+          margin: 45px;
+          width: 820px;
+        }
       }
 
       &--name {
         border: 0;
-        width: 450px;
+        width: 438px;
+        margin-left: -4px;
+
+        .form__label {
+          padding-right: 22px;
+        }
+
+        .form__input {
+          margin: 9px 0 34px;
+        }
+
+        div {
+          margin: 12px 0 2px;
+          flex-wrap: nowrap;
+        }
       }
 
       &--achievments {
         order: 4;
+
+        .form__item-containter {
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
       }
 
-      &--emotions {
-        .fieldset__label {
-          display: none;
+      &--contact-data {
+        div {
+          display: flex;
+          justify-content: space-around;
         }
       }
     }
