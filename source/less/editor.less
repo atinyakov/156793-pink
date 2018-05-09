@@ -3,65 +3,65 @@
   text-align: center;
   margin: 40px 0;
   padding-bottom: 33px;
-}
 
-.editor__button-container {
-  margin-top: 112px;
-}
+  &__button {
+    border-color: @pink;
+    color: @pink;
+    margin-bottom: 10px;
 
-.editor__controls {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 0 36px 0 32px;
-  margin: 15px 0 25px;
-}
-
-.editor__input {
-  display: none;
-
-  &--visible {
-    display: block;
-    position: absolute;
-    left: ~"calc(50% - 120px)";
-    top: 77px;
-    width: 240px;
-  }
-}
-
-.editor__button {
-  border-color: @pink;
-  color: @pink;
-  margin-bottom: 10px;
-}
-
-.editor__column {
-  width: 280px;
-  margin: 0 auto;
-  padding-top: 21px;
-}
-
-.editor__control-button {
-  background-color: transparent;
-  border: none;
-  background-position: center, 0;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-
-  &--crop {
-    background-image: url("../img/icon-editor-crop.svg");
+    &-container {
+      margin-top: 112px;
+    }
   }
 
-  &--fill {
-    background-image: url("../img/icon-editor-fill.svg");
+  &__column {
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 21px;
   }
 
-  &--contrast {
-    background-image: url("../img/icon-editor-contrast.svg");
+  &__control-button {
+    background-color: transparent;
+    border: none;
+    background-position: center, 0;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+
+    &--crop {
+      background-image: url("../img/icon-editor-crop.svg");
+    }
+
+    &--fill {
+      background-image: url("../img/icon-editor-fill.svg");
+    }
+
+    &--contrast {
+      background-image: url("../img/icon-editor-contrast.svg");
+    }
+  }
+
+  &__controls {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 36px 0 32px;
+    margin: 15px 0 25px;
+  }
+
+  &__input {
+    display: none;
+
+    &--visible {
+      display: block;
+      position: absolute;
+      left: ~"calc(50% - 120px)";
+      top: 77px;
+      width: 240px;
+    }
   }
 }
 
@@ -85,6 +85,7 @@
 
     &__container {
       display: flex;
+      justify-content: center;
       padding: 36px 10px 32px;
     }
 
