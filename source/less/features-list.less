@@ -1,13 +1,14 @@
 .features-list {
   margin: 0;
   padding: 0;
-  margin-top: 112px;
+  margin-top: 97px;
   min-height: 390px;
 
   &__slogan {
     font-family: "Open Sans Bold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
+    margin: 15px auto 12px;
 
     br {
       display: none;
@@ -23,7 +24,6 @@
   &__item {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
 
     &--horizontal {
       display: none;
@@ -40,9 +40,8 @@
     position: absolute;
     display: block;
     z-index: -2;
-    left: ~"calc(50% - 91px)";
-    bottom: -58px;
-    transform: scale(0.85);
+    left: ~"calc(50% - 75px)";
+    bottom: -22px;
 
     &--hidden {
       display: none;
@@ -65,10 +64,16 @@
     margin: 0;
     padding: 0;
     margin-left: 50%;
-    margin-top: 120px;
+    margin-top: 108px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    min-height: 398px;
+    justify-content: space-between;
 
     &__description {
       width: 310px;
+      margin-top: 0;
 
       &--horizontal {
         margin: 0.8em 0 0.9em;
@@ -77,8 +82,6 @@
     }
 
     &__item {
-      margin-bottom: 19px;
-
       &--horizontal {
         display: flex;
         background: white;
@@ -102,17 +105,31 @@
     }
 
     &__img {
-      left: ~"calc(50% - 269px)";
-      bottom: 370px;
-      transform: scale(1.44);
+      left: ~"calc(50% - 308px)";
+      bottom: 355px;
 
       &--horizontal {
-        left: ~"calc(50% - 339px)";
+        left: ~"calc(50% - 337px)";
         transform: scale(0.8);
         position: relative;
-        top: 26px;
+        bottom: -24px;
         z-index: 1;
         display: block;
+        fill: @light-background;
+      }
+
+      &-text {
+        font-size: 85px;
+        position: absolute;
+        font-weight: 900;
+        bottom: 43px;
+        left: ~"calc(50% - 287px);";
+        border-radius: 50%;
+        border: 12px solid @pink;
+        color: @pink;
+        padding: 39px;
+        z-index: 2;
+        font-family: "Open Sans Bold", "Arial", sans-serif;
       }
     }
 
@@ -122,6 +139,10 @@
         line-height: 35px;
         padding-top: 30px;
         margin: 0;
+
+        br {
+          display: block;
+        }
       }
     }
   }
@@ -130,16 +151,14 @@
 @media (min-width: @desktop-width) {
   .features-list {
     margin: 0 auto;
-    display: flex;
     width: 912px;
     min-height: 570px;
-    justify-content: space-between;
     flex-direction: row;
 
     &__description {
       width: 100%;
       font-size: 18px;
-      line-height: 28px;
+      line-height: 30px;
 
       &--horizontal {
         line-height: 30px;
@@ -166,7 +185,7 @@
 
     &__img {
       position: relative;
-      left: 0;
+      left: -9px;
       bottom: 0;
       transform: scale(1);
       margin: 0 auto;
@@ -177,6 +196,17 @@
 
       &--horizontal {
         margin: 0;
+        fill: #dedede;
+        left: 0;
+        bottom: -43px;
+      }
+
+      &-text {
+        font-size: 122px;
+        bottom: 88px;
+        left: ~"calc(50% - 447px)";
+        border: 17px solid #d22856;
+        padding: 40px;
       }
     }
 
@@ -196,12 +226,12 @@
       }
 
       &--horizontal {
-        padding-top: 40px;
+        padding-top: 72px;
       }
     }
 
     &__text {
-      margin-top: -80px;
+      margin-top: -4px;
       background: @light-background;
       box-shadow: 0 -5px 5px -5px #333333;
       text-align: center;

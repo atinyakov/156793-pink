@@ -56,7 +56,7 @@
 @media (min-width: @tablet-width) {
   .contact-us {
     &__map {
-      left: ~"calc(50% - 330px)";
+      left: ~"calc(50% - 350px)";
     }
 
     &__footer-wrapper {
@@ -76,11 +76,16 @@
       flex-wrap: wrap;
       width: 100%;
       padding-top: 10px;
+      padding-bottom: 0;
     }
 
     &__item {
       flex-grow: 1;
       margin-bottom: 49px;
+
+      &--middle {
+        margin-bottom: 30px;
+      }
     }
 
     &__slogan {

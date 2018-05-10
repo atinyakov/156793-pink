@@ -1,13 +1,103 @@
 .pricing {
   background-color: @light-background;
-  // min-height: 450px;
   text-align: center;
   margin: 0 auto;
   padding: 0;
 
+  &__billing-plan {
+    background-color: @dark-background;
+    color: white;
+    min-height: 97px;
+    text-align: center;
+
+    &--rowspanned {
+      display: table-caption;
+      width: 320px;
+    }
+  }
+
   &__wrapper {
     overflow: hidden;
     width: 100%;
+  }
+
+  &__plan-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__price {
+    display: block;
+    padding-top: 8px;
+    font-size: 24px;
+    font-family: "Open Sans Light", "Arial", sans-serif;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 840px;
+    margin-left: ~"calc(50% - 418px)";
+    text-transform: uppercase;
+    text-align: left;
+
+    &-cell {
+      width: 280px;
+      background-color: white;
+      background-position: 230px center;
+      background-size: 11%;
+      background-repeat: no-repeat;
+      padding: 0;
+      border: 2px solid #f2f2f2;
+
+      &-name {
+        padding: 0 0 0 21px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &--yes {
+        background-image: url("../img/icon-yes.svg");
+      }
+
+      &--no {
+        background-image: url("../img/icon-no.svg");
+      }
+
+      &--hit {
+        position: relative;
+
+        &::before {
+          content: url("../img/bg-hit.svg");
+          position: absolute;
+        }
+
+        &::after {
+          content: "ХИТ";
+          color: white;
+          position: absolute;
+          transform: rotate(-45deg);
+          font-size: 12px;
+          top: 20px;
+          left: 12px;
+        }
+      }
+    }
+
+    &-row {
+      height: 60px;
+
+      &--header {
+        min-height: 120px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    padding-top: 21px;
+    letter-spacing: 1.2px;
   }
 
   &__toggles {
@@ -19,80 +109,6 @@
   &__feature {
     display: none;
   }
-}
-
-.pricing__plan-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pricing__billing-plan {
-  background-color: @dark-background;
-  color: white;
-  min-height: 97px;
-  text-align: center;
-}
-
-.pricing__table {
-  border-collapse: collapse;
-  width: 840px;
-  margin-left: ~"calc(50% - 418px)";
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.pricing__table-row {
-  height: 60px;
-}
-
-.pricing__table-cell {
-  width: 280px;
-  background-color: white;
-  background-position: 230px center;
-  background-repeat: no-repeat;
-  padding: 0;
-  border: 2px solid #f2f2f2;
-
-  &-name {
-    padding: 0 0 0 21px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  &--yes {
-    background-image: url("../img/yes.png");
-  }
-
-  &--no {
-    background-image: url("../img/no.png");
-  }
-}
-
-.pricing__table-row--header {
-  min-height: 120px;
-}
-
-.pricing__title,
-.pricing__price {
-  display: block;
-}
-
-.pricing__title {
-  font-family: "Open Sans Bold", "Arial", sans-serif;
-  padding-top: 21px;
-  letter-spacing: 1.2px;
-}
-
-.pricing__price {
-  padding-top: 8px;
-  font-size: 24px;
-  font-family: "Open Sans Light", "Arial", sans-serif;
-}
-
-.pricing__billing-plan--rowspanned {
-  display: table-caption;
-  width: 320px;
 }
 
 @media (min-width: @tablet-width) {
@@ -115,41 +131,62 @@
       min-height: 79px;
     }
 
+    &__table {
+      width: 620px;
+      margin: auto;
+
+      &-row {
+        height: 46px;
+      }
+
+      &-cell {
+        width: 155px;
+        background-position: center;
+
+        &--hit {
+          position: relative;
+
+          &::before {
+            content: url("../img/bg-hit-tablet.svg");
+            position: absolute;
+          }
+        }
+
+        &--yes {
+          background-position: 63px 9px;
+          background-size: 21%;
+        }
+
+        &--no {
+          background-position: 65px 7px;
+          background-size: 18%;
+        }
+
+        &-name {
+          text-transform: none;
+          font-weight: 400;
+          padding: 0 0 0 16px;
+
+          &--hidden {
+            display: none;
+          }
+        }
+      }
+    }
+
     &__title {
       padding-top: 18px;
       letter-spacing: normal;
     }
 
+
+    &__plan-list--brief {
+      display: none;
+    }
+
     &__price {
       font-size: 18px;
     }
-  }
-
-  .pricing__table {
-    width: 620px;
-    margin: auto;
-
-    &-row {
-      height: 46px;
-    }
-
-    &-cell {
-      width: 155px;
-      background-position: center;
-
-      &-name {
-        text-transform: none;
-        font-weight: 400;
-
-        &--hidden {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .pricing__plan-list--brief {
-    display: none;
   }
 }
 
@@ -171,11 +208,21 @@
 
       &-cell {
         width: 235px;
+
+        &--yes {
+          background-position: 101px 20px;
+          background-size: 14%;
+        }
+
+        &--no {
+          background-position: 103px 15px;
+          background-size: 12%;
+        }
       }
     }
-  }
 
-  .pricing__plan-list--brief {
-    display: none;
+    &__plan-list--brief {
+      display: none;
+    }
   }
 }

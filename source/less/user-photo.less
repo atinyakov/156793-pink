@@ -45,7 +45,14 @@
   &__likes-total {
     color: @pink;
     font-size: 12px;
+    padding-left: 30px;
     order: 4;
+
+    &::after {
+      content: url("../img/icon-heart.svg");
+      position: relative;
+      left: -112px;
+    }
   }
 
   &__recent-uploads {
@@ -84,6 +91,8 @@
   }
 
   .user-photo {
+    overflow: hidden;
+
     &__item {
       width: 300px;
       height: 455px;
@@ -92,7 +101,20 @@
       &--wide {
         width: 660px;
         height: 100%;
-        margin: 0 auto 50px;
+      }
+    }
+
+    &__likes-total {
+      padding-left: 0;
+
+      &--wide {
+        order: 3;
+        margin-left: auto;
+      }
+
+      &::after {
+        left: 260px;
+        position: absolute;
       }
     }
 
@@ -109,6 +131,17 @@
         flex-wrap: wrap;
         align-self: center;
         height: auto;
+
+        .user-photo__likes-total {
+          &--wide {
+            margin-right: 36px;
+            position: relative;
+
+            &::after {
+              left: 90px;
+            }
+          }
+        }
       }
     }
 
@@ -119,11 +152,6 @@
       &--wide {
         order: 4;
       }
-    }
-
-    &__likes-total--wide {
-      order: 3;
-      margin-left: auto;
     }
 
     &__slogan {
