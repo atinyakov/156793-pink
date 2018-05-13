@@ -173,9 +173,10 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 2px solid @light-background;
+  border: 2px solid @dark-background;
   background-repeat: no-repeat;
   background-position: center;
+  color: white;
 }
 
 .form__radio:checked + .form__label::before {
@@ -188,9 +189,10 @@
   left: 0;
   top: -3px;
   display: inline-block;
+  color: white;
   width: 40px;
   height: 40px;
-  border: 2px solid @light-background;
+  border: 2px solid @dark-background;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -230,6 +232,11 @@
       &--text {
         width: 100%;
         margin: 10px 0 43px;
+      }
+
+      &--textarea {
+        margin: 50px 60px;
+        width: 500px;
       }
     }
 
@@ -297,7 +304,7 @@
         .form__input-wrapper {
           display: flex;
           flex-direction: column-reverse;
-          margin: 0 0 19px;
+          margin: 0 auto 19px;
           width: 370px;
 
           &--tel {
@@ -392,6 +399,18 @@
     &__notice {
       margin: 0;
     }
+  }
+
+  .form__checkbox + .form__label::before {
+    border: 2px solid @light-background;
+  }
+
+  .form__radio:checked + .form__label::before {
+    background-image: url("../img/icon-map-marker.svg");
+  }
+
+  .form__radio + .form__label::before {
+    border: 2px solid @light-background;
   }
 }
 
