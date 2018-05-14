@@ -1,0 +1,78 @@
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0 0 15px -5px  black;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &--success {
+    background: linear-gradient(to bottom, white 57%, @light-background 57%);
+    min-height: 270px;
+    top: ~"calc(50% - 190px)";
+  }
+
+  &--failure {
+    min-height: 290px;
+    top: ~"calc(50% - 145px)";
+  }
+
+  &__header {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__msg {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 20px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    width: 280px;
+    color: white;
+    background-color: #2aab6d;
+    min-height: 65px;
+    border: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .popup {
+    width: 465px;
+    left: ~"calc(50% - 232px)";
+
+    &__header {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    &__msg {
+      font-size: 18px;
+    }
+
+    &--success {
+      min-height: 435px;
+      background: linear-gradient(to bottom, white 62%, @light-background 62%);
+    }
+
+    &--failure {
+      min-height: 370px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popup {
+    width: 785px;
+    left: ~"calc(50% - 392px)";
+    min-height: 385px;
+    background: linear-gradient(to bottom, white 57%, @light-background 57%);
+  }
+}

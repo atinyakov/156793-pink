@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width">
     <title>Pink</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody()</script>
   </head>
   <body>
     <header class="header header--not-index">
       <h1 class="header__slogan">Фотографии <br>пользователей</h1>
         <nav class="main-nav main-nav--closed">
           <div class="main-nav__menu">
-            <picture>
-              <source class="main-nav__logo" media="(min-width: 940px)" srcset="img/logo-pink-white-desktop.svg">
-              <source class="main-nav__logo" media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-              <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="Pink logo">
-            </picture>
+            <a href="index.html" class="main-nav__logo">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+                <use xlink:href="img/sprite.svg#icon-pink" class="main-nav__logo-pink"></use>
+                <use xlink:href="img/sprite.svg#icon-i" class="main-nav__logo-i"></use>
+                <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="main-nav__logo-glasses-cropped"></use>
+                <use xlink:href="img/sprite.svg#icon-glasses" class="main-nav__logo-glasses"></use>
+                <use xlink:href="img/sprite.svg#icon-dots" class="main-nav__logo-dot"></use>
+              </svg>
+            </a>
             <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
             <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
               <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
@@ -175,17 +181,25 @@
     </main>
 
     <footer class="footer footer__more footer--not-index">
-      <picture class="footer__logo">
-        <source media="(min-width: 940px)" srcset="img/logo-pink-blue-desktop.svg">
-        <img src="img/logo-pink-footer-mobile.svg" alt="PINK logo">
-      </picture>
+      <a href="index.html" class="footer__logo">
+        <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+          <use xlink:href="img/sprite.svg#icon-pink" class="footer__logo-pink"></use>
+          <use xlink:href="img/sprite.svg#icon-i" class="footer__logo-i"></use>
+          <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="footer__logo-glasses-cropped"></use>
+          <use xlink:href="img/sprite.svg#icon-glasses" class="footer__logo-glasses"></use>
+          <use xlink:href="img/sprite.svg#icon-dots" class="footer__logo-dot"></use>
+        </svg>
+      </a>
       <ul class="footer__social">
         <li><a class="footer__social-item footer__social-item--twitter" href="" alt="Twitter"></a></li>
         <li><a class="footer__social-item footer__social-item--facebook" href="" alt="Facebook"></a></li>
         <li><a class="footer__social-item footer__social-item--youtube" href="" alt="Youtube"></a></li>
       </ul>
-      <a class="footer__developed">Раработано
-          <img src="img/htmlacademy.svg" alt="" class="footer_developed-logo" width="35" height="35">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
+        <span class="footer__developed-text">Разработано</span>
+        <svg x="0px" y="0px" width="26.943px" height="34.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <use xlink:href="img/sprite.svg#academy" class="footer__developed-logo"></use>
+        </svg>
       </a>
     </footer>
   </body>

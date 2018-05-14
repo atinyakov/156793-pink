@@ -32,9 +32,8 @@
 
   &__logo {
     position: relative;
-    top: -6px;
-    width: 75px;
-    height: 22px;
+    top: -7px;
+    left: -74px;
   }
 
   &__menu {
@@ -78,6 +77,27 @@
   content: url("../img/icon-menu-cross.svg");
 }
 
+.main-nav__logo-pink {
+  fill: white;
+}
+
+.main-nav__logo-dot,
+.main-nav__logo-i {
+  display: none;
+  fill: @pink;
+}
+
+.main-nav__logo-glasses {
+  fill: white;
+  display: none;
+}
+
+.main-nav__logo-glasses-cropped {
+  fill: white;
+  display: none;
+}
+
+
 @media (min-width: @tablet-width) {
   .main-nav__menu {
     min-height: 110px;
@@ -90,36 +110,57 @@
   .main-nav__logo {
     width: 147px;
     height: 40px;
+    top: -4px;
+    left: 0;
+  }
+
+  .main-nav__logo-glasses {
+    display: inline-block;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__sub-menu {
-    width: 650px;
-    min-height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  .main-nav {
+    &__sub-menu {
+      width: 650px;
+      min-height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-  .main-nav__item {
-    width: 131px;
-    height: auto;
-    background-color: transparent;
-    border-top: 0;
-    outline: 0;
-  }
+    &__item {
+      width: 131px;
+      height: auto;
+      background-color: transparent;
+      border-top: 0;
+      outline: 0;
+    }
 
-  .main-nav__button {
-    display: none;
-  }
+    &__button {
+      display: none;
+    }
 
-  .main-nav__link {
-    text-transform: capitalize;
+    &__link {
+      text-transform: capitalize;
+    }
+
+    &__logo-dot,
+    &__logo-i {
+      display: inline-block;
+    }
+
+    &__logo-glasses {
+      display: none;
+
+      &-cropped {
+        display: inline-block;
+      }
+    }
   }
 }

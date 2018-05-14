@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width">
     <title>Pink</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody()</script>
   </head>
   <body>
     <header class="header">
       <nav class="main-nav main-nav--closed">
         <div class="main-nav__menu">
-            <picture>
-              <source class="main-nav__logo" media="(min-width: 940px)" srcset="img/logo-pink-white-desktop.svg">
-              <source class="main-nav__logo" media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-              <img class="main-nav__logo" src="img/logo-pink-header-mobile.svg" alt="Pink logo">
-            </picture>
+          <a href="index.html" class="main-nav__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+              <use xlink:href="img/sprite.svg#icon-pink" class="main-nav__logo-pink"></use>
+              <use xlink:href="img/sprite.svg#icon-i" class="main-nav__logo-i"></use>
+              <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="main-nav__logo-glasses-cropped"></use>
+              <use xlink:href="img/sprite.svg#icon-glasses" class="main-nav__logo-glasses"></use>
+              <use xlink:href="img/sprite.svg#icon-dots" class="main-nav__logo-dot"></use>
+            </svg>
+          </a>
           <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
           <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
             <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
@@ -59,7 +65,6 @@
             <p class="features-list__slogan">Меняет мир вокруг</p>
             <p class="features-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </div>
-            <!-- <img class="features-list__img features-list__img--hidden" src="img/iphone-screen-2.png" width="186" height="382" alt=""> -->
             <picture class="features-list__img features-list__img--hidden">
               <source media="(min-width: 940px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
               <img src="img/iphone-screen-2-tablet@1x.png" srcset="img/iphone-screen-2-tablet@2x.png 2x" alt="">
@@ -80,7 +85,7 @@
         <div class="features-list__item features-list__item--horizontal">
           <span class="features-list__img-text">24</span>
           <svg class="features-list__img features-list__img--horizontal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="298px" height="345px" viewbox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
-            <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
+            <use xlink:href="img/sprite.svg#timer"></use>
           </svg>
           <div class="features-list__text features-list__text--horizontal">
             <p class="features-list__slogan features-list__slogan--horizontal">Эффект <br>на 24 часа!</p>
@@ -94,8 +99,8 @@
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <div class="reviews__wrapper">
           <button class="reviews__nav-button">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
-              <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+            <svg x="0px" y="0px" width="21.706px" height="41.719px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
             </svg>
           </button>
           <div class="reviews__containter">
@@ -121,8 +126,8 @@
             </ul>
           </div>
           <button class="reviews__nav-button">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
-            <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+            <svg x="0px" y="0px" width="21.706px" height="41.719px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
             </svg>
           </button>
         </div>
@@ -223,9 +228,10 @@
         </li>
       </ul>
       </div>
-      <svg width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="auto" viewbox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve">
+      <!-- БЕЛЫЙ ТРЕУГОЛЬНИК перенести в CSS-->
+      <!-- <svg width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="auto" viewbox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve">
         <polygon fill="#FFFFFF" points="297.64,61.905 0,0 595.28,0 "/>
-      </svg>
+      </svg> -->
       <picture class="contact-us__map">
         <source media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
         <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
@@ -233,10 +239,15 @@
       </picture>
       <div class="contact-us__footer-wrapper contact-us__footer-wrapper--bottom">
         <div class="footer__more footer__more--index">
-          <picture class="footer__logo">
-            <source media="(min-width: 940px)" srcset="img/logo-pink-blue-desktop.svg">
-            <img src="img/logo-pink-footer-mobile.svg" alt="PINK logo">
-          </picture>
+          <a href="index.html" class="footer__logo">
+            <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+              <use xlink:href="img/sprite.svg#icon-pink" class="footer__logo-pink"></use>
+              <use xlink:href="img/sprite.svg#icon-i" class="footer__logo-i"></use>
+              <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="footer__logo-glasses-cropped"></use>
+              <use xlink:href="img/sprite.svg#icon-glasses" class="footer__logo-glasses"></use>
+              <use xlink:href="img/sprite.svg#icon-dots" class="footer__logo-dot"></use>
+            </svg>
+          </a>
           <ul class="footer__social">
             <li><a class="footer__social-item footer__social-item--twitter" href="" alt="Twitter"></a></li>
             <li><a class="footer__social-item footer__social-item--facebook" href="" alt="Facebook"></a></li>
@@ -244,8 +255,8 @@
           </ul>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
             <span class="footer__developed-text">Разработано</span>
-            <svg class="footer_)developed-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-              <path fill="#d22856" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+            <svg x="0px" y="0px" width="26.943px" height="34.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <use xlink:href="img/sprite.svg#academy" class="footer__developed-logo"></use>
             </svg>
           </a>
         </div>

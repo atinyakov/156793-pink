@@ -12,20 +12,18 @@
 }
 
 .slider__input-radio:checked + label::before {
-  background-image: url("../img/slider__button.png");
-  width: 20px;
-  height: 20px;
-  background-size: 12px 12px;
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+  border: 3px solid @dark-background;
 }
 
 .slider__input-radio + label::before {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/slider__button--empty.png");
-  background-repeat: no-repeat;
-  background-size: 6px 6px;
-  background-position: center;
+  width: 4px;
+  height: 4px;
+  border: 3px solid @light-background;
+  background-color: @light-background;
   border-radius: 50%;
 }

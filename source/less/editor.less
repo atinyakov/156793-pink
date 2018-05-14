@@ -72,6 +72,7 @@ input[type="range"] {
 @media (min-width: @tablet-width) {
   .editor {
     padding-bottom: 0;
+    margin: 0 0 40px;
 
     &__button {
       margin-bottom: 23px;
@@ -79,12 +80,17 @@ input[type="range"] {
 
       &-container {
         margin-top: 69px;
+        display: flex;
+        flex-direction: column;
       }
     }
 
     &__column {
       width: 300px;
       padding-top: 21px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     &__container {
@@ -125,21 +131,29 @@ input[type="range"] {
 @media (min-width: @desktop-width) {
   .editor {
     margin-bottom: 103px;
+    background-color: transparent;
 
     &__button {
       width: 190px;
 
-      &__container {
-        display: flex;
+      &-container {
         margin-top: 143px;
         justify-content: space-between;
         width: 420px;
+        flex-direction: row;
       }
     }
 
     &__column {
-      width: 470px;
+      width: 460px;
       margin: 0;
+    }
+
+    &__container {
+      width: 940px;
+      background-color: @light-background;
+      margin: auto;
+      padding: 36px 0 32px;
     }
 
     &__control-button {
