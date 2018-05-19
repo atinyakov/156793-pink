@@ -101,9 +101,29 @@
   }
 
   &__toggles {
-    margin-top: 35px;
-    margin-left: ~"calc(50% - 74px)";
-    padding-bottom: 45px;
+    margin-left: ~"calc(50% - 29px)";
+    padding: 0;
+    padding-bottom: 47px;
+    margin-top: 42px;
+    width: 58px;
+
+    .slider__input-radio:checked + label::before {
+      width: 7px;
+      height: 7px;
+      background-color: transparent;
+      border: 3px solid @dark-background;
+    }
+
+    .slider__input-radio + label::before {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 2px;
+      border: 2px solid @dark-background;
+      background-color: @dark-background;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
   }
 
   &__feature {
@@ -149,6 +169,13 @@
           &::before {
             content: url("../img/bg-hit-tablet.svg");
             position: absolute;
+            width: 70px;
+          }
+
+          &::after {
+            font-size: 13px;
+            top: 12px;
+            left: 7px;
           }
         }
 
@@ -209,6 +236,11 @@
       &-cell {
         width: 235px;
 
+        &-name {
+          padding: 0 0 0 23px;
+          font-size: 18px;
+        }
+
         &--yes {
           background-position: 101px 20px;
           background-size: 14%;
@@ -218,11 +250,27 @@
           background-position: 103px 15px;
           background-size: 12%;
         }
+
+        &--hit {
+          &::before {
+            content: url("../img/bg-hit.svg");
+          }
+
+          &::after {
+            top: 16px;
+            left: 13px;
+          }
+        }
       }
     }
 
     &__plan-list--brief {
       display: none;
+    }
+
+    &__price {
+      font-size: 24px;
+      padding-top: 10px;
     }
   }
 }

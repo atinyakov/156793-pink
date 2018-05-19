@@ -39,19 +39,35 @@
       width: 100%;
       display: block;
       background: none;
+
+      &::after {
+        content: "Панорама дня";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: ~"calc(50% - 141px)";
+        background-color: @pink;
+        color: white;
+        opacity: 1;
+        font-size: 12px;
+        text-transform: uppercase;
+        width: 106px;
+        padding: 10px 17px;
+      }
     }
   }
 
   &__likes-total {
     color: @pink;
     font-size: 12px;
-    padding-left: 30px;
+    padding-left: 33px;
     order: 4;
+    text-transform: uppercase;
 
     &::after {
       content: url("../img/icon-heart.svg");
       position: relative;
-      left: -112px;
+      left: -121px;
     }
   }
 
@@ -102,6 +118,11 @@
         width: 660px;
         height: 100%;
         margin: 0 0 50px;
+
+        &::after {
+          top: 57px;
+          right: ~"calc(50% - 310px)";
+        }
       }
     }
 

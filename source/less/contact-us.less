@@ -36,6 +36,14 @@
     list-style: none;
     background-color: white;
     width: 320px;
+
+    &::after {
+      content: url("../img/bg-triangle-white-footer.svg");
+      position: absolute;
+      width: 320px;
+      left: ~"calc(50% - 160px)";
+      bottom: 168px;
+    }
   }
 }
 
@@ -88,6 +96,12 @@
       width: 100%;
       padding-top: 10px;
       padding-bottom: 0;
+
+      &::after {
+        width: 660px;
+        left: ~"calc(50% - 330px)";
+        bottom: 433px;
+      }
     }
 
     &__item {
@@ -114,7 +128,6 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .contact-us {
     &__content {
@@ -125,7 +138,7 @@
       left: ~"calc(50% - 600px)";
 
       &::after {
-        bottom: 403px;
+        bottom: 400px;
       }
     }
 
@@ -157,6 +170,12 @@
       padding-top: 23px;
       width: 960px;
       justify-content: space-between;
+
+      &::after {
+        width: 1200px;
+        bottom: 595px;
+        left: ~"calc(50% - 600px)";
+      }
     }
   }
 }
