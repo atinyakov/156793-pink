@@ -101,7 +101,7 @@ input[type="range"] {
 
 @media (min-width: @tablet-width) {
   .editor {
-    padding-bottom: 0;
+    // padding-bottom: 0;
     margin: 0 0 40px;
 
     &__button {
@@ -117,11 +117,11 @@ input[type="range"] {
 
     &__column {
       width: 300px;
-      padding-top: 21px;
+      padding-top: 57px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0;
+      margin: 0 11px;
     }
 
     &__container {
@@ -135,6 +135,7 @@ input[type="range"] {
     &__controls {
       flex-direction: column;
       margin: 0;
+      margin-top: -14px;
       padding: 0;
 
       input {
@@ -163,23 +164,26 @@ input[type="range"] {
 
 @media (min-width: @desktop-width) {
   .editor {
-    margin-bottom: 103px;
+    margin-bottom: 0;
     background-color: transparent;
 
     &__button {
-      width: 190px;
+      width: 185px;
 
       &-container {
-        margin-top: 143px;
         justify-content: space-between;
-        width: 420px;
         flex-direction: row;
+        margin-top: 146px;
+        margin-left: 25px;
+        width: 414px;
       }
     }
 
     &__column {
-      width: 460px;
+      padding-top: 21px;
+      width: 400px;
       margin: 0;
+      margin-left: 31px;
     }
 
     &__container {
@@ -187,6 +191,7 @@ input[type="range"] {
       background-color: @light-background;
       margin: auto;
       padding: 36px 0 32px;
+      justify-content: flex-start;
     }
 
     &__control-button {

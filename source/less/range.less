@@ -75,7 +75,7 @@
     justify-content: space-between;
     align-items: center;
     width: 275px;
-    height: 72px;
+    height: 70px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     // &__filter {
@@ -93,23 +93,67 @@
 
     &__scale {
       width: 200px;
+      margin-right: 8px;
     }
 
-    // &__bar {
-    //
-    // }
+    &__symbol {
+      width: 50px;
+      height: 30px;
+      opacity: 1;
+      fill: @pink;
+
+      &--contrast {
+        height: 20px;
+      }
+    }
     //
     // &__button {
     // }
 
     &__slider {
       &--crop {
-        left: 0;
+        left: 143px;
+      }
+
+      &--contrast {
+        left: 94px;
+      }
+
+      &--fill {
+        left: 23px;
       }
     }
   }
 }
 
-// @media (min-width: @desktop-width) {
-//
-// }
+@media (min-width: @desktop-width) {
+  .range {
+    &__slider {
+      &--crop {
+        left: 70px;
+      }
+
+      &--contrast {
+        left: 160px;
+      }
+
+      &--fill {
+        left: 247px;
+      }
+    }
+
+    &__scale {
+      width: 288px;
+      margin-right: 12px;
+    }
+
+    &__symbol {
+      width: 60px;
+      height: 60px;
+
+      &--contrast {
+        height: 42px;
+      }
+    }
+  }
+}

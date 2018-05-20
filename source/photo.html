@@ -44,7 +44,7 @@
             <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
             <source class="user-photo__img" media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
             <source class="user-photo__img" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-            <img class="user-photo__img" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x">
+            <img class="user-photo__img user-photo__img--wide" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x">
           </picture>
           <div class="user-photo__description user-photo__description--wide">
             <div class="user-photo__user user-photo__user--wide">
@@ -184,45 +184,43 @@
           <div class="editor__column">
             <ul class="editor__controls">
               <li class="range">
-                <!-- <div class="range"> -->
-                  <a href="#">
+                <a href="#">
                     <svg class="range__symbol range__symbol--active" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
                     <use xlink:href="img/sprite.svg#crop"></use>
                     </svg>
-                  </a>
-                  <div class="range__controls range__controls--active">
+                </a>
+                <div class="range__controls range__controls--active">
                     <div class="range__scale">
                       <div class="range__bar"></div>
                     </div>
                     <button class="range__slider range__slider--crop"><span class="visually-hidden">Ползунок</span></button>
                   </div>
-                <!-- </div> -->
               </li>
               <li class="range">
-                <!-- <div class="range"> -->
-                <svg class="range__symbol" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-                  <use xlink:href="img/sprite.svg#fill"></use>
-                </svg>
-                  <div class="range__controls">
+                <a href="#">
+                  <svg class="range__symbol" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                    <use xlink:href="img/sprite.svg#fill"></use>
+                  </svg>
+                </a>
+                <div class="range__controls">
                     <div class="range__scale">
                       <div class="range__bar"></div>
                     </div>
                     <button class="range__slider range__slider--fill"><span class="visually-hidden">Ползунок</span></button>
                   </div>
-                <!-- </div> -->
               </li>
               <li class="range">
-                <!-- <div class="range"> -->
-                <svg class="range__symbol" x="0px" y="0px" width="36.943px" height="44.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-                  <use xlink:href="img/sprite.svg#contrast"></use>
-                </svg>
-                  <div class="range__controls">
+                <a href="#">
+                  <svg class="range__symbol range__symbol--contrast" x="0px" y="0px" width="36.943px" height="44.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                    <use xlink:href="img/sprite.svg#contrast"></use>
+                  </svg>
+                </a>
+                <div class="range__controls">
                     <div class="range__scale">
                       <div class="range__bar"></div>
                     </div>
                     <button class="range__slider range__slider--contrast"><span class="visually-hidden">Ползунок</span></button>
                   </div>
-                <!-- </div> -->
               </li>
             </ul>
             <div class="editor__button-container" >

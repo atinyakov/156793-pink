@@ -63,38 +63,32 @@
   }
 }
 
-// .footer__logo:hover + .footer__more .footer__logo-pink {
-//   fill: @pink;
-// }
-
 .footer__more {
   width: 100%;
   justify-content: space-between;
   align-items: center;
 
-  &__more {
-    .footer__logo-pink {
-      fill: black;
-    }
+  .footer__logo-pink {
+    fill: black;
+  }
 
-    .footer__logo-dot {
-      display: none;
-    }
+  .footer__logo-dot {
+    display: none;
+  }
 
-    .footer__logo-i {
-      display: none;
-      fill: @pink;
-    }
+  .footer__logo-i {
+    display: none;
+    fill: @pink;
+  }
 
-    .footer__logo-glasses {
-      fill: @pink;
-      display: block;
-    }
+  .footer__logo-glasses {
+    fill: @pink;
+    display: block;
+  }
 
-    .footer__logo-glasses-cropped {
-      fill: @pink;
-      display: none;
-    }
+  .footer__logo-glasses-cropped {
+    fill: @pink;
+    display: none;
   }
 }
 
@@ -132,16 +126,11 @@
   .footer {
     &__more {
       display: flex;
-      // min-height: 130px;
       padding: 40px 0;
       box-sizing: border-box;
       width: 620px;
       margin: 0 auto;
     }
-
-    // &__logo {
-    //   left: -46px;
-    // }
 
     .footer__logo-glasses {
       display: inline-block;
@@ -157,6 +146,16 @@
     flex-direction: row;
     padding: 0;
     align-items: flex-start;
+    min-height: 130px;
+
+    .footer__social {
+      margin-right: 17px;
+      margin-top: -6px;
+    }
+
+    .footer__developed {
+      margin-top: 7px;
+    }
   }
 }
 
@@ -183,6 +182,23 @@
 
     .footer__logo-glasses-cropped {
       display: inline-block;
+    }
+  }
+
+  .footer--not-index {
+    .footer__more {
+      width: 940px;
+      padding: 36px 0;
+    }
+
+    .footer__developed-text {
+      padding-right: 10px;
+      font-size: 18px;
+    }
+
+    .footer__social {
+      margin-right: -10px;
+      margin-top: -6px;
     }
   }
 }
