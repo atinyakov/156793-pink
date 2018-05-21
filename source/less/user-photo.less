@@ -57,6 +57,12 @@
     }
   }
 
+  &__img {
+    &--wide {
+      width: 100%;
+    }
+  }
+
   &__likes-total {
     color: @pink;
     font-size: 12px;
@@ -111,7 +117,6 @@
 
     &__img--wide {
       position: relative;
-      left: -21px;
     }
 
     &__item {
@@ -123,6 +128,7 @@
         width: 660px;
         height: 100%;
         margin: 0 0 50px;
+        margin-left: ~"calc(50% - 330px)";
 
         &::after {
           top: 57px;
