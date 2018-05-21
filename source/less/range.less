@@ -23,10 +23,6 @@
     margin-left: auto;
   }
 
-  // &__bar {
-  //
-  // }
-
   &__button {
     background-color: transparent;
     border: none;
@@ -43,6 +39,10 @@
     background-color: @light-background;
     border-radius: 50%;
     cursor: pointer;
+
+    &:active {
+      background-color: @pink;
+    }
 
     &--crop {
       left: 194px;
@@ -104,6 +104,11 @@
 
       &--contrast {
         height: 20px;
+      }
+
+      &:hover {
+        fill: black;
+        opacity: 0.5;
       }
     }
     //

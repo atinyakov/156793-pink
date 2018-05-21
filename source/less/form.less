@@ -8,19 +8,32 @@
   &__button {
     display: block;
     margin: 6px auto;
-    background-color: green;
+    background-color: #2aab6d;
     width: 286px;
     line-height: 24px;
     font-size: 19px;
     text-transform: uppercase;
     border-radius: 7px;
     min-height: 71px;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--disabled {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   &__fieldset {
     border: 0;
     margin: 0;
-    padding: 0 0 30px;
+    padding: 0 0 28px;
 
     div {
       display: flex;
@@ -36,6 +49,7 @@
     &--contact-data {
       order: 3;
       padding-top: 28px;
+      padding-bottom: 15px;
     }
 
     &--app {
@@ -113,6 +127,14 @@
   &__input {
     border: 2px solid @light-background;
 
+    &:hover {
+      border-color: black;
+    }
+
+    &:active {
+      border-color: @pink;
+    }
+
     &--text {
       color: @dark-background;
       font-size: 18px;
@@ -127,6 +149,14 @@
       line-height: 31px;
       width: 238px;
       min-height: 170px;
+
+      &:hover {
+        border-color: black;
+      }
+
+      &:active {
+        border-color: @pink;
+      }
     }
   }
 
@@ -139,6 +169,7 @@
       font-size: 14px;
       padding-left: 22px;
       margin-bottom: 5px;
+      color: @pink;
     }
   }
 
@@ -146,6 +177,7 @@
     color: @pink;
     text-transform: uppercase;
     font-size: 14px;
+    padding: 0 30px;
 
     &--hidden {
       display: none;
@@ -157,8 +189,18 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin: 37px 0 64px;
+    margin: 39px 0 67px;
     font-size: 14px;
+
+    sup {
+      color: @pink;
+      font-size: 14px;
+      top: 0;
+    }
+
+    &--extended {
+      display: none;
+    }
   }
 }
 
@@ -171,12 +213,26 @@
   position: absolute;
   left: 0;
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 2px solid @dark-background;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
+}
+
+.form__checkbox:hover + .form__label::before {
+  border: 2px solid black;
+}
+
+.form__checkbox:active + .form__label::before {
+  border: 2px solid @pink;
+  background-image: url("../img/icon-yes-form.svg");
+}
+
+.form__checkbox:checked:active + .form__label::before {
+  background-image: none;
 }
 
 .form__radio:checked + .form__label::before {
@@ -189,27 +245,43 @@
   left: 0;
   top: -3px;
   display: inline-block;
-  color: white;
+  background-color: white;
   width: 40px;
   height: 40px;
-  border: 2px solid @dark-background;
+  border: 2px solid #e5e5e5;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.form__radio:hover + .form__label::before {
+  border: 2px solid @dark-background;
+}
+
+.form__radio:active + .form__label::before {
+  border: 2px solid @pink;
+  background-image: url("../img/icon-map-marker.svg");
+}
+
+.form__radio:checked:active + .form__label::before {
+  background-image: none;
+}
+
 @media (min-width: @tablet-width) {
   .form {
-    margin-bottom: 57px;
+    margin-bottom: 63px;
 
     &__button {
-      width: 574px;
+      margin: 0;
+      width: 305px;
     }
 
     &__label {
       &--contact {
         padding-left: 0;
-        padding-right: 20px;
+        margin-top: 24px;
+        margin-left: -4px;
+        padding-right: 21px;
       }
     }
 
@@ -235,8 +307,9 @@
       }
 
       &--textarea {
-        margin: 50px 60px;
-        width: 500px;
+        margin: 33px auto 43px 59px;
+        width: 459px;
+        min-height: 161px;
       }
     }
 
@@ -279,7 +352,8 @@
           &__item {
             &-containter {
               margin-left: 60px;
-              margin-top: 37px;
+              margin-top: 38px;
+              margin-bottom: 4px;
             }
           }
 
@@ -301,11 +375,21 @@
           display: block;
         }
 
+        .form__label {
+          padding-left: 18px;
+          color: @pink;
+
+          &--contact {
+            margin-top: 0;
+            padding-left: 24px;
+          }
+        }
+
         .form__input-wrapper {
           display: flex;
           flex-direction: column-reverse;
           margin: 0 auto 19px;
-          width: 370px;
+          width: 500px;
 
           &--tel {
             position: relative;
@@ -322,11 +406,11 @@
             &::before {
               content: "";
               width: 60px;
-              height: 60px;
+              height: 58px;
               background-color: @light-background;
               position: absolute;
-              right: -1px;
-              bottom: 48px;
+              right: 0;
+              bottom: 49px;
             }
           }
 
@@ -345,11 +429,11 @@
             &::before {
               content: "";
               width: 60px;
-              height: 60px;
+              height: 58px;
               background-color: @light-background;
               position: absolute;
-              right: -1px;
-              bottom: 48px;
+              right: 0;
+              bottom: 49px;
             }
           }
         }
@@ -357,11 +441,6 @@
         .form__input {
           margin: 4px 0 8px;
           width: ~"calc( 100% - 21px)";
-        }
-
-        .form__label {
-          padding-left: 18px;
-          color: @pink;
         }
       }
 
@@ -397,11 +476,12 @@
       align-items: center;
       width: 620px;
       margin: 0 auto;
-      margin-bottom: 77px;
+      margin-bottom: 88px;
     }
 
     &__notice {
       margin: 0;
+      width: 183px;
     }
   }
 
@@ -415,6 +495,8 @@
 
   .form__radio + .form__label::before {
     border: 2px solid @light-background;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -425,7 +507,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 64px;
 
     &__fieldset {
       border: 2px solid @light-background;
@@ -436,22 +518,26 @@
       }
 
       &--app {
-        border: 2;
-        width: 450px;
         padding: 0;
-        margin: -56px 0 0 50px;
-        background: none;
+        width: 430px;
+        min-height: 310px;
+        margin: -45px 0 0 50px;
 
         .form__input--textarea {
           margin: 45px;
           width: 820px;
         }
+
+        .form__item-containter {
+          margin-left: 74px;
+          margin-top: 41px;
+        }
       }
 
       &--name {
         border: 0;
-        width: 438px;
-        margin-left: -4px;
+        width: 430px;
+        padding: 0 0 15px;
 
         .form__label {
           padding-right: 22px;
@@ -469,31 +555,87 @@
 
       &--achievments {
         order: 4;
+        width: 940px;
 
         .form__item-containter {
+          flex-direction: column;
           flex-wrap: wrap;
-          flex-direction: row;
+          height: 173px;
         }
       }
 
       &--contact-data {
-        .form__input-container {
-          display: flex;
-          justify-content: space-between;
-          width: 820px;
-          margin: 0 auto;
-          flex-wrap: nowrap;
+        width: 935px;
+
+        .form__label {
+          padding-left: 24px;
+          width: 200px;
         }
+
+        .form__input {
+          margin: 1px 0 7px;
+          width: 350px;
+
+          &-container {
+            display: flex;
+            justify-content: space-between;
+            width: 820px;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+          }
+
+          &-wrapper {
+            margin: 0 71px 7px 0;
+            width: 410px;
+          }
+
+          &-wrapper--tel {
+            &::before {
+              right: 2px;
+              bottom: 48px;
+            }
+
+            &::after {
+              right: 20px;
+            }
+          }
+
+          &-wrapper--email {
+            &::before {
+              right: 2px;
+              bottom: 48px;
+            }
+          }
+        }
+      }
+
+      &--emotions {
+        width: 936px;
       }
     }
 
     &__input--textarea {
-      margin: 40px 60px;
-      width: 820px;
+      margin: 27px 38px 34px 59px;
+      width: 776px;
+      padding: 14px 19px 17px;
+      min-height: auto;
     }
 
     &__legend--hidden {
       display: block;
+    }
+
+    &__notice {
+      width: 314px;
+
+      &--extended {
+        display: inline;
+      }
+    }
+
+    &__submit {
+      width: 940px;
+      margin-bottom: 0;
     }
   }
 }

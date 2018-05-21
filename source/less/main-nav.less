@@ -76,6 +76,10 @@
   content: url("../img/icon-menu-cross.svg");
 }
 
+// .main-nav__logo:hover + .main-nav__logo-pink {
+//   fill: red;
+// }
+
 .header {
   .main-nav__logo-pink {
     fill: white;
@@ -97,6 +101,7 @@
     display: none;
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .main-nav__menu {
@@ -154,6 +159,18 @@
 
     &__link {
       text-transform: capitalize;
+
+      &:hover {
+        color: @pink;
+      }
+
+      &:active {
+        color: white;
+      }
+
+      &--active {
+        border-bottom: 2px solid white;
+      }
     }
   }
 
