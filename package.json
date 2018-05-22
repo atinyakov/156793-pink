@@ -17,7 +17,6 @@
     "grunt-cwebp": "^2.1.1",
     "grunt-juwain-posthtml": "^0.6.0",
     "grunt-postcss": "0.9.x",
-    "grunt-posthtml": "^0.5.0",
     "grunt-svgstore": "^1.0.0",
     "load-grunt-tasks": "^4.0.0",
     "posthtml-include": "^1.1.0",

@@ -32,12 +32,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "source/*.html",
-            "source/css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: "source/",
+          server: "build/",
           watchTask: true,
           notify: false,
           open: true,
@@ -48,9 +48,13 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      html: {
+        files: ["source/*.html"],
+        tasks: ["posthtml"]
+      },
       style: {
         files: ["source/less/**/*.less"],
-        tasks: ["less", "postcss"]
+        tasks: ["less", "postcss","csso"]
       }
     },
 
@@ -60,23 +64,23 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/output.css": ["build/css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
 
-    // imagemin: {
-    //   images: {
-    //     options: {
-    //       optimizationLevel: 3,
-    //       progressive: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       src: ["source/img/**/*.{png,jpg,svg}"]
-    //     }]
-    //   }
-    // },
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["source/img/**/*.{png,jpg,svg}"]
+        }]
+      }
+    },
 
     cwebp: {
       images: {
@@ -107,10 +111,11 @@ module.exports = function(grunt) {
           require("posthtml-include")()
         ]
       },
-      html: {
+      build: {
         files: [{
           expand: true,
-          src: ["source/*.html"],
+          cwd: "source",
+          src: ["*.html"],
           dest: "build"
         }]
       }
