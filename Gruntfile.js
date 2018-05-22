@@ -60,7 +60,7 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/style.min.css": ["source/css/style.css"]
+          "build/css/output.css": ["build/css/style.css"]
         }
       }
     },
@@ -90,31 +90,32 @@ module.exports = function(grunt) {
       }
     },
 
-    // svgstore: {
-    //   options: {
-    //     includeTitleElement: false
-    //   },
-    //   sprite: {
-    //     files: {
-    //       "build/img/sprite.svg" : ["source/img/icon-*.svg"]
-    //     }
-    //   }
-    // },
+    svgstore: {
+      options: {
+        includeTitleElement: false
+      },
+      sprite: {
+        files: {
+          "build/img/sprite.svg" : ["source/img/icon-*.svg"]
+        }
+      }
+    },
 
-    // posthtml: {
-    //   options: {
-    //     use: [
-    //       require("posthtml-include")()
-    //     ]
-    //   },
-    //   html {
-    //     files: [{
-    //       expand: true,
-    //       src: ["source/*.html"],
-    //       dest: "build"
-    //     }]
-    //   }
-    // },
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["source/*.html"],
+          dest: "build"
+        }]
+      }
+    },
+
     clean: {
       build: ["build"]
     },
@@ -132,17 +133,18 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       }
-     }
+      }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+
   grunt.registerTask("build", [
     "clean",
     "copy",
     "less",
-    "postcss"
-    // "csso"
-    // "svgstore",
-    // "posthtml"
+    "postcss",
+    "csso",
+    "svgstore",
+    "posthtml"
   ]);
 };
