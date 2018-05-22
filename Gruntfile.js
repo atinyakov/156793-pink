@@ -32,7 +32,8 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            src: ["build/*.html", "build/css/*.css"]
+            "source/*.html",
+            "source/css/*.css"
           ]
         },
         options: {
@@ -47,15 +48,11 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      html {
-        files: ["source/*html"],
-        tasks: ["posthtml"]
-      },
       style: {
         files: ["source/less/**/*.less"],
-        tasks: ["less", "postcss", "csso"]
+        tasks: ["less", "postcss"]
       }
-    }
+    },
 
     csso: {
       style: {
@@ -63,23 +60,23 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "source/css/style.min.css" : ["source/css/style.css"]
+          "build/css/style.min.css": ["source/css/style.css"]
         }
       }
-    }
+    },
 
-    imagemin: {
-      images: {
-        options: {
-          optimizationLevel: 3,
-          progressive: true
-        },
-        files: [{
-          expand: true,
-          src: ["source/img/**/*.{png,jpg,svg}"]
-        }]
-      }
-    }
+    // imagemin: {
+    //   images: {
+    //     options: {
+    //       optimizationLevel: 3,
+    //       progressive: true
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       src: ["source/img/**/*.{png,jpg,svg}"]
+    //     }]
+    //   }
+    // },
 
     cwebp: {
       images: {
@@ -91,33 +88,36 @@ module.exports = function(grunt) {
           src: ["source/img/**/*.{png,jpg}"]
         }]
       }
-    }
+    },
 
-    svgstore: {
-      options: {
-        includeTitleElement: false
-      },
-      sprite: {
-        files: {
-          "build/img/sprite.svg" : ["source/img/icon-*.svg"]
-        }
-      }
-    }
+    // svgstore: {
+    //   options: {
+    //     includeTitleElement: false
+    //   },
+    //   sprite: {
+    //     files: {
+    //       "build/img/sprite.svg" : ["source/img/icon-*.svg"]
+    //     }
+    //   }
+    // },
 
-    posthtml: {
-      options: {
-        use: [
-          require("posthtml-include")()
-        ]
-      },
-      html {
-        files: [{
-          expand: true,
-          src: ["source/*.html"],
-          dest: "build"
-        }]
-      }
-    }
+    // posthtml: {
+    //   options: {
+    //     use: [
+    //       require("posthtml-include")()
+    //     ]
+    //   },
+    //   html {
+    //     files: [{
+    //       expand: true,
+    //       src: ["source/*.html"],
+    //       dest: "build"
+    //     }]
+    //   }
+    // },
+    clean: {
+      build: ["build"]
+    },
 
     copy: {
       build: {
@@ -131,21 +131,18 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
-       }
+      }
      }
-
-     clean: {
-       build: ["build"]
-     }
+  });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
     "clean",
     "copy",
     "less",
-    "postcss",
-    "csso",
-    "svgstore",
-    "posthtml"
+    "postcss"
+    // "csso"
+    // "svgstore",
+    // "posthtml"
   ]);
 };
