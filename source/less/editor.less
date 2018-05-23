@@ -1,16 +1,45 @@
 .editor {
   background-color: @light-background;
   text-align: center;
-  margin: 40px 0;
+  margin: 40px 0 46px;
   padding-bottom: 33px;
 
   &__button {
     border-color: @pink;
     color: @pink;
     margin-bottom: 10px;
+    background-color: transparent;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    font-weight: 700;
+
+    &:hover {
+      background-color: @pink;
+      color: white;
+    }
+
+    &:active {
+      background-color: @pink;
+      color: rgba(255, 255, 255, 0.3);
+    }
 
     &-container {
-      margin-top: 112px;
+      margin-top: 103px;
+      position: relative;
+    }
+
+    &--disabled {
+      border-color: rgba(0, 0, 0, 1);
+      color: rgba(0, 0, 0, 1);
+      opacity: 0.1;
+
+      &:hover {
+        opacity: 0.3;
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 0.3);
+      }
     }
   }
 
@@ -20,36 +49,14 @@
     padding-top: 21px;
   }
 
-  &__control-button {
-    background-color: transparent;
-    border: none;
-    background-position: center, 0;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-
-    &--crop {
-      background-image: url("../img/icon-editor-crop.svg");
-    }
-
-    &--fill {
-      background-image: url("../img/icon-editor-fill.svg");
-    }
-
-    &--contrast {
-      background-image: url("../img/icon-editor-contrast.svg");
-    }
-  }
-
   &__controls {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
-    padding: 0 36px 0 32px;
-    margin: 15px 0 25px;
+    padding: 0 43px 0 30px;
+    margin: 10px auto 10px;
   }
 
   &__input {
@@ -71,7 +78,6 @@ input[type="range"] {
 
 @media (min-width: @tablet-width) {
   .editor {
-    padding-bottom: 0;
     margin: 0 0 40px;
 
     &__button {
@@ -87,21 +93,24 @@ input[type="range"] {
 
     &__column {
       width: 300px;
-      padding-top: 21px;
+      padding-top: 57px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0 11px;
     }
 
     &__container {
       display: flex;
       justify-content: center;
-      padding: 36px 10px 32px;
+      width: 660px;
+      margin: 0 auto;
     }
 
     &__controls {
       flex-direction: column;
       margin: 0;
+      margin-top: -14px;
       padding: 0;
 
       input {
@@ -130,23 +139,26 @@ input[type="range"] {
 
 @media (min-width: @desktop-width) {
   .editor {
-    margin-bottom: 103px;
+    margin-bottom: 0;
     background-color: transparent;
 
     &__button {
-      width: 190px;
+      width: 185px;
 
       &-container {
-        margin-top: 143px;
         justify-content: space-between;
-        width: 420px;
         flex-direction: row;
+        margin-top: 146px;
+        margin-left: 25px;
+        width: 414px;
       }
     }
 
     &__column {
-      width: 460px;
+      padding-top: 21px;
+      width: 400px;
       margin: 0;
+      margin-left: 31px;
     }
 
     &__container {
@@ -154,6 +166,7 @@ input[type="range"] {
       background-color: @light-background;
       margin: auto;
       padding: 36px 0 32px;
+      justify-content: flex-start;
     }
 
     &__control-button {

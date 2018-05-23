@@ -33,8 +33,10 @@
   }
 
   &__toggles {
-    margin-top: 28px;
-    margin-left: ~"calc(50% - 74px)";
+    margin-left: ~"calc(50% - 32px)";
+    width: 60px;
+    margin-top: 33px;
+    padding: 0;
   }
 
   &__author {
@@ -57,6 +59,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: -15px;
+    background: linear-gradient(0.487turn, #ffffff 88%, @light-background 88%);
 
     &__item {
       min-height: 200px;
@@ -104,6 +107,7 @@
   .reviews {
     min-height: 500px;
     margin-top: 0;
+    background: linear-gradient(0.487turn, #ffffff 83%, @light-background 83%);
 
     &__author {
       min-height: 54px;
@@ -136,9 +140,17 @@
 
     &__nav-button {
       display: block;
-      opacity: 0.1;
+      opacity: 0.3;
       position: relative;
       top: 51px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.1;
+      }
     }
 
     &__text {

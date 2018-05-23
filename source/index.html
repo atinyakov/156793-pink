@@ -4,27 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Pink</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody()</script>
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <nav class="main-nav main-nav--closed">
         <div class="main-nav__menu">
-          <a href="index.html" class="main-nav__logo">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-              <use xlink:href="img/sprite.svg#icon-pink" class="main-nav__logo-pink"></use>
-              <use xlink:href="img/sprite.svg#icon-i" class="main-nav__logo-i"></use>
-              <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="main-nav__logo-glasses-cropped"></use>
-              <use xlink:href="img/sprite.svg#icon-glasses" class="main-nav__logo-glasses"></use>
-              <use xlink:href="img/sprite.svg#icon-dots" class="main-nav__logo-dot"></use>
+          <a href="index.html">
+            <svg  class="main-nav__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+              <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
+              <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
+              <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
+              <use xlink:href="#icon-logo-glasses" class="main-nav__logo-glasses"></use>
+              <use xlink:href="#icon-logo-dots" class="main-nav__logo-dot"></use>
             </svg>
           </a>
           <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
           <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
-            <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
@@ -58,7 +62,7 @@
             </div>
             <picture class="features-list__img features-list__img--hidden">
               <source type="image/webp" media="(min-width: 940px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="iphone-screen-1-tablet@1x.webp 1x, iphone-screen-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/iphone-screen-1-tablet@1x.webp 1x, img/iphone-screen-1-tablet@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
               <img src="img/iphone-screen-1-tablet@1x.png" srcset="img/iphone-screen-1-tablet@2x.png 2x" alt="">
             </picture>
@@ -66,11 +70,11 @@
           <li class="features-list__item">
             <div class="features-list__text">
             <p class="features-list__slogan">Меняет мир вокруг</p>
-            <p class="features-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="features-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br>усилить эффект</p>
             </div>
             <picture class="features-list__img features-list__img--hidden">
               <source type="image/webp" media="(min-width: 940px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="iphone-screen-2-tablet@1x.webp 1x, iphone-screen-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/iphone-screen-2-tablet@1x.webp 1x, img/iphone-screen-2-tablet@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
               <img src="img/iphone-screen-2-tablet@1x.png" srcset="img/iphone-screen-2-tablet@2x.png 2x" alt="">
             </picture>
@@ -83,7 +87,7 @@
               <picture class="features-list__img">
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/iphone-screen-mobile.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
                 <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="">
@@ -92,8 +96,8 @@
         </ul>
         <div class="features-list__item features-list__item--horizontal">
           <span class="features-list__img-text">24</span>
-          <svg class="features-list__img features-list__img--horizontal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="298px" height="345px" viewbox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
-            <use xlink:href="img/sprite.svg#timer"></use>
+          <svg class="features-list__img features-list__img--horizontal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="239px" height="276px" viewbox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
+            <use xlink:href="#icon-timer"></use>
           </svg>
           <div class="features-list__text features-list__text--horizontal">
             <p class="features-list__slogan features-list__slogan--horizontal">Эффект <br>на 24 часа!</p>
@@ -108,7 +112,7 @@
         <div class="reviews__wrapper">
           <button class="reviews__nav-button">
             <svg x="0px" y="0px" width="21.706px" height="41.719px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
-              <use xlink:href="img/sprite.svg#arrow-left"></use>
+              <use xlink:href="#icon-review-arrow-left"></use>
             </svg>
           </button>
           <div class="reviews__containter">
@@ -135,7 +139,7 @@
           </div>
           <button class="reviews__nav-button">
             <svg x="0px" y="0px" width="21.706px" height="41.719px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
-            <use xlink:href="img/sprite.svg#arrow-right"></use>
+            <use xlink:href="#icon-review-arrow-right"></use>
             </svg>
           </button>
         </div>
@@ -236,14 +240,10 @@
         </li>
       </ul>
       </div>
-      <!-- БЕЛЫЙ ТРЕУГОЛЬНИК перенести в CSS-->
-      <!-- <svg width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="auto" viewbox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve">
-        <polygon fill="#FFFFFF" points="297.64,61.905 0,0 595.28,0 "/>
-      </svg> -->
       <picture class="contact-us__map">
         <source type="image/webp" media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile.webp 1x, img/bg-map-mobile@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
         <source media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
         <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
         <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
@@ -252,11 +252,11 @@
         <div class="footer__more footer__more--index">
           <a href="index.html" class="footer__logo">
             <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-              <use xlink:href="img/sprite.svg#icon-pink" class="footer__logo-pink"></use>
-              <use xlink:href="img/sprite.svg#icon-i" class="footer__logo-i"></use>
-              <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="footer__logo-glasses-cropped"></use>
-              <use xlink:href="img/sprite.svg#icon-glasses" class="footer__logo-glasses"></use>
-              <use xlink:href="img/sprite.svg#icon-dots" class="footer__logo-dot"></use>
+              <use xlink:href="#icon-logo-pink" class="footer__logo-pink"></use>
+              <use xlink:href="#icon-logo-i" class="footer__logo-i"></use>
+              <use xlink:href="#icon-logo-glasses-cropped" class="footer__logo-glasses-cropped"></use>
+              <use xlink:href="#icon-logo-glasses" class="footer__logo-glasses"></use>
+              <use xlink:href="#icon-logo-dots" class="footer__logo-dot"></use>
             </svg>
           </a>
           <ul class="footer__social">
@@ -267,7 +267,7 @@
           <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
             <span class="footer__developed-text">Разработано</span>
             <svg x="0px" y="0px" width="26.943px" height="34.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-              <use xlink:href="img/sprite.svg#academy" class="footer__developed-logo"></use>
+              <use xlink:href="#icon-logo-htmlacademy" class="footer__developed-logo"></use>
             </svg>
           </a>
         </div>

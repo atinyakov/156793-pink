@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   width: 74px;
+  height: 13px;
 }
 
 .slider__switcher label {
@@ -21,9 +22,30 @@
 .slider__input-radio + label::before {
   content: "";
   display: block;
+  width: 2px;
+  height: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.slider__input-radio:hover + label::before {
+  content: "";
+  display: block;
   width: 4px;
   height: 4px;
-  border: 3px solid @light-background;
-  background-color: @light-background;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
+}
+
+.slider__input-radio:active + label::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slider__input-radio:checked:hover + label::before {
+  border: 3px solid @dark-background;
+}
+
+.slider__input-radio:checked:active + label::before {
+  border: 3px solid @dark-background;
 }

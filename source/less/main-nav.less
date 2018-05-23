@@ -33,7 +33,7 @@
   &__logo {
     position: relative;
     top: -7px;
-    left: -74px;
+    left: -66px;
   }
 
   &__menu {
@@ -43,8 +43,7 @@
     align-items: center;
     max-width: 940px;
     margin: 0 auto;
-    padding: 0 20px;
-    min-height: 65px;
+    padding: 10px 15px;
   }
 
   &__sub-menu {
@@ -77,30 +76,46 @@
   content: url("../img/icon-menu-cross.svg");
 }
 
-.main-nav__logo-pink {
-  fill: white;
+.main-nav__logo:hover {
+  .main-nav__logo-pink {
+    fill: @pink;
+  }
+
+  .main-nav__logo-glasses {
+    fill: @pink;
+  }
+
+  .main-nav__logo-glasses-cropped {
+    fill: @pink;
+  }
 }
 
-.main-nav__logo-dot,
-.main-nav__logo-i {
-  display: none;
-  fill: @pink;
-}
+.header {
+  .main-nav__logo-pink {
+    fill: white;
+  }
 
-.main-nav__logo-glasses {
-  fill: white;
-  display: none;
-}
+  .main-nav__logo-dot,
+  .main-nav__logo-i {
+    display: none;
+    fill: @pink;
+  }
 
-.main-nav__logo-glasses-cropped {
-  fill: white;
-  display: none;
+  .main-nav__logo-glasses {
+    fill: white;
+    display: none;
+  }
+
+  .main-nav__logo-glasses-cropped {
+    fill: white;
+    display: none;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
   .main-nav__menu {
-    min-height: 110px;
+    padding: 35px 15px;
   }
 
   .main-nav__sub-menu {
@@ -110,17 +125,23 @@
   .main-nav__logo {
     width: 147px;
     height: 40px;
-    top: -4px;
-    left: 0;
+    top: -8px;
+    left: 3px;
   }
 
-  .main-nav__logo-glasses {
-    display: inline-block;
+  .header {
+    .main-nav__logo-glasses {
+      display: inline-block;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    &__menu {
+      padding: 21px 15px 23px;
+    }
+
     &__sub-menu {
       width: 650px;
       min-height: auto;
@@ -148,14 +169,28 @@
 
     &__link {
       text-transform: capitalize;
-    }
 
-    &__logo-dot,
-    &__logo-i {
+      &:hover {
+        color: @pink;
+      }
+
+      &:active {
+        color: white;
+      }
+
+      &--active {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+
+  .header {
+    .main-nav__logo-dot,
+    .main-nav__logo-i {
       display: inline-block;
     }
 
-    &__logo-glasses {
+    .main-nav__logo-glasses {
       display: none;
 
       &-cropped {

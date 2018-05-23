@@ -1,0 +1,155 @@
+.range {
+  position: relative;
+
+  &__filter {
+    width: 200px;
+  }
+
+  &__controls {
+    display: none;
+
+    &--active {
+      display: block;
+      position: absolute;
+      left: -13px;
+      margin: 30px 0;
+    }
+  }
+
+  &__scale {
+    height: 2px;
+    background: #000000;
+    width: 240px;
+    margin-left: auto;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__slider {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: 2px solid @pink;
+    background-color: @light-background;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:active {
+      background-color: @pink;
+    }
+
+    &--crop {
+      left: 194px;
+    }
+  }
+
+  &__symbol {
+    opacity: 0.3;
+
+    &--active {
+      fill: @pink;
+      opacity: 1;
+    }
+
+    &:active {
+      fill: @pink;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .range {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
+    height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &__controls {
+      display: block;
+      position: relative;
+      left: 0;
+      margin: 0;
+    }
+
+    &__scale {
+      width: 200px;
+      margin-right: 8px;
+    }
+
+    &__symbol {
+      width: 50px;
+      height: 30px;
+      opacity: 1;
+      fill: @pink;
+
+      &--contrast {
+        height: 20px;
+      }
+
+      &:hover {
+        fill: black;
+        opacity: 0.5;
+      }
+    }
+
+    &__slider {
+      &--crop {
+        left: 143px;
+      }
+
+      &--contrast {
+        left: 94px;
+      }
+
+      &--fill {
+        left: 23px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range {
+    &__slider {
+      &--crop {
+        left: 70px;
+      }
+
+      &--contrast {
+        left: 160px;
+      }
+
+      &--fill {
+        left: 247px;
+      }
+    }
+
+    &__scale {
+      width: 288px;
+      margin-right: 12px;
+    }
+
+    &__symbol {
+      width: 60px;
+      height: 60px;
+
+      &--contrast {
+        height: 42px;
+      }
+    }
+  }
+}

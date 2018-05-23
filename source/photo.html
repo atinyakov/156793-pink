@@ -4,29 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Pink</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody()</script>
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header header--not-index">
       <h1 class="header__slogan">Фотографии <br>пользователей</h1>
         <nav class="main-nav main-nav--closed">
           <div class="main-nav__menu">
             <a href="index.html" class="main-nav__logo">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-                <use xlink:href="img/sprite.svg#icon-pink" class="main-nav__logo-pink"></use>
-                <use xlink:href="img/sprite.svg#icon-i" class="main-nav__logo-i"></use>
-                <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="main-nav__logo-glasses-cropped"></use>
-                <use xlink:href="img/sprite.svg#icon-glasses" class="main-nav__logo-glasses"></use>
-                <use xlink:href="img/sprite.svg#icon-dots" class="main-nav__logo-dot"></use>
+                <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
+                <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
+                <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
+                <use xlink:href="#icon-logo-glasses" class="main-nav__logo-glasses"></use>
+                <use xlink:href="#icon-logo-dots" class="main-nav__logo-dot"></use>
               </svg>
             </a>
             <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
             <ul class="main-nav__sub-menu main-nav__sub-menu--hidden">
-              <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Фотографии</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
             </ul>
@@ -41,10 +45,10 @@
           <picture>
             <source type="image/webp" media="(min-width: 940px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/panorama-mobile.webp 1x, img/panorama-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
             <source class="user-photo__img" media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
             <source class="user-photo__img" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-            <img class="user-photo__img" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x">
+            <img class="user-photo__img user-photo__img--wide" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x">
           </picture>
           <div class="user-photo__description user-photo__description--wide">
             <div class="user-photo__user user-photo__user--wide">
@@ -60,7 +64,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-car-mobile.webp 1x, img/photo-car-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="">
@@ -78,7 +82,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-drumset-mobile.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="">
@@ -96,7 +100,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-window-mobile.webp 1x, img/photo-window-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="">
@@ -114,7 +118,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-fair-mobile.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="">
@@ -132,7 +136,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-pov-mobile.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="">
@@ -150,7 +154,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-wing-mobile.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
               <source class="user-photo__img" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
               <source class="user-photo__img" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
               <img class="user-photo__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="">
@@ -175,7 +179,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-road-mobile.webp 1x, img/photo-road-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
               <source class="editor__img" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
               <source class="editor__img" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
               <img class="editor__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="">
@@ -183,17 +187,44 @@
           </div>
           <div class="editor__column">
             <ul class="editor__controls">
-              <li>
-                <label id="crop" class="editor__control-button editor__control-button--crop"><span class="visually-hidden">crop</span></label>
-                <input class="editor__input" type="range" name="crop" value="">
+              <li class="range">
+                <a href="#">
+                    <svg class="range__symbol range__symbol--active" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                    <use xlink:href="#icon-editor-crop"></use>
+                    </svg>
+                </a>
+                <div class="range__controls range__controls--active">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <button class="range__slider range__slider--crop"><span class="visually-hidden">Ползунок</span></button>
+                  </div>
               </li>
-              <li>
-                <label id="fill" class="editor__control-button editor__control-button--fill"><span class="visually-hidden">fill</span></label>
-                <input class="editor__input" type="range" name="fill" value="">
+              <li class="range">
+                <a href="#">
+                  <svg class="range__symbol" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                    <use xlink:href="#icon-editor-fill"></use>
+                  </svg>
+                </a>
+                <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <button class="range__slider range__slider--fill"><span class="visually-hidden">Ползунок</span></button>
+                  </div>
               </li>
-              <li>
-                <label id="contrast" class="editor__control-button editor__control-button--contrast"><span class="visually-hidden">contrast</span></label>
-                <input class="editor__input editor__input--visible" type="range" name="contrast" value="">
+              <li class="range">
+                <a href="#">
+                  <svg class="range__symbol range__symbol--contrast" x="0px" y="0px" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                    <use xlink:href="#icon-editor-contrast"></use>
+                  </svg>
+                </a>
+                <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <button class="range__slider range__slider--contrast"><span class="visually-hidden">Ползунок</span></button>
+                  </div>
               </li>
             </ul>
             <div class="editor__button-container" >
@@ -208,11 +239,11 @@
     <footer class="footer footer__more footer--not-index">
       <a href="index.html" class="footer__logo">
         <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-          <use xlink:href="img/sprite.svg#icon-pink" class="footer__logo-pink"></use>
-          <use xlink:href="img/sprite.svg#icon-i" class="footer__logo-i"></use>
-          <use xlink:href="img/sprite.svg#icon-glasses--cropped" class="footer__logo-glasses-cropped"></use>
-          <use xlink:href="img/sprite.svg#icon-glasses" class="footer__logo-glasses"></use>
-          <use xlink:href="img/sprite.svg#icon-dots" class="footer__logo-dot"></use>
+          <use xlink:href="#icon-logo-pink" class="footer__logo-pink"></use>
+          <use xlink:href="#icon-logo-i" class="footer__logo-i"></use>
+          <use xlink:href="#icon-logo-glasses-cropped" class="footer__logo-glasses-cropped"></use>
+          <use xlink:href="#icon-logo-glasses" class="footer__logo-glasses"></use>
+          <use xlink:href="#icon-logo-dots" class="footer__logo-dot"></use>
         </svg>
       </a>
       <ul class="footer__social">
@@ -223,7 +254,7 @@
       <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
         <span class="footer__developed-text">Разработано</span>
         <svg x="0px" y="0px" width="26.943px" height="34.09px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-          <use xlink:href="img/sprite.svg#academy" class="footer__developed-logo"></use>
+          <use xlink:href="#icon-logo-htmlacademy" class="footer__developed-logo"></use>
         </svg>
       </a>
     </footer>

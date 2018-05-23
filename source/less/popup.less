@@ -9,11 +9,16 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  z-index: 4;
 
   &--success {
     background: linear-gradient(to bottom, white 57%, @light-background 57%);
-    min-height: 270px;
+    min-height: 380px;
     top: ~"calc(50% - 190px)";
+
+    .popup__button {
+      margin-top: 64px;
+    }
   }
 
   &--failure {
@@ -24,6 +29,7 @@
   &__header {
     font-size: 18px;
     line-height: 24px;
+    margin: 38px auto 25px;
   }
 
   &__msg {
@@ -39,7 +45,22 @@
     background-color: #2aab6d;
     min-height: 65px;
     border: 0;
-    margin-bottom: 40px;
+    margin-top: 24px;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    font-weight: 700;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--disabled {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
@@ -48,22 +69,52 @@
     width: 465px;
     left: ~"calc(50% - 232px)";
 
-    &__header {
-      font-size: 30px;
-      line-height: 40px;
-    }
-
-    &__msg {
-      font-size: 18px;
-    }
-
     &--success {
       min-height: 435px;
       background: linear-gradient(to bottom, white 62%, @light-background 62%);
+
+      .popup__header {
+        font-size: 30px;
+        line-height: 40px;
+        font-family: "Open Sans Bold", "Arial", sans-serif;
+        font-weight: 700;
+        width: 210px;
+        margin: 38px auto 20px;
+      }
+
+      .popup__msg {
+        font-size: 18px;
+        margin: 19px auto;
+        width: 310px;
+
+        br {
+          display: none;
+        }
+      }
     }
 
     &--failure {
-      min-height: 370px;
+      min-height: 355px;
+
+      .popup__header {
+        font-size: 30px;
+        line-height: 40px;
+        font-family: "Open Sans Bold", "Arial", sans-serif;
+        font-weight: 700;
+        width: 220px;
+        margin: 30px auto 23px;
+      }
+
+      .popup__msg {
+        font-size: 18px;
+        margin: 19px auto;
+        width: 310px;
+      }
+
+      .popup__button {
+        width: 300px;
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -74,5 +125,23 @@
     left: ~"calc(50% - 392px)";
     min-height: 385px;
     background: linear-gradient(to bottom, white 57%, @light-background 57%);
+
+    &--success,
+    &--failure {
+      .popup__header {
+        margin: 46px auto 20px;
+        width: 400px;
+      }
+
+      .popup__msg {
+        margin: 19px auto;
+        width: 390px;
+      }
+
+      .popup__button {
+        margin-top: 68px;
+        width: 459px;
+      }
+    }
   }
 }
