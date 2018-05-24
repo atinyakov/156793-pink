@@ -44,12 +44,13 @@
 
     &--name {
       order: 1;
+      padding: 0 0 10px;
     }
 
     &--contact-data {
       order: 3;
       padding-top: 28px;
-      padding-bottom: 15px;
+      padding-bottom: 0px;
 
       .form__legend {
         display: none;
@@ -71,7 +72,10 @@
       }
 
       .form__legend {
-        margin-bottom: 36px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        top: 56px;
       }
     }
 
@@ -94,18 +98,25 @@
         padding-left: 28px;
         margin: 0 auto 42px;
       }
+
+      .form__legend {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        top: 56px;
+      }
     }
   }
 
   &__legend {
     display: block;
     color: @pink;
+    margin: 0 auto 38px;;
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
-    padding-top: 37px;
+    padding: 37px 15px 0;
     line-height: 19px;
-    margin-bottom: 38px;
   }
 
   &__item {
@@ -121,6 +132,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 96px;
     }
   }
 
@@ -185,7 +197,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin: 32px 0 67px;
+    margin: 37px 0 67px; //form
     font-size: 14px;
 
     sup {
@@ -291,6 +303,7 @@
 
     &__item {
       &-containter {
+        padding-top: 0;
         margin-left: 59px;
         margin-top: 38px;
         align-items: flex-start;
@@ -331,6 +344,7 @@
 
         .form__legend {
           margin-bottom: 10px;
+          top: 0;
         }
       }
 
@@ -344,6 +358,7 @@
         .form {
           &__legend {
             margin-bottom: 5px;
+            top: 0;
           }
 
           &__item {
@@ -572,7 +587,6 @@
 
         .form__legend {
           padding-left: 24px;
-          width: 200px;
         }
 
         .form__input {
