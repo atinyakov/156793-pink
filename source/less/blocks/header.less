@@ -29,6 +29,26 @@
   &__devider {
     display: block;
   }
+
+  .main-nav__logo-pink {
+    fill: white;
+  }
+
+  .main-nav__logo-dot,
+  .main-nav__logo-i {
+    display: none;
+    fill: @pink;
+  }
+
+  .main-nav__logo-glasses {
+    fill: white;
+    display: none;
+  }
+
+  .main-nav__logo-glasses-cropped {
+    fill: white;
+    display: none;
+  }
 }
 
 
@@ -72,6 +92,10 @@
         display: block;
       }
     }
+
+    .main-nav__logo-glasses {
+      display: inline-block;
+    }
   }
 
   .header--not-index {
@@ -104,6 +128,19 @@
 
       br {
         display: block;
+      }
+    }
+
+    .main-nav__logo-dot,
+    .main-nav__logo-i {
+      display: inline-block;
+    }
+
+    .main-nav__logo-glasses {
+      display: none;
+
+      &-cropped {
+        display: inline-block;
       }
     }
   }

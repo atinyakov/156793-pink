@@ -1,10 +1,6 @@
 "use strict";
 
 module.exports = function(grunt) {
-  // grunt.loadNpmTasks("grunt-contrib-less");
-  // grunt.loadNpmTasks("grunt-browser-sync");
-  // grunt.loadNpmTasks("grunt-contrib-watch");
-  // grunt.loadNpmTasks("grunt-postcss");
 
   require("load-grunt-tasks")(grunt);
 
@@ -55,6 +51,13 @@ module.exports = function(grunt) {
       style: {
         files: ["source/less/**/*.less"],
         tasks: ["less", "postcss","csso"]
+      },
+      scripts: {
+        files: ["source/js/**/*.js"],
+        tasks: ["copy:watch","uglify"],
+        options: {
+          spawn: false,
+        }
       }
     },
 
@@ -137,8 +140,40 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
+      },
+      watch: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "js/**"
+          ],
+          dest: "build"
+        }]
       }
+    },
+
+    htmlmin: {                                     // Task
+      dist: {                                      // Target
+        options: {                                 // Target options
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {                                   // Dictionary of files
+          "build/index.html": "build/index.html",     // "destination": "source"
+          "build/form.html": "build/form.html",
+          "build/photo.html": "build/photo.html"
+        }
       }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          "build/js/menu.min.js": ["build/js/menu.js"]
+        }
+      }
+    }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
@@ -150,6 +185,8 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "svgstore",
-    "posthtml"
+    "posthtml",
+    "htmlmin",
+    "uglify"
   ]);
 };

@@ -144,6 +144,9 @@
     }
 
     &--textarea {
+      font-family: "Open Sans Light", "Arial", serif;
+      font-weight: 300;
+      font-size: 16px;
       border: 2px solid @light-background;
       padding: 14px 19px;
       line-height: 31px;
@@ -397,7 +400,7 @@
             &::after {
               content: url("../img/icon-phone.svg");
               position: absolute;
-              right: 19px;
+              left: 461px;
               bottom: 70px;
               width: 20px;
               height: 20px;
@@ -409,7 +412,7 @@
               height: 58px;
               background-color: @light-background;
               position: absolute;
-              right: 0;
+              left: 441px;
               bottom: 49px;
             }
           }
@@ -420,7 +423,7 @@
             &::after {
               content: url("../img/icon-mail.svg");
               position: absolute;
-              right: 18px;
+              left: 462px;
               bottom: 72px;
               width: 20px;
               height: 20px;
@@ -432,7 +435,7 @@
               height: 58px;
               background-color: @light-background;
               position: absolute;
-              right: 0;
+              left: 441px;
               bottom: 49px;
             }
           }
@@ -591,18 +594,22 @@
 
           &-wrapper--tel {
             &::before {
-              right: 2px;
+              left: 312px;
               bottom: 48px;
             }
 
             &::after {
-              right: 20px;
+              left: 332px;
             }
           }
 
           &-wrapper--email {
+            &::after {
+              left: 333px;
+            }
+
             &::before {
-              right: 2px;
+              left: 312px;
               bottom: 48px;
             }
           }

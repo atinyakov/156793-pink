@@ -66,6 +66,18 @@
   line-height: 28px;
   margin: 0;
   padding-top: 4px;
+  text-decoration: none;
+
+  &--mail {
+    &:hover {
+      text-decoration: underline;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +88,11 @@
       &::after {
         bottom: 276px;
       }
+    }
+
+    &__google {
+      width: 700px;
+      height: 400px;
     }
 
     &__footer-wrapper {
@@ -140,6 +157,11 @@
       &::after {
         bottom: 400px;
       }
+    }
+
+    &__google {
+      width: 1200px;
+      height: 485px;
     }
 
     &__slogan {
