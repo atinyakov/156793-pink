@@ -19,7 +19,7 @@
         <nav class="main-nav main-nav--closed">
           <div class="main-nav__menu">
             <a href="index.html" class="main-nav__logo">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
                 <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
                 <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
                 <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
@@ -32,7 +32,7 @@
               <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
               <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Конкурс</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
             </ul>
           </div>
         </nav>
@@ -45,7 +45,7 @@
               <legend class="form__legend visually-hidden">Ваше имя</legend>
               <div>
                 <label class="form__label form__label--contact" for="last-name">Фамилия:</label>
-                <input class="form__input form__input--text" id="last-name" type="text" name="" value="" placeholder="Укажите фамилию *">
+                <input class="form__input form__input--text" id="last-name" type="text" name="" value="last-name" placeholder="Укажите фамилию *">
               </div>
               <div>
                 <label class="form__label form__label--contact" for="first-name">Имя:</label>
@@ -53,7 +53,7 @@
               </div>
               <div>
                 <label class="form__label form__label--contact" for="first-name">Отчество</label>
-                <input class="form__input form__input--text" id="middle-name" type="text" name="first-name" value="" placeholder="Ну и отчество тоже *">
+                <input class="form__input form__input--text" id="middle-name" type="text" name="middle-name" value="" placeholder="Ну и отчество тоже *">
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--achievments">
@@ -65,7 +65,7 @@
                   <label class="form__label" for="selfie">Сделал селфи с акулой</label>
                 </li>
                 <li class="form__item">
-                  <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" id="red tan" name="achievments" value="red tan" checked>
+                  <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" id="red-tan" name="achievments" value="red tan" checked>
                   <label class="form__label" for="red tan">Обгорел на пляже</label>
                 </li>
                 <li class="form__item">
@@ -120,7 +120,7 @@
             <fieldset class="form__fieldset form__fieldset--emotions">
               <legend class="form__legend form__legend--hidden">Опишите свои эмоции:</legend>
               <label class="form__header" for="emotions">Опишите свои эмоции:</label>
-              <textarea class="form__input--textarea" type="textarea" name="emotions" value="" rows="3" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea class="form__input--textarea" name="emotions" rows="3" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
           </form>
           <div class="form__submit">
@@ -131,7 +131,7 @@
     </main>
     <footer class="footer footer__more footer--not-index">
       <a href="index.html" class="footer__logo">
-        <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+        <svg x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
           <use xlink:href="#icon-logo-pink" class="footer__logo-pink"></use>
           <use xlink:href="#icon-logo-i" class="footer__logo-i"></use>
           <use xlink:href="#icon-logo-glasses-cropped" class="footer__logo-glasses-cropped"></use>
@@ -140,9 +140,9 @@
         </svg>
       </a>
       <ul class="footer__social">
-        <li><a class="footer__social-item footer__social-item--twitter" href="" alt="Twitter"></a></li>
-        <li><a class="footer__social-item footer__social-item--facebook" href="" alt="Facebook"></a></li>
-        <li><a class="footer__social-item footer__social-item--youtube" href="" alt="Youtube"></a></li>
+        <li><a class="footer__social-item footer__social-item--twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a class="footer__social-item footer__social-item--facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a class="footer__social-item footer__social-item--youtube" href="#"><span class="visually-hidden">Youtube</span></a></li>
       </ul>
       <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
         <span class="footer__developed-text">Разработано</span>
@@ -162,4 +162,5 @@
       <button class="popup__button" type="button" name="button">Закрыть окно</button>
     </section>
   </body>
+  <script src="/js/menu.min.js"></script>
 </html>

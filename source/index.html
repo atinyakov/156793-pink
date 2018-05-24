@@ -6,6 +6,8 @@
     <title>Pink</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody()</script>
     <script src="js/picturefill.min.js" async></script>
@@ -18,7 +20,7 @@
       <nav class="main-nav main-nav--closed">
         <div class="main-nav__menu">
           <a href="index.html">
-            <svg  class="main-nav__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 42.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+            <svg  class="main-nav__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
               <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
               <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
               <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
@@ -31,7 +33,7 @@
             <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
@@ -39,9 +41,9 @@
           <h2 class="download-app__slogan download-app__slogan--hidden">Взгляните на жизнь иначе!</h2>
           <a href="" class="download-app__download-button button">Скачать приложение</a>
           <ul class="download-app__list">
-            <li><a class="download-app__item download-app__item--apple" href=""><span class="visually-hidden">Apple</span></a></li>
-            <li><a class="download-app__item download-app__item--android" href=""><span class="visually-hidden">Android</span></a></li>
-            <li><a class="download-app__item download-app__item--windows" href=""><span class="visually-hidden">Windows</span></a></li>
+            <li><a class="download-app__item download-app__item--apple" href="https://www.apple.com/ru/itunes/download/"><span class="visually-hidden">Apple</span></a></li>
+            <li><a class="download-app__item download-app__item--android" href="https://play.google.com/store/apps"><span class="visually-hidden">Android</span></a></li>
+            <li><a class="download-app__item download-app__item--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?icid=CNavAppsWindowsPhoneApps"><span class="visually-hidden">Windows</span></a></li>
           </ul>
           <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
@@ -232,7 +234,7 @@
         </li>
         <li class="contact-us__item contact-us__item--right">
           <b class="contact-us__title">Пишите:</b>
-          <p class="contact-us__content">mail@htmlacademy.ru</p>
+          <a class="contact-us__content contact-us__content--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
         <li class="contact-us__item contact-us__item--middle">
           <b class="contact-us__title">Приезжайте в гости:</b>
@@ -240,18 +242,22 @@
         </li>
       </ul>
       </div>
-      <picture class="contact-us__map">
-        <source type="image/webp" media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-        <source media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-        <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-        <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
-      </picture>
+      <div>
+        <picture class="contact-us__map">
+          <source type="image/webp" media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 940px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
+        </picture>
+        <iframe class="contact-us__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.32089461614341!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1524139109139"
+  width="320" height="200" style="border:0" allowfullscreen=""></iframe>
+      </div>
       <div class="contact-us__footer-wrapper contact-us__footer-wrapper--bottom">
         <div class="footer__more footer__more--index">
           <a href="index.html" class="footer__logo">
-            <svg x="0px" y="0px" width="146.3px" height="42.375px" viebox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+            <svg x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
               <use xlink:href="#icon-logo-pink" class="footer__logo-pink"></use>
               <use xlink:href="#icon-logo-i" class="footer__logo-i"></use>
               <use xlink:href="#icon-logo-glasses-cropped" class="footer__logo-glasses-cropped"></use>
@@ -260,9 +266,9 @@
             </svg>
           </a>
           <ul class="footer__social">
-            <li><a class="footer__social-item footer__social-item--twitter" href="" alt="Twitter"></a></li>
-            <li><a class="footer__social-item footer__social-item--facebook" href="" alt="Facebook"></a></li>
-            <li><a class="footer__social-item footer__social-item--youtube" href="" alt="Youtube"></a></li>
+            <li><a class="footer__social-item footer__social-item--twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="footer__social-item footer__social-item--facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="footer__social-item footer__social-item--youtube" href="#"><span class="visually-hidden">Youtube</span></a></li>
           </ul>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__developed">
             <span class="footer__developed-text">Разработано</span>
@@ -273,5 +279,6 @@
         </div>
       </div>
     </footer>
+    <script src="/js/menu.min.js"></script>
   </body>
 </html>
