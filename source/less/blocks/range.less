@@ -51,11 +51,8 @@
 
   &__symbol {
     opacity: 0.3;
-
-    &--active {
-      opacity: 1;
-      fill: @pink;
-    }
+    width: 58px;
+    height: 50px;
 
     &:active {
       opacity: 1;
@@ -65,8 +62,18 @@
     &:hover {
       opacity: 0.5;
     }
+
+    &--contrast {
+      height: 32px;
+    }
+  }
+
+  .range__symbol--active {
+    opacity: 1;
+    fill: @pink;
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .range {
@@ -92,12 +99,13 @@
 
     &__symbol {
       width: 50px;
-      height: 30px;
+      height: 26px;
       opacity: 1;
-      fill: @pink;
+      fill: #d22856;
+      padding-top: 8px;
 
       &--contrast {
-        height: 20px;
+        height: 17px;
       }
 
       &:hover {
@@ -144,11 +152,11 @@
     }
 
     &__symbol {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 50px;;
 
       &--contrast {
-        height: 42px;
+        height: 30px;
       }
     }
   }
