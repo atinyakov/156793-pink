@@ -136,7 +136,8 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**"
+            "img/**",
+            "js/**"
           ],
           dest: "build"
         }]
