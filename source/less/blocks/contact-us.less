@@ -19,7 +19,7 @@
     position: absolute;
     bottom: 0;
     left: ~"calc(50% - 160px)";
-    z-index: -1;
+    z-index: -2;
 
     &::after {
       content: url("../img/icon-map-marker.svg");
@@ -42,7 +42,7 @@
       position: absolute;
       width: 320px;
       left: ~"calc(50% - 160px)";
-      bottom: 173px;
+      bottom: 170px;
     }
   }
 }
@@ -51,6 +51,14 @@
   width: 280px;
   padding: 0 20px;
   margin-bottom: 24px;
+
+  &--right {
+    margin-bottom: 21px;
+
+    .contact-us__content {
+      line-height: 39px;
+    }
+  }
 }
 
 .contact-us__title {
@@ -65,7 +73,7 @@
   letter-spacing: -0.2px;
   line-height: 28px;
   margin: 0;
-  padding-top: 4px;
+  padding-top: 5px;
   text-decoration: none;
 
   &--mail {
@@ -91,7 +99,7 @@
     }
 
     &__google {
-      height: 400px;
+      height: 380px;
     }
 
     &__footer-wrapper {
@@ -116,7 +124,7 @@
       &::after {
         width: 660px;
         left: ~"calc(50% - 330px)";
-        bottom: 433px;
+        bottom: 390px;
       }
     }
 
@@ -126,6 +134,12 @@
 
       &--middle {
         margin-bottom: 30px;
+      }
+
+      &--right {
+        .contact-us__content {
+          line-height: 77px;
+        }
       }
     }
 

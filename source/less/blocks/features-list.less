@@ -21,6 +21,10 @@
     font-size: 14px;
     line-height: 24px;
     width: 255px;
+
+    br {
+      display: none;
+    }
   }
 
   &__item {
@@ -75,6 +79,10 @@
       width: 310px;
       margin-top: 0;
 
+      br {
+        display: block;
+      }
+
       &--horizontal {
         margin: 0.8em 0 0.9em;
         text-align: left;
@@ -121,14 +129,14 @@
         font-size: 94px;
         position: absolute;
         font-weight: 900;
-        bottom: 47px;
-        left: ~"calc(50% - 287px)";
+        bottom: 42px;
+        left: ~"calc(50% - 293px)";
         border-radius: 50%;
         border: 12px solid #d22856;
         color: #d22856;
         z-index: 2;
         font-family: "Open Sans Bold", "Arial", sans-serif;
-        padding: 16px 31px 22px;
+        padding: 31px 35px 38px;
       }
     }
 
@@ -204,10 +212,10 @@
 
       &-text {
         font-size: 122px;
-        bottom: 88px;
+        bottom: 90px;
         left: ~"calc(50% - 447px)";
-        border: 17px solid #d22856;
-        padding: 18px 40px 29px;
+        border: 17px solid @pink;
+        padding: 32px 41px 49px;
       }
     }
 

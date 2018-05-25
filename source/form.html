@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Pink</title>
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody()</script>
     <script src="js/picturefill.min.js" async></script>
@@ -39,7 +39,7 @@
       </header>
     <main class="page-main">
         <section class="page-main__form">
-        <h3 class="page-main__header">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!<br><span class="form__intstructions">Пожалуйста заполните форму ниже:</span></h3>
+        <h3 class="page-main__header">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000<br> миль на вашу бонусную карту!<br><span class="form__intstructions">Пожалуйста заполните форму ниже:</span></h3>
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset form__fieldset--name">
               <legend class="form__legend visually-hidden">Ваше имя</legend>
@@ -58,8 +58,7 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--achievments">
               <legend class="form__legend">Ваши безбашенные <br>достижения в путешествии</legend>
-              <!-- <label class="form__header" for="achievments">Ваши безбашенные <br>достижения в путешествии</label> -->
-              <ul class="form__item-containter">
+              <ul class="form__item-container">
                 <li class="form__item">
                   <input class="form__checkbox form__checkbox--checked visually-hidden" type="checkbox" id="selfie" name="achievments" value="shark selfie" checked>
                   <label class="form__label" for="selfie">Сделал селфи с акулой</label>
@@ -101,8 +100,7 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--app">
               <legend class="form__legend">С каким приложением<br> путешествовали?</legend>
-              <!-- <label class="form__header" for="app">С каким приложением<br> путешествовали?</label> -->
-              <ul class="form__item-containter">
+              <ul class="form__item-container">
                 <li class="form__item">
                   <input class="form__radio visually-hidden" type="radio" id="ios" name="app" value="ios" checked>
                   <label class="form__label" for="ios">Pink для iOS</label>
@@ -119,7 +117,6 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--emotions">
               <legend class="form__legend">Опишите свои эмоции:</legend>
-              <!-- <label class="form__header" for="emotions">Опишите свои эмоции:</label> -->
               <textarea class="form__input--textarea" name="emotions" rows="3" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
           </form>

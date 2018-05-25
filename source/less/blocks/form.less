@@ -65,6 +65,10 @@
 
       .form__item {
         margin-bottom: 34px;
+
+        &-container {
+          padding: 88px 0 0;
+        }
       }
 
       .form__input-container {
@@ -75,7 +79,7 @@
         position: relative;
         margin: 0;
         padding: 0;
-        top: 56px;
+        top: 51px;
       }
     }
 
@@ -125,7 +129,7 @@
     margin-bottom: 42px;
     width: 280px;
 
-    &-containter {
+    &-container {
       margin: 0;
       padding: 0;
       list-style: none;
@@ -302,7 +306,7 @@
     }
 
     &__item {
-      &-containter {
+      &-container {
         padding-top: 0;
         margin-left: 59px;
         margin-top: 38px;
@@ -346,6 +350,10 @@
           margin-bottom: 10px;
           top: 0;
         }
+
+        .form__item-container {
+          padding: 0;
+        }
       }
 
       &--achievments {
@@ -362,7 +370,7 @@
           }
 
           &__item {
-            &-containter {
+            &-container {
               margin-left: 60px;
               margin-top: 38px;
               margin-bottom: 4px;
@@ -546,7 +554,7 @@
           width: 820px;
         }
 
-        .form__item-containter {
+        .form__item-container {
           margin-left: 74px;
           margin-top: 41px;
         }
@@ -575,7 +583,22 @@
         order: 4;
         width: 940px;
 
-        .form__item-containter {
+        .form__item:nth-child(1),
+        .form__item:nth-child(2) {
+          width: 319px;
+        }
+
+        .form__item:nth-child(3),
+        .form__item:nth-child(4) {
+          width: 294px;
+        }
+
+        .form__item:nth-child(5),
+        .form__item:nth-child(6) {
+          width: 300px;
+        }
+
+        .form__item-container {
           flex-direction: column;
           flex-wrap: wrap;
           height: 173px;
