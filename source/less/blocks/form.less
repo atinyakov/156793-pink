@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Open Sans Light", "Arial", serif;
+  font-weight: 300;
 
   &__button {
     display: block;
@@ -121,6 +123,7 @@
     font-size: 14px;
     padding: 37px 15px 0;
     line-height: 19px;
+    width: 100%;
   }
 
   &__item {
@@ -161,17 +164,23 @@
       height: 56px;
       width: 255px;
       padding-left: 19px;
+
+      &::placeholder {
+        color: black;
+        opacity: 1; /* Firefox */
+      }
     }
 
     &--textarea {
       font-family: "Open Sans Light", "Arial", serif;
-      font-weight: 700;
+      font-weight: 300;
       font-size: 19px;
       border: 2px solid @light-background;
       padding: 14px 19px;
       line-height: 31px;
       width: 238px;
       min-height: 170px;
+      resize: none/vertical;
 
       &:hover {
         border-color: black;
@@ -179,6 +188,11 @@
 
       &:active {
         border-color: @pink;
+      }
+
+      &::placeholder {
+        color: black;
+        opacity: 1; /* Firefox */
       }
     }
   }
@@ -201,7 +215,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin: 37px 0 67px; //form
+    margin: 30px 0 60px;
     font-size: 14px;
 
     sup {
@@ -213,6 +227,10 @@
     &--extended {
       display: none;
     }
+  }
+
+  &__submit {
+    order: 6;
   }
 }
 
@@ -501,8 +519,7 @@
       justify-content: space-between;
       align-items: center;
       width: 620px;
-      margin: 0 auto;
-      margin-bottom: 88px;
+      margin: 65px auto 24px;
     }
 
     &__notice {
@@ -533,7 +550,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    margin-bottom: 64px;
 
     &__fieldset {
       border: 2px solid @light-background;
@@ -679,7 +695,7 @@
 
     &__submit {
       width: 940px;
-      margin-bottom: 0;
+      margin: 60px auto 0;
     }
   }
 }
