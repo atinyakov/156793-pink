@@ -68,7 +68,6 @@ module.exports = function(grunt) {
         },
         files: {
           "build/css/style.min.css": ["source/css/style.css"],
-          "build/css/normalize.min.css": ["source/css/normalize.css"]
         }
       }
     },
