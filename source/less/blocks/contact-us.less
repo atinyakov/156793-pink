@@ -11,7 +11,7 @@
     letter-spacing: -0.2px;
     line-height: 28px;
     margin: 0;
-    padding-top: 5px;
+    padding-top: 2px;
     text-decoration: none;
 
     &--mail {
@@ -29,13 +29,19 @@
   &__item {
     width: 280px;
     padding: 0 20px;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 
     &--right {
-      margin-bottom: 21px;
+      margin-bottom: 19px;
 
       .contact-us__content {
-        line-height: 50px;
+        line-height: 40px;
+      }
+    }
+
+    &--middle {
+      .contact-us__content {
+        padding-top: 6px;
       }
     }
   }
@@ -92,7 +98,7 @@
       position: absolute;
       width: 320px;
       left: ~"calc(50% - 160px)";
-      bottom: 175px;
+      bottom: 168px;
     }
   }
 }
@@ -134,7 +140,7 @@
       &::after {
         width: 660px;
         left: ~"calc(50% - 330px)";
-        bottom: 430px;
+        bottom: 432px;
       }
     }
 
@@ -144,6 +150,12 @@
       &--middle {
         margin-bottom: 30px;
         margin-top: 16px;
+      }
+
+      &--right {
+        .contact-us__content {
+          line-height: 50px;
+        }
       }
     }
 
@@ -197,11 +209,19 @@
       &--middle {
         margin: 0;
         order: 2;
+
+        .contact-us__content {
+          padding-top: 26px;
+        }
       }
 
       &--right {
         margin: 0;
         order: 3;
+
+        .contact-us__content {
+          line-height: 82px;
+        }
       }
     }
 

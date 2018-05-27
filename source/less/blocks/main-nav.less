@@ -1,39 +1,19 @@
 .main-nav {
   min-height: 65px;
 
-  &--closed {
-    background-color: rgba(0, 0, 0, 0.3);
-
-    .main-nav__button::before {
-      content: url("../img/icon-menu-burger.svg");
-      width: 50px;
-      display: block;
-      cursor: pointer;
-    }
-  }
-
-  &--opened {
-    background-color: #283645;
-
-    .main-nav__button::before {
-      content: url("../img/icon-menu-cross.svg");
-      width: 50px;
-      display: block;
-      cursor: pointer;
-    }
-  }
-
   &__button {
     background-color: transparent;
     border: none;
+    display: none;
   }
 
   &__item {
     width: 100%;
-    height: 65px;
+    height: 62px;
     background-color: #283645;
     border-top: 2px solid #485461;
     outline: 1px solid #000001;
+    z-index: 4;
 
     &--hidden {
       display: none;
@@ -42,13 +22,24 @@
 
   &__link {
     display: block;
-    line-height: 65px;
+    line-height: 62px;
     color: white;
     opacity: 1;
     text-transform: uppercase;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    font-weight: 700;
     font-size: 18px;
     text-decoration: none;
     text-align: center;
+
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: @pink;
+      opacity: 0.3;
+    }
   }
 
   &__logo {
@@ -60,10 +51,65 @@
   &__menu {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     max-width: 940px;
-    margin: 0 auto;
+    width: auto;
     padding: 10px 15px;
+    height: 48px;
+    background-color: #283645;
+
+    &--closed {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      .main-nav__button {
+        display: block;
+
+        &:hover {
+          &::before {
+            content: url("../img/icon-menu-burger-h.svg");
+          }
+        }
+
+        &:active {
+          &::before {
+            content: url("../img/icon-menu-burger-a.svg");
+          }
+        }
+
+        &::before {
+          content: url("../img/icon-menu-burger.svg");
+          width: 50px;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--opened {
+      .main-nav__button {
+        display: block;
+
+        &:hover {
+          &::before {
+            content: url("../img/icon-menu-cross-h.svg");
+          }
+        }
+
+        &:active {
+          &::before {
+            content: url("../img/icon-menu-cross-a.svg");
+          }
+        }
+
+        &::before {
+          content: url("../img/icon-menu-cross.svg");
+          width: 21px;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   &__sub-menu {
@@ -71,19 +117,10 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    position: absolute;
     margin: 0;
-    top: 67px;
     left: 0;
     width: 100%;
     z-index: 2;
-
-    &--hidden {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: none;
-    }
   }
 }
 
@@ -101,10 +138,24 @@
   }
 }
 
+.main-nav__logo:active {
+  .main-nav__logo-pink {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+  .main-nav__logo-glasses {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+  .main-nav__logo-glasses-cropped {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+}
 
 @media (min-width: @tablet-width) {
   .main-nav__menu {
-    padding: 35px 15px;
+    padding: 35px 17px;
+    height: 40px;
   }
 
   .main-nav__sub-menu {
@@ -113,7 +164,7 @@
 
   .main-nav__logo {
     width: 147px;
-    height: 40px;
+    height: 41px;
     top: -8px;
     left: 3px;
   }
@@ -121,21 +172,22 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+
     &__menu {
-      padding: 21px 15px 23px;
+      padding: 37px 0 32px;
+      background-color: transparent;
+      margin-right: 98px;
     }
 
     &__sub-menu {
-      width: 650px;
-      min-height: auto;
-      position: relative;
-      top: 0;
-      left: 0;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
+      max-width: 940px;
+      margin: 0 auto;
     }
 
     &__item {
@@ -152,6 +204,8 @@
 
     &__link {
       text-transform: capitalize;
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-weight: 400;
 
       &:hover {
         color: @pink;
@@ -159,11 +213,16 @@
 
       &:active {
         color: white;
+        opacity: 0.3;
       }
 
       &--active {
         border-bottom: 2px solid white;
       }
+    }
+
+    &__logo {
+      left: 0;
     }
   }
 }

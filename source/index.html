@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="css/style.min.css" as="style">
@@ -15,26 +15,26 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="header">
-      <nav class="main-nav main-nav--opened">
-        <div class="main-nav__menu">
-          <a href="index.html">
-            <svg  class="main-nav__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
-              <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
-              <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
-              <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
-              <use xlink:href="#icon-logo-glasses" class="main-nav__logo-glasses"></use>
-              <use xlink:href="#icon-logo-dots" class="main-nav__logo-dot"></use>
-            </svg>
-          </a>
-          <button class="main-nav__button"><span class="visually-hidden">Меню</span></button>
-          <ul class="main-nav__sub-menu">
-            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-          </ul>
-        </div>
+    <header class="header header--opened">
+      <nav class="main-nav">
+        <ul class="main-nav__sub-menu">
+          <li class="main-nav__menu">
+            <a href="index.html">
+                <svg  class="main-nav__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="42.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+                  <use xlink:href="#icon-logo-pink" class="main-nav__logo-pink"></use>
+                  <use xlink:href="#icon-logo-i" class="main-nav__logo-i"></use>
+                  <use xlink:href="#icon-logo-glasses-cropped" class="main-nav__logo-glasses-cropped"></use>
+                  <use xlink:href="#icon-logo-glasses" class="main-nav__logo-glasses"></use>
+                  <use xlink:href="#icon-logo-dots" class="main-nav__logo-dot"></use>
+                </svg>
+            </a>
+            <button class="main-nav__button main-nav__button"><span class="visually-hidden">Меню</span></button>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
       </nav>
       <section class="download-app ">
           <h2 class="download-app__slogan download-app__slogan--hidden">Взгляните на жизнь иначе!</h2>
@@ -95,7 +95,7 @@
               </picture>
           </li>
         </ul>
-        <div class="features-list__item features-list__item--horizontal">
+        <div class="features__features-list features-list features__features-list--horizontal features-list__item features-list__item--horizontal">
           <span class="features-list__img-text">24</span>
           <svg class="features-list__img features-list__img--horizontal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="239px" height="276px" viewbox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
             <use xlink:href="#icon-timer"></use>
@@ -107,7 +107,6 @@
           </div>
         </div>
       </section>
-
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <div class="reviews__wrapper">
@@ -144,7 +143,7 @@
             </svg>
           </button>
         </div>
-        <ul class="reviews__toggles slider__toggles">
+        <ul class="reviews__toggles slider">
           <li class="slider__switcher">
             <input class="slider__input-radio visually-hidden" type="radio" id="slider-1" name="slide-page-1" checked="">
             <label tabindex="0" for="slider-1"><span class="visually-hidden">1</span></label>
@@ -206,7 +205,7 @@
             </tr>
           </table>
         </div>
-        <ul class="pricing__toggles slider__toggles">
+        <ul class="pricing__toggles slider">
           <li class="slider__switcher">
             <input class="slider__input-radio visually-hidden" type="radio" id="price-1" name="price-1">
             <label tabindex="0" for="price-1"><span class="visually-hidden">1</span></label>

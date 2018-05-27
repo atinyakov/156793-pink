@@ -18,11 +18,15 @@
       margin-top: 14px;
     }
   }
-}
 
-.features__features-list {
-  list-style: none;
-  color: #000000;
+  .features__features-list {
+    list-style: none;
+    color: #000000;
+  }
+
+  .features__features-list--horizontal {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -39,6 +43,12 @@
         font-family: "Open Sans Light", "Arial", sans-serif;
         font-weight: 300;
       }
+    }
+
+    .features__features-list--horizontal {
+      display: flex;
+      min-height: auto;
+      margin: 0 auto;
     }
   }
 
