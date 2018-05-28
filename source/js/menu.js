@@ -6,8 +6,6 @@ var mobileMenuHeader = document.querySelector('.main-nav__menu');
 var header = document.querySelector('.header');
 var mobileNav = document.querySelectorAll('.main-nav__item');
 
-console.log(header)
-
 var enableHeader = function () {
   if (header.classList.contains('header--opened')) {
       header.classList.remove('header--opened');

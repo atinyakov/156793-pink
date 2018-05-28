@@ -128,7 +128,7 @@
       &--wide {
         width: 660px;
         height: 100%;
-        margin: 0 0 51px;
+        margin: 0 0 46px;
         margin-left: ~"calc(50% - 330px)";
 
         &::after {
@@ -161,9 +161,10 @@
       &--wide {
         flex-direction: row;
         width: 565px;
-        padding: 24px 28px 12px;
+        padding: 24px 28px 30px;
         flex-wrap: wrap;
         align-self: center;
+        min-height: auto;
         height: auto;
 
         .user-photo__likes-total {
@@ -186,6 +187,7 @@
 
       &--wide {
         order: 4;
+        margin: 4px 0 0;
       }
     }
 
@@ -228,14 +230,15 @@
         margin: 0 auto;
         width: 877px;
         flex-direction: row;
-        height: 70px;
+        // height: 70px;
+        height: auto;
         padding: 24px 28px 0;
       }
     }
 
     &__comment {
       &--wide {
-        margin: -7px 0 13px;
+        margin: 6px 0 13px;
       }
     }
 
@@ -246,7 +249,7 @@
       &--wide {
         width: 100%;
         height: auto;
-        margin: 0 0 47px;
+        margin: 0 0 60px;
 
         &::after {
           top: 54px;
@@ -261,6 +264,7 @@
 
       &--wide {
         left: 0;
+        height: 505px;
       }
     }
 
