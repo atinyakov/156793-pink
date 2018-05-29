@@ -113,7 +113,6 @@
         margin: 0;
         padding: 0;
         top: 56px;
-        // left: ~"calc(50% - 108px)";
         width: 100%;
       }
     }
@@ -154,7 +153,8 @@
       border-color: black;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       border-color: @pink;
     }
 
@@ -186,7 +186,8 @@
         border-color: black;
       }
 
-      &:active {
+      &:active,
+      &:focus {
         border-color: @pink;
       }
 
@@ -267,16 +268,7 @@
 }
 
 .form__checkbox:focus + .form__label::before {
-  outline: 2px dotted @pink;
-}
-
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  &:focus {
-    outline: 2px dotted @pink;
-  }
+  border: 2px solid @pink;
 }
 
 .form__radio:checked + .form__label::before {
@@ -313,7 +305,7 @@ input[type="tel"] {
 }
 
 .form__radio:focus + .form__label::before {
-  outline: 2px dotted @pink;
+  border: 2px solid @pink;
 }
 
 @media (min-width: @tablet-width) {
