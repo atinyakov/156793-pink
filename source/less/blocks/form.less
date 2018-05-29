@@ -250,6 +250,7 @@
   background-repeat: no-repeat;
   background-position: center;
   color: white;
+  cursor: pointer;
 }
 
 .form__checkbox:hover + .form__label::before {
@@ -263,6 +264,19 @@
 
 .form__checkbox:checked:active + .form__label::before {
   background-image: none;
+}
+
+.form__checkbox:focus + .form__label::before {
+  outline: 2px dotted @pink;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  &:focus {
+    outline: 2px dotted @pink;
+  }
 }
 
 .form__radio:checked + .form__label::before {
@@ -282,6 +296,7 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .form__radio:hover + .form__label::before {
@@ -295,6 +310,10 @@
 
 .form__radio:checked:active + .form__label::before {
   background-image: none;
+}
+
+.form__radio:focus + .form__label::before {
+  outline: 2px dotted @pink;
 }
 
 @media (min-width: @tablet-width) {
